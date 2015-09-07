@@ -1,0 +1,143 @@
+USE [RiceManagementDBV2]
+GO
+
+/****** Object:  StoredProcedure [dbo].[SP_GetBalanceSheetGroupSum]    Script Date: 7/9/2558 15:51:11 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+-- =============================================
+-- Author:  <Author,,Name>
+-- Create date: <Create Date,,>
+-- Description: <Description,,>
+-- =============================================
+CREATE PROCEDURE [dbo].[SP_GetBalanceSheetGroupSum]
+ -- Add the parameters for the stored procedure here
+ --@StartAccountID varchar(20),
+ --@EndAccountID varchar(20),
+ @StartDate date,
+ @EndDate date
+AS
+BEGIN
+ -- SET NOCOUNT ON added to prevent extra result sets from
+ -- interfering with SELECT statements.
+ SET NOCOUNT ON;
+--===========================================================================
+ --หาวันแรกของปีบัญชี 
+ Declare @AccountPeriodStart date
+ --set @AccountPeriodStart = (select  dbo.AccountPeriodDetail.StartDate
+ --   FROM dbo.AccountPeriod INNER JOIN
+ --                     dbo.AccountPeriodDetail ON dbo.AccountPeriod.Oid = dbo.AccountPeriodDetail.AccountPeriod
+ --   WHERE (dbo.AccountPeriod.Status = 0) 
+ --    AND (dbo.AccountPeriodDetail.ItemNo = 1))
+ set @AccountPeriodStart = (select ap.startdate from AccountPeriod ap
+							where ap.startdate <= @StartDate 
+							and ap.enddate >= @StartDate) 
+--===========================================================================
+select 
+	AccountTypeName,
+	AccountGroupID, 
+	AccountGroupName, 
+	ParentAccount, 
+	ParentAccountName,
+	sum(case when ForwardDr < 0 then 0
+		 when ForwardCr < 0 then -ForwardCr
+		 else ForwardDr 
+	end) as ForwardDr,
+	sum(case when ForwardCr < 0 then 0 
+		 when ForwardDr < 0 then - ForwardDr
+		 else ForwardCr 
+	end) as ForwardCr,
+	sum(CurrentDr) As CurrentDr,
+	sum(CurrentCr) As CurrentCr,
+	sum(case when TotalDr < 0 then 0
+		 when TotalCr < 0 then -TotalCr
+		 else TotalDr 
+	end) as TotalDr,
+	sum(case when TotalCr < 0 then 0 
+		 when TotalDr < 0 then - TotalDr
+		 else TotalCr 
+	end) as TotalCr
+from(
+	select 
+		 AccountID,
+		 AccountName,
+		 AccountTypeName,
+		 AccountGroupID, 
+		 AccountGroupName, 
+		 ParentAccount, 
+		 ParentAccountName,
+		 Nature,
+		 case Nature
+			when 0 then (GlForwardDr) - (GlForwardCr) 
+			when 1 then 0
+		 end as ForwardDr,
+		 case Nature
+			when 0 then 0
+			when 1 then  (GlForwardCr) - (GlForwardDr) 
+		 end as ForwardCr,
+		 CurrentDr,
+		 CurrentCr,
+		 case Nature
+		  when 0 then
+		   ((GlForwardDr) - (GlForwardCr)) + (CurrentDr - CurrentCr)
+		  else 0
+		 end As TotalDr,
+		 case Nature 
+		  when 1 then
+		   ((GlForwardCr) - (GlForwardDr)) + (CurrentCr - CurrentDr)
+		  else 0
+		 end As TotalCr
+	from(
+		SELECT ac.AccountID, 
+		   ac.AccountName,
+		   at.AccountTypeName,
+		   ag.AccountGroupID, 
+		   ag.AccountGroupName, 
+		   pr.AccountID AS ParentAccount, 
+		   pr.AccountName AS ParentAccountName, 
+		   ag.Nature,
+		   ISNULL((SELECT SUM(gl2.DrAmnt) FROM  dbo.GL gl2
+				WHERE  (gl2.AccID = ac.AccountID)
+				 and (gl2.DocuDate <= @StartDate)
+				 and (gl2.DocuDate >= @AccountPeriodStart)
+				GROUP BY AccountName, AccID ),0) as GlForwardDr,
+		   ISNULL((SELECT SUM(gl3.CrAmnt) FROM    dbo.GL gl3
+				WHERE  (gl3.AccID = ac.AccountID)
+				 and (gl3.DocuDate <= @StartDate)
+				 and (gl3.DocuDate >= @AccountPeriodStart)
+				GROUP BY AccountName, AccID ),0) as GlForwardCr ,
+			ISNULL((select sum(gl.DrAmnt) 
+				from GL gl 
+				where gl.AccID = ac.AccountID and (gl.DocuDate between @StartDate and @EndDate) and (gl.ListNo <> '0000')
+				group by gl.AccID),0) as CurrentDr,
+			ISNULL((select sum(gl.CrAmnt) 
+				from GL gl 
+				where gl.AccID = ac.AccountID and (gl.DocuDate between @StartDate and @EndDate) and (gl.ListNo <> '0000')
+				group by gl.AccID),0) as CurrentCr
+		FROM  dbo.Account AS ac LEFT OUTER JOIN
+			dbo.Account AS pr ON ac.ParentAccount = pr.Oid INNER JOIN
+			dbo.AccountType AS at ON ac.AccountType = at.Oid INNER JOIN
+            dbo.AccountGroup AS ag ON ac.AccountGroup = ag.Oid
+		--where (ac.AccountID between @StartAccountID and @EndAccountID)
+		where ag.AccountGroupID in ('1003','1004')
+) as TempTable) as FinalTable 
+where abs( FinalTable.TotalCr - FinalTable.TotalDr) <> 0
+GROUP BY 
+	AccountTypeName,
+	AccountGroupID, 
+	AccountGroupName, 
+	ParentAccount, 
+	ParentAccountName
+order by ParentAccount
+END
+
+
+
+GO
+
+
