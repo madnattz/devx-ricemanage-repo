@@ -5440,6 +5440,10 @@
         <ColumnInfo Id="IsAssLeader" Width="78" Index="5" />
         <ColumnInfo Id="Status" Index="6" />
       </Columns>
+      <HiddenActions>
+        <ActionLink ActionId="Link" IsNewNode="True" />
+        <ActionLink ActionId="Unlink" IsNewNode="True" />
+      </HiddenActions>
       <Sorting>
         <SortProperty Id="MemberID_asc" PropertyName="MemberID" Index="0" IsNewNode="True" />
       </Sorting>
