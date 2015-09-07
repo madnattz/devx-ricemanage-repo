@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Title="ระบบจัดการการผลิตและจำหน่ายเมล็ดพันธุ์" Copyright="RiceThailand.go.th" Description="">
+  <ActionDesign>
+    <Actions>
+      <Action Id="Delete" ConfirmationMessage="ท่านต้องการลบข้อมูลนี้ ใช่หรือไม่?" />
+    </Actions>
+  </ActionDesign>
+  <BOModel>
+    <Class Name="DevExpress.ExpressApp.Security.AuthenticationStandardLogonParameters">
+      <OwnMembers>
+        <Member Name="Password" Caption="รหัสผ่าน" />
+        <Member Name="UserName" Caption="ชื่อผู้ใช้งาน" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <Options Skin="Visual Studio 2013 Light" UIType="TabbedMDI" FormStyle="Ribbon">
+    <RibbonOptions RibbonControlStyle="Office2013" />
+  </Options>
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="14.2.5.0" IsNewNode="True" />
+    <SchemaModule Name="SystemWindowsFormsModule" Version="14.2.5.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <DetailView Id="AuthenticationStandardLogonParameters_DetailView" Caption="เข้าสู่ระบบ">
+      <Items>
+        <StaticText Id="LogonText" Text="ยินดีต้อนรับ กรุณากรอก ชื่อผู้ใช้งาน และ รหัสผ่าน ด้านล่างนี้" Caption="ยินดีต้อนรับ กรุณากรอก ชื่อผู้ใช้งาน และ รหัสผ่าน ด้านล่างนี้" />
+        <PropertyEditor Id="Password" Caption="รหัสผ่าน" />
+        <PropertyEditor Id="UserName" Caption="ชื่อผู้ใช้งาน" />
+      </Items>
+    </DetailView>
+    <ListView Id="BuySeed_BuySeedWeights_ListView" NewItemRowPosition="Bottom" AllowEdit="True" />
+    <ListView Id="BuySeedWeight_ListView" NewItemRowPosition="Bottom" AllowEdit="True" />
+    <DetailView Id="User_DetailView">
+      <Items>
+        <PropertyEditor Id="ChangePasswordOnFirstLogon" Caption="เปลี่ยรหัสผ่านเมื่อเข้าสู่ระบบครั้งแรก" />
+        <PropertyEditor Id="DisplayName" Caption="ชื่อ-นามสกุล" />
+        <PropertyEditor Id="IsActive" Caption="เปิดใช้งาน" />
+        <PropertyEditor Id="Roles" Caption="สิทธิ์การใช้งาน" />
+        <PropertyEditor Id="UserName" Caption="ชื่อผู้ใช้งาน" />
+      </Items>
+    </DetailView>
+  </Views>
+</Application>

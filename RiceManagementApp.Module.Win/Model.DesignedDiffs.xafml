@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Logo="RiceLogo" AboutInfoString="{0:ProductName}&lt;br&gt;{0:Version}&lt;br&gt;{0:Copyright}&lt;br&gt;{0:Description}Powered by NTi.co.th" Copyright="RiceThailand.go.th">
+  <ActionDesign>
+    <Actions>
+      <Action Id="OpenObject" Caption="ข้อมูลเชื่อมโยง" Index="-1" />
+    </Actions>
+    <ActionToContainerMapping>
+      <ActionContainer Id="OpenObject" Removed="True" />
+    </ActionToContainerMapping>
+  </ActionDesign>
+  <BOModel>
+    <Class Name="RiceManagementApp.Module.AccountID">
+      <OwnMembers>
+        <Member Name="Account" DataSourceCriteria="[PublicStatus] = ##Enum#RiceManagementApp.Module.PublicStatus,Activate#" />
+      </OwnMembers>
+    </Class>
+    <Class Name="RiceManagementApp.Module.AccountPeriod">
+      <OwnMembers>
+        <Member Name="AccountYear" PropertyEditorType="RiceManagementApp.Module.Win.CustomYearDropdown" />
+      </OwnMembers>
+    </Class>
+    <Class Name="RiceManagementApp.Module.ArrangeSeedLot">
+      <OwnMembers>
+        <Member Name="SeedYear" PropertyEditorType="RiceManagementApp.Module.Win.CustomYearDropdown" />
+      </OwnMembers>
+    </Class>
+    <Class Name="RiceManagementApp.Module.AuditBuyPlanDetail">
+      <OwnMembers>
+        <Member Name="PlanYear" PropertyEditorType="RiceManagementApp.Module.Win.CustomYearDropdown" />
+      </OwnMembers>
+    </Class>
+    <Class Name="RiceManagementApp.Module.AuditCheckFarmPlanDetail">
+      <OwnMembers>
+        <Member Name="PlanYear" PropertyEditorType="RiceManagementApp.Module.Win.CustomYearDropdown" />
+      </OwnMembers>
+    </Class>
+    <Class Name="RiceManagementApp.Module.AuditGrowPlanDetail">
+      <OwnMembers>
+        <Member Name="PlanYear" PropertyEditorType="RiceManagementApp.Module.Win.CustomYearDropdown" />
+      </OwnMembers>
+    </Class>
+    <Class Name="RiceManagementApp.Module.AuditKeepPlanDetail">
+      <OwnMembers>
+        <Member Name="PlanYear" PropertyEditorType="RiceManagementApp.Module.Win.CustomYearDropdown" />
+      </OwnMembers>
+    </Class>
+    <Class Name="RiceManagementApp.Module.AuditProcessPlanDetail">
+      <OwnMembers>
+        <Member Name="PlanYear" PropertyEditorType="RiceManagementApp.Module.Win.CustomYearDropdown" />
+      </OwnMembers>
+    </Class>
+    <Class Name="RiceManagementApp.Module.AuditSalePlanDetail">
+      <OwnMembers>
+        <Member Name="PlanYear" PropertyEditorType="RiceManagementApp.Module.Win.CustomYearDropdown" />
+      </OwnMembers>
+    </Class>
+    <Class Name="RiceManagementApp.Module.BuyPlanDetail">
+      <OwnMembers>
+        <Member Name="PlanYear" PropertyEditorType="RiceManagementApp.Module.Win.CustomYearDropdown" />
+      </OwnMembers>
+    </Class>
+    <Class Name="RiceManagementApp.Module.EventAccCostID">
+      <OwnMembers>
+        <Member Name="YearID" PropertyEditorType="RiceManagementApp.Module.Win.CustomYearDropdown" />
+      </OwnMembers>
+    </Class>
+    <Class Name="RiceManagementApp.Module.EventPayDateID">
+      <OwnMembers>
+        <Member Name="YearID" PropertyEditorType="RiceManagementApp.Module.Win.CustomYearDropdown" />
+      </OwnMembers>
+    </Class>
+    <Class Name="RiceManagementApp.Module.GrowPlanDetail">
+      <OwnMembers>
+        <Member Name="PlanYear" PropertyEditorType="RiceManagementApp.Module.Win.CustomYearDropdown" />
+      </OwnMembers>
+    </Class>
+    <Class Name="RiceManagementApp.Module.HarvestPlanDetail">
+      <OwnMembers>
+        <Member Name="PlanYear" PropertyEditorType="RiceManagementApp.Module.Win.CustomYearDropdown" />
+      </OwnMembers>
+    </Class>
+    <Class Name="RiceManagementApp.Module.MainPlan">
+      <OwnMembers>
+        <Member Name="Lot" PropertyEditorType="RiceManagementApp.Module.Win.CustomLotDropdown" />
+        <Member Name="SeedYear" PropertyEditorType="RiceManagementApp.Module.Win.CustomYearDropdown" />
+      </OwnMembers>
+    </Class>
+    <Class Name="RiceManagementApp.Module.PickMaterial">
+      <OwnMembers>
+        <Member Name="UseWithSeedYear" PropertyEditorType="RiceManagementApp.Module.Win.CustomYearDropdown" />
+      </OwnMembers>
+    </Class>
+    <Class Name="RiceManagementApp.Module.PlanFarmerSeedSouce">
+      <OwnMembers>
+        <Member Name="SeedYear" PropertyEditorType="RiceManagementApp.Module.Win.CustomYearDropdown" />
+      </OwnMembers>
+    </Class>
+    <Class Name="RiceManagementApp.Module.QualityAudit">
+      <OwnMembers>
+        <Member Name="SeedYear" PropertyEditorType="RiceManagementApp.Module.Win.CustomYearDropdown" />
+      </OwnMembers>
+    </Class>
+    <Class Name="RiceManagementApp.Module.ReceiveMaterialDetail">
+      <OwnMembers>
+        <Member Name="MaterialYear" PropertyEditorType="RiceManagementApp.Module.Win.CustomYearDropdown" />
+      </OwnMembers>
+    </Class>
+    <Class Name="RiceManagementApp.Module.ReceiveSeedDetail">
+      <OwnMembers>
+        <Member Name="SeedYear" PropertyEditorType="RiceManagementApp.Module.Win.CustomYearDropdown" />
+      </OwnMembers>
+    </Class>
+    <Class Name="RiceManagementApp.Module.SeedPrice" Caption="ราคาเพดานเมล็ดพันธุ์">
+      <OwnMembers>
+        <Member Name="SeedYear" PropertyEditorType="RiceManagementApp.Module.Win.CustomYearDropdown" />
+      </OwnMembers>
+    </Class>
+    <Class Name="RiceManagementApp.Module.Vacation">
+      <OwnMembers>
+        <Member Name="Year" PropertyEditorType="RiceManagementApp.Module.Win.CustomYearDropdown" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <CreatableItems>
+    <CreatableItem ClassName="RiceManagementApp.Module.AccCostData" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.Account" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.AccountBookID" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.AccountBookJV" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.AccountBookPV" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.AccountBookRV" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.AccountGFMIS" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.AccountGroup" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.AccountPeriod" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.AccountReportNav" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.AccountType" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.ActivityName" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.ActivityPlan" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.ActivityPlanReport" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.ApproveBuy" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.ArrangeSeedLot" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.ArrangeSeedLotDetail" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.AssociationGroup" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.AuditActivityPlan" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.AuditBuyPlanDetail" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.AuditCheckFarmPlanDetail" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.AuditGrowPlanDetail" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.AuditKeepPlanDetail" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.AuditProcessPlanDetail" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.AuditSalePlanDetail" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.BusinessClass" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.BuyFarmer" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.BuyPlan" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.BuyPlanDetail" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.BuyPosition" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.BuyQualitySettings" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.BuySeed" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.BuySeedWeight" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.CheckFarm" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.CheckFarmSummary" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.ConfigAccount" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.CostTypeID" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.CustomAddress" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.DemoPlanBudget01" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.DemoPlanBudget02" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.DemoPlanBudgetDetail01" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.DemoPlanBudgetDetail02" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.DemoResultBudget01" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.DemoResultBudget02" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.Employee" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.EstimateByGrowType" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.EventAccCostID" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.EventAccountBID" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.EventBringforward" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.EventGLID" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.EventPayDateID" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.ExpenseCategories" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.FactoryInventory" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.FactoryMaterialInventory" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.FactoryMaterialTransaction" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.FactoryPickMaterial" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.FactoryPickMaterialDetail" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.FactoryPickProcess" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.FactoryPickSeed" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.FactoryPickSeedDetail" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.FactoryReturnSeed" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.FactoryReturnSeedDetail" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.FactorySeedProcess" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.FactorySeedProcessDetail" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.FactorySeedProcessToday" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.FactoryTransaction" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.Farm" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.Farmer" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.FarmerGroup" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.Forecast" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.GFMISTypePV" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.GFMISTypeRV" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.GrowPlan" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.GrowPlanDetail" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.GrowType" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.HarvestPlan" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.HarvestPlanDetail" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.MainPlan" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.Material" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.MaterialProduct" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.MaterialTransaction" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.Member" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.MoneyType" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.OrganizationSection" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.PickMaterial" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.PickMaterialDetail" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.PickSeed" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.PickSeedDetail" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.PickType" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.PlanAssignBuyTeam" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.PlanBudget02" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.PlanBudget02_Detail" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.PlanFarmer" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.PlanFarmerFarm" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.PlanFarmerGroup" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.PlanFarmerGrow" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.PlanFarmerSeedSouce" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.PlanSeedNeed" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.Plant" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.Positions" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.PrefixName" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.ProjectName" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.Province" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.QualityAudit" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.QualityAuditStep" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.ReceiveMaterial" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.ReceiveSeed" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.ReceiveTransferMaterial" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.ReceiveTransferMaterialDetail" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.ReceiveTransferSeed" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.ReceiveTransferSeedDetail" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.ReceiveType" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.ReferenceLotNo" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.ReserveSeed" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.ReserveSeedDetail" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.RestoreMaterial" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.RestoreMaterialDetail" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.ResultBudget02" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.Sale" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.SaleDetail" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.SalePrice" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.Season" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.SeedClass" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.SeedClubs" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.SeedMembers" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.SeedPrice" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.SeedProduct" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.SeedStatus" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.SeedTransaction" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.SeedType" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.Site" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.SiteSetting" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.SubmitAccCostReport" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.SubmitAuditActivityReport" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.SubmitCheckFarmSummaryReport" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.SubmitCheckQualityForMonthReport" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.SubmitCheckRedSeedReport" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.SubmitPayDateReport" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.SubmitPlantKP2" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.SubmitPlantKP3" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.SubmitPlantKP5" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.SubmitProcess" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.SubmitProcessDetail" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.SubmitQualityBetweenStorage" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.SubmitQualityForBuyReport" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.SubmitQualityHistoryReport" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.SubmitTrialBalacneReport" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.SummaryBuy" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.SummaryBuyFarmer" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.TransferMaterial" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.TransferMaterialDetail" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.TransferSeed" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.TransferSeedDetail" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.TransferType" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.UnitID" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.User" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.Vacation" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.VacationDetail" Removed="True" />
+    <CreatableItem ClassName="RiceManagementApp.Module.VacationSetting" Removed="True" />
+  </CreatableItems>
+  <Localization>
+    <LocalizationGroup Name="Exceptions">
+      <LocalizationGroup Name="UserVisibleExceptions">
+        <LocalizationGroup Name="Validation">
+          <LocalizationItem Name="ActionErrorMessageHeaderFormat" Value="พบข้อผิดพลาดในการบันทึกข้อมูล กรุณาตรวจสอบข้อมูล ดังต่อไปนี้" />
+          <LocalizationItem Name="AllContextsErrorMessageHeader" Value="พบข้อผิดพลาดในการบันทึกข้อมูล กรุณาตรวจสอบข้อมูล ดังต่อไปนี้" />
+          <LocalizationItem Name="SaveErrorMessageHeader" Value="พบข้อผิดพลาดในการบันทึกข้อมูล กรุณาตรวจสอบข้อมูล ดังต่อไปนี้" />
+          <LocalizationItem Name="ValidationSucceededMessageHeader" Value="ไม่พบข้อผิดพลาด" />
+        </LocalizationGroup>
+      </LocalizationGroup>
+    </LocalizationGroup>
+    <LocalizationGroup Name="Messages">
+      <LocalizationItem Name="User" Value="ผู้ใช้งาน : {0}" />
+      <LocalizationItem Name="ValidationErrorMessage" Value="เกิดข้อผิดพลาด" />
+      <LocalizationItem Name="ValidationInformationMessage" Value="ข้อผิดพลาด" />
+    </LocalizationGroup>
+  </Localization>
+  <NavigationItems>
+    <Items>
+      <Item Id="PlanNav" Index="0" />
+      <Item Id="AuditNav" Index="1" />
+      <Item Id="BuySeedNav" Index="2" />
+      <Item Id="FactoryNav" Index="4" />
+      <Item Id="Reports" Index="7" />
+      <Item Id="Default" Index="8" />
+    </Items>
+  </NavigationItems>
+  <Options UIType="StandardMDI" />
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="14.2.5.0" IsNewNode="True" />
+    <SchemaModule Name="SystemWindowsFormsModule" Version="14.2.5.0" IsNewNode="True" />
+  </SchemaModules>
+  <Validation>
+    <ErrorMessageTemplates>
+      <RuleRequiredField MessageTemplateMustNotBeEmpty="กรุณากรอกข้อมูล &quot;{TargetPropertyName}&quot;" />
+      <RuleUniqueValue MessageTemplateMustBeUnique="มีข้อมูล &quot;{TargetPropertyName}&quot;. &quot;{TargetPropertyName}&quot; นี้แล้ว ไม่สามารถบันทึกข้อมูลได้" />
+      <RuleValueComparison MessageTemplateMustBeGreaterThanOperand="&quot;{TargetPropertyName}&quot; ต้องมีค่ามากกว่า &quot;{RightOperand}&quot;." />
+    </ErrorMessageTemplates>
+  </Validation>
+  <Views>
+    <DetailView Id="AboutInfo_DetailView">
+      <Items>
+        <StaticImage Id="Logo" ImageName="Action_AboutInfo" />
+      </Items>
+    </DetailView>
+    <ListView Id="AccountBookJV_AccountID_ListView">
+      <Columns>
+        <ColumnInfo Id="Account" DataSourceCriteria="[PublicStatus] = ##Enum#RiceManagementApp.Module.PublicStatus,Activate#" />
+      </Columns>
+    </ListView>
+    <ListView Id="AccountBookPV_AccountID_ListView">
+      <Columns>
+        <ColumnInfo Id="Account" DataSourceCriteria="[PublicStatus] = ##Enum#RiceManagementApp.Module.PublicStatus,Activate#" />
+      </Columns>
+    </ListView>
+    <ListView Id="AccountBookRV_AccountID_ListView">
+      <Columns>
+        <ColumnInfo Id="Account" DataSourceCriteria="[PublicStatus] = ##Enum#RiceManagementApp.Module.PublicStatus,Activate#" />
+      </Columns>
+    </ListView>
+    <ListView Id="ContextValidationResult_ListView">
+      <Columns>
+        <ColumnInfo Id="Context" Width="83" />
+        <ColumnInfo Id="ContextValidationOutcome" Width="107" />
+      </Columns>
+    </ListView>
+    <ListView Id="RuleSetValidationResultItem_ByTarget_ListView">
+      <Columns>
+        <ColumnInfo Id="TargetCaption" Width="183" SortOrder="Descending" Index="-1" />
+        <ColumnInfo Id="ErrorMessage" Index="0" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

@@ -1,0 +1,2771 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://rsms.ricethailand.go.th/webservices/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://rsms.ricethailand.go.th/webservices/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://rsms.ricethailand.go.th/webservices/">
+      <s:element name="Authenticate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthenticateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthenticateResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="f" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="FileName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SiteID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SecurityKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendFileResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUpdateProvince">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProvinceId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUpdateProvinceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUpdateProvinceResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUpdateDistrict">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProvinceId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DistrictId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUpdateDistrictResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUpdateDistrictResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUpdateSubDistrict">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProvinceId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DistrictId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SubDistrictId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUpdateSubDistrictResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUpdateSubDistrictResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSiteInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SiteType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SiteNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSiteInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSiteInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Account">
+        <s:complexType />
+      </s:element>
+      <s:element name="AccountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AccountResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUpdatePlant">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetUpdatePlantResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUpdatePlantResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitDataKp2Report">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SecureID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KP2Data" type="tns:KP2ReportData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="KP2ReportData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SiteNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SiteName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PlantName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedTypeName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedClassName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeasonName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedYear" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedLot" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SubmitDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="SubmitBy" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="KP2ReportDetails" type="tns:ArrayOfKP2ReportDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfKP2ReportDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="KP2ReportDetail" nillable="true" type="tns:KP2ReportDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="KP2ReportDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="FarmerNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FarmerName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FarmerGroupNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FarmerGroupName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AddressNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Moo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tambol" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Amphur" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Province" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AreaSize" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SeedUseQuantity" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SeedGoalQuantity" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedSource" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsMaxBuyFarmer" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SubmitDataKp2ReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubmitDataKp2ReportResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitDataKp3Report">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SecureID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KP3Data" type="tns:KP3ReportData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="KP3ReportData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SiteNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SiteName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PlantName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedTypeName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedClassName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeasonName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedYear" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedLot" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SubmitDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="SubmitBy" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="KP3ReportDetails" type="tns:ArrayOfKP3ReportDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfKP3ReportDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="KP3ReportDetail" nillable="true" type="tns:KP3ReportDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="KP3ReportDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="FarmerNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FarmerName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FarmerGroupNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FarmerGroupName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AddressNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Moo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tambol" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Amphur" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Province" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GroupAddressNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GroupMoo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GroupTambol" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GroupAmphur" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GroupProvince" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AreaSize" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SeedRecieveQuantity" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SeedUseQuantity" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SeedGoalQuantity" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsMaxBuyFarmer" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="GrowStartDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="GrowEndDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="CheckFarmStartDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="CheckFarmEndDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="HarvestStartDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="HarvestEndDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="BuyStartDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="BuyEndDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProcessStartDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProcessEndDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="MarketStartDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="MarketEndDate" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SubmitDataKp3ReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubmitDataKp3ReportResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitDataKp5Report">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SecureID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KP5Data" type="tns:KP5ReportData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="KP5ReportData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SiteNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SiteName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PlantName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedTypeName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedClassName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeasonName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedYear" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedLot" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SubmitDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="SubmitBy" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="KP5ReportDetails" type="tns:ArrayOfKP5ReportDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfKP5ReportDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="KP5ReportDetail" nillable="true" type="tns:KP5ReportDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="KP5ReportDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="FarmerNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FarmerName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FarmerGroupNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FarmerGroupName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AddressNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Moo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tambol" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Amphur" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Province" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AreaSize" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="QuantityPerUnit" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="BuyQuantity" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsMaxBuyFarmer" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="SeedPrice" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SubmitDataKp5ReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubmitDataKp5ReportResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitDataPlanAndResultReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SecureID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReportData" type="tns:ArrayOfActivityPlanReportData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfActivityPlanReportData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ActivityPlanReportData" nillable="true" type="tns:ActivityPlanReportData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ActivityPlanReportData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SiteNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SiteName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PlantName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedTypeName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedClassName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeasonName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedYear" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedLot" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="GoalQuantity" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="BuyQuantity" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalAreaSize" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalFarmerGroup" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalFarmer" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SubmitDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="SubmitBy" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GrowPlanDetails" type="tns:ArrayOfGrowPlanDetail" />
+          <s:element minOccurs="0" maxOccurs="1" name="HarvestPlanDetails" type="tns:ArrayOfHarvestPlanDetail" />
+          <s:element minOccurs="0" maxOccurs="1" name="BuyPlanDetails" type="tns:ArrayOfBuyPlanDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfGrowPlanDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GrowPlanDetail" nillable="true" type="tns:GrowPlanDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GrowPlanDetail">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="StartDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="EndDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Remark" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Oct1_2Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Oct1_2Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Oct3_4Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Oct3_4Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Nov1_2Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Nov1_2Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Nov3_4Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Nov3_4Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Dec1_2Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Dec1_2Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Dec3_4Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Dec3_4Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Jan1_2Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Jan1_2Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Jan3_4Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Jan3_4Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Feb1_2Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Feb1_2Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Feb3_4Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Feb3_4Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Mar1_2Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Mar1_2Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Mar3_4Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Mar3_4Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Apr1_2Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Apr1_2Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Apr3_4Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Apr3_4Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="May1_2Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="May1_2Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="May3_4Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="May3_4Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Jun1_2Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Jun1_2Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Jun3_4Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Jun3_4Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Jul1_2Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Jul1_2Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Jul3_4Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Jul3_4Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Aug1_2Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Aug1_2Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Aug3_4Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Aug3_4Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Sep1_2Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Sep1_2Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Sep3_4Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Sep3_4Result" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfHarvestPlanDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="HarvestPlanDetail" nillable="true" type="tns:HarvestPlanDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="HarvestPlanDetail">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="StartDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="EndDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Remark" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Oct1_2Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Oct1_2Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Oct3_4Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Oct3_4Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Nov1_2Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Nov1_2Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Nov3_4Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Nov3_4Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Dec1_2Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Dec1_2Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Dec3_4Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Dec3_4Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Jan1_2Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Jan1_2Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Jan3_4Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Jan3_4Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Feb1_2Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Feb1_2Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Feb3_4Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Feb3_4Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Mar1_2Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Mar1_2Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Mar3_4Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Mar3_4Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Apr1_2Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Apr1_2Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Apr3_4Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Apr3_4Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="May1_2Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="May1_2Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="May3_4Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="May3_4Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Jun1_2Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Jun1_2Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Jun3_4Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Jun3_4Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Jul1_2Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Jul1_2Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Jul3_4Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Jul3_4Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Aug1_2Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Aug1_2Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Aug3_4Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Aug3_4Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Sep1_2Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Sep1_2Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Sep3_4Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Sep3_4Result" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfBuyPlanDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="BuyPlanDetail" nillable="true" type="tns:BuyPlanDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BuyPlanDetail">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="StartDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="EndDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Remark" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Oct1_2Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Oct1_2Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Oct3_4Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Oct3_4Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Nov1_2Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Nov1_2Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Nov3_4Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Nov3_4Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Dec1_2Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Dec1_2Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Dec3_4Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Dec3_4Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Jan1_2Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Jan1_2Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Jan3_4Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Jan3_4Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Feb1_2Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Feb1_2Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Feb3_4Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Feb3_4Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Mar1_2Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Mar1_2Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Mar3_4Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Mar3_4Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Apr1_2Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Apr1_2Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Apr3_4Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Apr3_4Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="May1_2Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="May1_2Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="May3_4Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="May3_4Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Jun1_2Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Jun1_2Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Jun3_4Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Jun3_4Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Jul1_2Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Jul1_2Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Jul3_4Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Jul3_4Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Aug1_2Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Aug1_2Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Aug3_4Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Aug3_4Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Sep1_2Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Sep1_2Result" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Sep3_4Plan" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Sep3_4Result" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SubmitDataPlanAndResultReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubmitDataPlanAndResultReportResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitDataCheckFarmReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SecureID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CheckFarmData" type="tns:CheckFarmHeader" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CheckFarmHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SiteNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SiteName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PlantName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedTypeName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedClassName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeasonName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedYear" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedLot" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SubmitDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="SubmitBy" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CheckFarmDetails" type="tns:ArrayOfCheckFarmDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCheckFarmDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CheckFarmDetail" nillable="true" type="tns:CheckFarmDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CheckFarmDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="FarmerNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FarmerName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="GrowAreaSize" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="EstimateResultPerArea" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="CheckPeriod" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="GrowTypeString" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OtherSeedValue" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="RedSeedValue" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Disease" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Bug" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Weed" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Broken" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Distance" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DamageArea" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CheckDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CheckResults" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Remark" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SubmitDataCheckFarmReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubmitDataCheckFarmReportResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitDataCheckFarmSummaryReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SecureID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReportData" type="tns:ArrayOfCheckFarmSummaryHeader" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCheckFarmSummaryHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CheckFarmSummaryHeader" nillable="true" type="tns:CheckFarmSummaryHeader" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CheckFarmSummaryHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SiteNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SiteName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PlantName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedTypeName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedClassName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeasonName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedYear" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedLot" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SubmitDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="SubmitBy" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Remark" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CheckFarmSummaryDetails" type="tns:ArrayOfCheckFarmSummaryDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCheckFarmSummaryDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CheckFarmSummaryDetail" nillable="true" type="tns:CheckFarmSummaryDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CheckFarmSummaryDetail">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="OctPlanSize" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="OctCheckSize" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="OctPassSize" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="OctFullDamageSize" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="OctFailReason" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NovPlanSize" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NovCheckSize" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NovPassSize" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NovFullDamageSize" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="NovFailReason" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DecPlanSize" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DecCheckSize" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DecPassSize" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DecFullDamageSize" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DecFailReason" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="JanPlanSize" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="JanCheckSize" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="JanPassSize" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="JanFullDamageSize" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="JanFailReason" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FebPlanSize" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="FebCheckSize" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="FebPassSize" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="FebFullDamageSize" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="FebFailReason" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MarPlanSize" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MarCheckSize" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MarPassSize" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MarFullDamageSize" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="MarFailReason" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AprPlanSize" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="AprCheckSize" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="AprPassSize" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="AprFullDamageSize" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="AprFailReason" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MayPlanSize" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MayCheckSize" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MayPassSize" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MayFullDamageSize" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="MayFailReason" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="JunPlanSize" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="JunCheckSize" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="JunPassSize" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="JunFullDamageSize" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="JunFailReason" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="JulPlanSize" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="JulCheckSize" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="JulPassSize" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="JulFullDamageSize" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="JulFailReason" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AugPlanSize" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="AugCheckSize" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="AugPassSize" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="AugFullDamageSize" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="AugFailReason" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SepPlanSize" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SepCheckSize" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SepPassSize" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SepFullDamageSize" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SepFailReason" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SubmitDataCheckFarmSummaryReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubmitDataCheckFarmSummaryReportResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitCheckRedSeedReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SecureID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReportData" type="tns:CheckRedSeedData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CheckRedSeedData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SiteNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SiteName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeasonName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedYear" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MainSeedAll" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MainSeedNoRedSeed" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MainSeedRedSeed" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Main1" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Main2" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Main3" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Main4" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Main5" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Main6_10" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Main11_15" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Main16_20" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Main21_25" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Main26_30" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Main31_40" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Main41_50" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Main51_100" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Main101_150" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Main151_200" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MainMore200" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="BuySeedAll" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="BuySeedNoRedSeed" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="BuySeedRedSeed" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Buy1" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Buy2" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Buy3" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Buy4" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Buy5" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Buy6_10" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Buy11_15" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Buy16_20" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Buy21_25" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Buy26_30" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Buy31_40" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Buy41_50" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Buy51_100" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Buy101_150" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Buy151_200" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="BuyMore200" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SubmitDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="SubmitBy" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SubmitCheckRedSeedReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubmitCheckRedSeedReportResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitCheckQualityForMonth">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SecureID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReportData" type="tns:ArrayOfCheckQualityForMonthData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCheckQualityForMonthData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CheckQualityForMonthData" nillable="true" type="tns:CheckQualityForMonthData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CheckQualityForMonthData">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CheckMonthNo" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CheckMonthName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CheckYear" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SiteNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SiteName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedTypeName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedClassName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeasonName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedYear" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedLot" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StepName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SampleCount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Wet" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Compound" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Grow" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Strong" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PureSeed" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="OtherSeed" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="OtherRice" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="RedSeed" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="GreenSeed" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="FloatSeed" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Insect" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DiseaseSeed" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="KOH" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Iodine" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="StickySeed" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="AATest" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="AllTestCount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PassQuantity" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Remark" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SubmitDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="SubmitBy" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SubmitCheckQualityForMonthResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubmitCheckQualityForMonthResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitDataDailyProcessReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SecureID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DailyProcessData" type="tns:DailyProcessHeader" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DailyProcessHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SiteNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SiteName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SubmitDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="SubmitBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="StartDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="EndDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProcessWeek" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProcessMonth" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProcessYear" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProcessDateFullName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DailyProcessDetails" type="tns:ArrayOfDailyProcessDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfDailyProcessDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DailyProcessDetail" nillable="true" type="tns:DailyProcessDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DailyProcessDetail">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ProcessDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="PlantName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClassName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeasonName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedYear" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OutputQuantity" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="NormalTime" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="OverTime" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ShiftTime" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ImproveComplete" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="FactoryName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SubmitDataDailyProcessReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubmitDataDailyProcessReportResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitDataQualityForBuyReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SecureID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="QualityForBuyData" type="tns:QualityForBuyHeader" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="QualityForBuyHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SiteNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SiteName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PlantName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedTypeName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedClassName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeasonName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedYear" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedLot" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SubmitDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="SubmitBy" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="QualityForBuyDetails" type="tns:ArrayOfQualityForBuyDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfQualityForBuyDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="QualityForBuyDetail" nillable="true" type="tns:QualityForBuyDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="QualityForBuyDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SampleNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PlanFarmerNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PlanFarmerName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClassName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Quantity" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="WetSeed" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="PureSeed" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="CompoundSeed" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="OtherRiceSeed" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="RedSeed" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="GrowSeed" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="OtherSeed" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="CheckDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CheckResult" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ExampleNo" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SubmitDataQualityForBuyReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubmitDataQualityForBuyReportResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitDataQualityHistoryReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SecureID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="QualityHistoryData" type="tns:ArrayOfQualityHistoryHeader" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfQualityHistoryHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="QualityHistoryHeader" nillable="true" type="tns:QualityHistoryHeader" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="QualityHistoryHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SiteNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SiteName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PlantName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedTypeName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedClassName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeasonName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedYear" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedLot" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SubmitDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="SubmitBy" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="QualityHistoryDetails" type="tns:ArrayOfQualityHistoryDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfQualityHistoryDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="QualityHistoryDetail" nillable="true" type="tns:QualityHistoryDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="QualityHistoryDetail">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="HeaderNo" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ForBuyWetSeed" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="ForBuyGrowSeed" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="ForBuyRedSeed" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="ForBuyOtherSeed" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="ForBuyCheckDate" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BeforeWetSeed" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="BeforeGrowSeed" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="BeforeCompound" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="BeforeDate" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AfterWetSeed" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="AfterGrowSeed" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="AfterStrongSeed" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="AfterPureSeed" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="AfterCompound" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="AfterRedSeed" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="AfterOtherSeed" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="AfterWeight" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="AfterDate" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SubmitDataQualityHistoryReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubmitDataQualityHistoryReportResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitDataQBS06Report">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SecureID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReportData" type="tns:QualityBetweenStorageHeader" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="QualityBetweenStorageHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SiteNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SiteName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeasonName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedYear" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SubmitDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="SubmitBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SentDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="SentBy" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="QualityBetweenStorageDetails" type="tns:ArrayOfQualityBetweenStorageDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfQualityBetweenStorageDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="QualityBetweenStorageDetail" nillable="true" type="tns:QualityBetweenStorageDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="QualityBetweenStorageDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PlantName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedClassName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedTypeName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeasonName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedYear" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedLot" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BuyDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProcessDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DiffProcessDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Wet" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Grow" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Strong" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SeedWeight" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="LabDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="DiffProcess" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DiffMonthBuy" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SubmitDataQBS06ReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubmitDataQBS06ReportResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitDataQualityActivityReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SecureID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReportData" type="tns:QualityActivityHeader" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="QualityActivityHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SiteNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SiteName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PlantName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedTypeName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedClassName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeasonName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedYear" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedLot" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SeedGoal" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="BuyGoal" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalGrowArea" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalGroup" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalFarmer" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SubmitDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="SubmitBy" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="QualityActivityDetails" type="tns:ArrayOfQualityActivityDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfQualityActivityDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="QualityActivityDetail" nillable="true" type="tns:QualityActivityDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="QualityActivityDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="HeaderNo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ActivityNo" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="PlanName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PlanUnit" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OctValue" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NovValue" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DecValue" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="JanValue" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="FebValue" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MarValue" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="AprValue" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MayValue" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="JunValue" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="JulValue" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="AugValue" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SepValue" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="AllValue" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DiffValue" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SubmitDataQualityActivityReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubmitDataQualityActivityReportResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitReceiveSeed">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SecureID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Data" type="tns:ReceiveSeed" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ReceiveSeed">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="SiteNo" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SiteName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReceiveNo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReceiveDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReceiveReason" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsOtherReceiveType" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReceiveTypeOther" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RefNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReceiveUser" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReceiveUserPosition" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApproveUser" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApproveUserPosition" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Remark" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReceiveSeedDetails" type="tns:ArrayOfReceiveSeedDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfReceiveSeedDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ReceiveSeedDetail" nillable="true" type="tns:ReceiveSeedDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ReceiveSeedDetail">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ReceiveSeed" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Plant" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedClass" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Season" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedYear" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MoneyType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LotNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedSource" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FarmSource" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Quantity" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Bags" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsMixChemical" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsFinishProcess" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SubmitReceiveSeedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubmitReceiveSeedResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitDataTrialBalance">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SecureID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReportData" type="tns:TrialBalanceHeader" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TrialBalanceHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SiteNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SiteName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BalanceDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="SentDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Month" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Year" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SentBy" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TrialBalanceDetails" type="tns:ArrayOfTrialBalanceDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfTrialBalanceDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TrialBalanceDetail" nillable="true" type="tns:TrialBalanceDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TrialBalanceDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AccountID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccountName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalBalance" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SubmitDataTrialBalanceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubmitDataTrialBalanceResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitDataPayDate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SecureID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReportData" type="tns:PayDateHeader" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PayDateHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SiteNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SiteName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SentDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeasonName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SeedMonth" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedYear" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FiscalYear" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SentBy" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PayDateDetails" type="tns:ArrayOfPayDateDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfPayDateDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PayDateDetail" nillable="true" type="tns:PayDateDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PayDateDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SeedName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedClass" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BatchNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RefNo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="WeightDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="RefDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="CenterPayDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="PayDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalDays" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalFamer" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalWeight" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalAmount" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SubmitDataPayDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubmitDataPayDateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitDataAccCost">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SecureID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReportData" type="tns:AccCostHeader" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AccCostHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SiteNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SiteName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SentDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeasonName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SeedMonth" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedYear" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedFiscalYear" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SentBy" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccCostDetails" type="tns:ArrayOfAccCostDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfAccCostDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="AccCostDetail" nillable="true" type="tns:AccCostDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AccCostDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Plant" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Seed" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeasonName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedYear" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AmountSeed" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="AmountSeedGood" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="AmountSeedOut" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalSeed" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalMaterials" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalOil" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalChemical" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PriceSeedGood" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PriceSeedOutUsage" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="CostPriceSeedGood" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="CostPriceSeedOutUsage" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SubmitDataAccCostResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubmitDataAccCostResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitDataTrialBalanceMonth">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SecureID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReportData" type="tns:TrialBalanceMonthHeader" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TrialBalanceMonthHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SiteNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SiteName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BalanceDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="SentDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="BalanceMonth" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="BalanceYear" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SentBy" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TrialBalanceMonthDetail" type="tns:ArrayOfTrialBalanceMonthDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfTrialBalanceMonthDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TrialBalanceMonthDetail" nillable="true" type="tns:TrialBalanceMonthDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TrialBalanceMonthDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AccountID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccountName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ForwardDrCr" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="CurrentDrCr" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalDrCr" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SubmitDataTrialBalanceMonthResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubmitDataTrialBalanceMonthResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitDataPlanBudget02">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SecureID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReportData" type="tns:PlanBudgetHeader02" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PlanBudgetHeader02">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SiteNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SiteName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SentDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="SentBy" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BudgetYear" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BudgetMonth" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="PlanName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProjectName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActivityName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SubActivityName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PlanBudgetDetails" type="tns:ArrayOfPlanBudgetDetail02" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfPlanBudgetDetail02">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PlanBudgetDetail02" nillable="true" type="tns:PlanBudgetDetail02" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PlanBudgetDetail02">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ProjectSubActivityName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PlanBudgetType" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExpenseID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExpenseName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PlanBudgetDetailMonth" type="tns:PlanBudgetDetailMonth02" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResultBudget" type="tns:ResultBudget02" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PlanBudgetDetailMonth02">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="October" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="November" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="December" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="January" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="February" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="March" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="April" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="May" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="June" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="July" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="August" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="September" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ResultBudget02">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="October" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="November" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="December" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="January" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="February" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="March" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="April" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="May" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="June" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="July" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="August" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="September" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SubmitDataPlanBudget02Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubmitDataPlanBudget02Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitDataTrialBalanceTransfer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SecureID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReportData" type="tns:PlanTrialBalanceTransfer03" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PlanTrialBalanceTransfer03">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DataOwner" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SiteNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SiteName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SentDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="SentBy" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PlanYear" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PlanTransferDetailIncome" type="tns:ArrayOfTrialBalanceTransferIncomeData" />
+          <s:element minOccurs="0" maxOccurs="1" name="PlanTransferDetailExpend" type="tns:ArrayOfTrialBalanceTransferExpensesData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfTrialBalanceTransferIncomeData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TrialBalanceTransferIncomeData" nillable="true" type="tns:TrialBalanceTransferIncomeData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TrialBalanceTransferIncomeData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SettingIncomeOid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CatalogueNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="listIncome" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="October" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="November" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="December" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="January" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="February" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="March" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="April" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="May" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="June" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="July" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="August" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="September" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfTrialBalanceTransferExpensesData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TrialBalanceTransferExpensesData" nillable="true" type="tns:TrialBalanceTransferExpensesData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TrialBalanceTransferExpensesData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SettingExpensesOid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CatalogueNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="listExpenses" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="October" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="November" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="December" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="January" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="February" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="March" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="April" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="May" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="June" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="July" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="August" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="September" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SubmitDataTrialBalanceTransferResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubmitDataTrialBalanceTransferResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitDataIncomeAndExpensesMonth">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SecureID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReportData" type="tns:ResultIncomeAndExpensesMonth" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResultIncomeAndExpensesMonth">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DataOwner" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SiteNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SiteName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SentDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="SentBy" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResultYear" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResultMonth" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResultMonthDetailIncome" type="tns:ArrayOfResultMonthIncomeData" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResultMonthDetailExpenses" type="tns:ArrayOfResultMonthExpensesData" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccountGFMISDetailRV" type="tns:ArrayOfAccountGFMISDetailRVDatas" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccountGFMISDetailPV" type="tns:ArrayOfAccountGFMISDetailPVDatas" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfResultMonthIncomeData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ResultMonthIncomeData" nillable="true" type="tns:ResultMonthIncomeData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ResultMonthIncomeData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultIncomeOid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="listID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="listIncome" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IncomeMonth" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="ExpendMonth" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="Note" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfResultMonthExpensesData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ResultMonthExpensesData" nillable="true" type="tns:ResultMonthExpensesData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ResultMonthExpensesData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ResultExpensesOid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="listID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="listExpenses" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IncomeMonth" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="ExpendMonth" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="Note" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfAccountGFMISDetailRVDatas">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="AccountGFMISDetailRVDatas" nillable="true" type="tns:AccountGFMISDetailRVDatas" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AccountGFMISDetailRVDatas">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="listGF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodeGF" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AmountIncome" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfAccountGFMISDetailPVDatas">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="AccountGFMISDetailPVDatas" nillable="true" type="tns:AccountGFMISDetailPVDatas" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AccountGFMISDetailPVDatas">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="listGF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodeGF" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AmountExpenses" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SubmitDataIncomeAndExpensesMonthResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubmitDataIncomeAndExpensesMonthResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckCanSubmit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SiteNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReportName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ReportMonth" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReportYear" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ReportQuarter" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckCanSubmitResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckCanSubmitResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitDataTrialBalanceQuarter">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SecureID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReportData" type="tns:TrialBalanceQuarterHeader" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TrialBalanceQuarterHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SiteNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SiteName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BalanceDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="SentDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="BalanceQuarter" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BalanceYear" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SentBy" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TrialBalanceQuarterDetail" type="tns:ArrayOfTrialBalanceQuarterDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfTrialBalanceQuarterDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TrialBalanceQuarterDetail" nillable="true" type="tns:TrialBalanceQuarterDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TrialBalanceQuarterDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AccountID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccountName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalDr" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalCr" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SubmitDataTrialBalanceQuarterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubmitDataTrialBalanceQuarterResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitDataPlanBudget">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SecureID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReportData" type="tns:PlanBudgetHeader01" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PlanBudgetHeader01">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SiteNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SiteName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SentDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="SentBy" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PlanYear" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PlanMonth" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="PlanName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProjectName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActivityName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Note" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Problem" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PlanBudgetDetails" type="tns:ArrayOfPlanBudgetDetail01" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfPlanBudgetDetail01">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PlanBudgetDetail01" nillable="true" type="tns:PlanBudgetDetail01" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PlanBudgetDetail01">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ActivityName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Classifier" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="PlanBudgetDetailMonth" type="tns:PlanBudgetDetailMonth01" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResultBudget" type="tns:ResultBudget01" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PlanBudgetDetailMonth01">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="October" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="November" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="December" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="January" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="February" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="March" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="April" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="May" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="June" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="July" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="August" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="September" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ResultBudget01">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="October" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="November" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="December" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="January" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="February" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="March" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="April" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="May" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="June" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="July" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="August" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="September" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SubmitDataPlanBudgetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubmitDataPlanBudgetResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitCheckQualityReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SecureID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CheckQualityData" type="tns:CheckQualityHeader" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CheckQualityHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SiteNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SiteName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedClass" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Season" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedYear" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SubmitDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="SubmitBy" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CheckQualityDetails" type="tns:ArrayOfCheckQualityDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCheckQualityDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CheckQualityDetail" nillable="true" type="tns:CheckQualityDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CheckQualityDetail">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="HeaderNo" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SampleNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LotNo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="HarvestDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="SampleSource" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Bags" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedWeight" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Wet" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Grow" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PureSeed" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OtherSeed" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Compound" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RedSeed" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StickySeed" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Strong" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LabDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CheckResults" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Remark" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SeedTypeName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SubmitCheckQualityReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubmitCheckQualityReportResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AuthenticateSoapIn">
+    <wsdl:part name="parameters" element="tns:Authenticate" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticateSoapOut">
+    <wsdl:part name="parameters" element="tns:AuthenticateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendFileSoapIn">
+    <wsdl:part name="parameters" element="tns:SendFile" />
+  </wsdl:message>
+  <wsdl:message name="SendFileSoapOut">
+    <wsdl:part name="parameters" element="tns:SendFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUpdateProvinceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUpdateProvince" />
+  </wsdl:message>
+  <wsdl:message name="GetUpdateProvinceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUpdateProvinceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUpdateDistrictSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUpdateDistrict" />
+  </wsdl:message>
+  <wsdl:message name="GetUpdateDistrictSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUpdateDistrictResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUpdateSubDistrictSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUpdateSubDistrict" />
+  </wsdl:message>
+  <wsdl:message name="GetUpdateSubDistrictSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUpdateSubDistrictResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSiteInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSiteInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetSiteInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSiteInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AccountSoapIn">
+    <wsdl:part name="parameters" element="tns:Account" />
+  </wsdl:message>
+  <wsdl:message name="AccountSoapOut">
+    <wsdl:part name="parameters" element="tns:AccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUpdatePlantSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUpdatePlant" />
+  </wsdl:message>
+  <wsdl:message name="GetUpdatePlantSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUpdatePlantResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubmitDataKp2ReportSoapIn">
+    <wsdl:part name="parameters" element="tns:SubmitDataKp2Report" />
+  </wsdl:message>
+  <wsdl:message name="SubmitDataKp2ReportSoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitDataKp2ReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubmitDataKp3ReportSoapIn">
+    <wsdl:part name="parameters" element="tns:SubmitDataKp3Report" />
+  </wsdl:message>
+  <wsdl:message name="SubmitDataKp3ReportSoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitDataKp3ReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubmitDataKp5ReportSoapIn">
+    <wsdl:part name="parameters" element="tns:SubmitDataKp5Report" />
+  </wsdl:message>
+  <wsdl:message name="SubmitDataKp5ReportSoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitDataKp5ReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubmitDataPlanAndResultReportSoapIn">
+    <wsdl:part name="parameters" element="tns:SubmitDataPlanAndResultReport" />
+  </wsdl:message>
+  <wsdl:message name="SubmitDataPlanAndResultReportSoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitDataPlanAndResultReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubmitDataCheckFarmReportSoapIn">
+    <wsdl:part name="parameters" element="tns:SubmitDataCheckFarmReport" />
+  </wsdl:message>
+  <wsdl:message name="SubmitDataCheckFarmReportSoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitDataCheckFarmReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubmitDataCheckFarmSummaryReportSoapIn">
+    <wsdl:part name="parameters" element="tns:SubmitDataCheckFarmSummaryReport" />
+  </wsdl:message>
+  <wsdl:message name="SubmitDataCheckFarmSummaryReportSoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitDataCheckFarmSummaryReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubmitCheckRedSeedReportSoapIn">
+    <wsdl:part name="parameters" element="tns:SubmitCheckRedSeedReport" />
+  </wsdl:message>
+  <wsdl:message name="SubmitCheckRedSeedReportSoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitCheckRedSeedReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubmitCheckQualityForMonthSoapIn">
+    <wsdl:part name="parameters" element="tns:SubmitCheckQualityForMonth" />
+  </wsdl:message>
+  <wsdl:message name="SubmitCheckQualityForMonthSoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitCheckQualityForMonthResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubmitDataDailyProcessReportSoapIn">
+    <wsdl:part name="parameters" element="tns:SubmitDataDailyProcessReport" />
+  </wsdl:message>
+  <wsdl:message name="SubmitDataDailyProcessReportSoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitDataDailyProcessReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubmitDataQualityForBuyReportSoapIn">
+    <wsdl:part name="parameters" element="tns:SubmitDataQualityForBuyReport" />
+  </wsdl:message>
+  <wsdl:message name="SubmitDataQualityForBuyReportSoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitDataQualityForBuyReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubmitDataQualityHistoryReportSoapIn">
+    <wsdl:part name="parameters" element="tns:SubmitDataQualityHistoryReport" />
+  </wsdl:message>
+  <wsdl:message name="SubmitDataQualityHistoryReportSoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitDataQualityHistoryReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubmitDataQBS06ReportSoapIn">
+    <wsdl:part name="parameters" element="tns:SubmitDataQBS06Report" />
+  </wsdl:message>
+  <wsdl:message name="SubmitDataQBS06ReportSoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitDataQBS06ReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubmitDataQualityActivityReportSoapIn">
+    <wsdl:part name="parameters" element="tns:SubmitDataQualityActivityReport" />
+  </wsdl:message>
+  <wsdl:message name="SubmitDataQualityActivityReportSoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitDataQualityActivityReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubmitReceiveSeedSoapIn">
+    <wsdl:part name="parameters" element="tns:SubmitReceiveSeed" />
+  </wsdl:message>
+  <wsdl:message name="SubmitReceiveSeedSoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitReceiveSeedResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubmitDataTrialBalanceSoapIn">
+    <wsdl:part name="parameters" element="tns:SubmitDataTrialBalance" />
+  </wsdl:message>
+  <wsdl:message name="SubmitDataTrialBalanceSoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitDataTrialBalanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubmitDataPayDateSoapIn">
+    <wsdl:part name="parameters" element="tns:SubmitDataPayDate" />
+  </wsdl:message>
+  <wsdl:message name="SubmitDataPayDateSoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitDataPayDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubmitDataAccCostSoapIn">
+    <wsdl:part name="parameters" element="tns:SubmitDataAccCost" />
+  </wsdl:message>
+  <wsdl:message name="SubmitDataAccCostSoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitDataAccCostResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubmitDataTrialBalanceMonthSoapIn">
+    <wsdl:part name="parameters" element="tns:SubmitDataTrialBalanceMonth" />
+  </wsdl:message>
+  <wsdl:message name="SubmitDataTrialBalanceMonthSoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitDataTrialBalanceMonthResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubmitDataPlanBudget02SoapIn">
+    <wsdl:part name="parameters" element="tns:SubmitDataPlanBudget02" />
+  </wsdl:message>
+  <wsdl:message name="SubmitDataPlanBudget02SoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitDataPlanBudget02Response" />
+  </wsdl:message>
+  <wsdl:message name="SubmitDataTrialBalanceTransferSoapIn">
+    <wsdl:part name="parameters" element="tns:SubmitDataTrialBalanceTransfer" />
+  </wsdl:message>
+  <wsdl:message name="SubmitDataTrialBalanceTransferSoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitDataTrialBalanceTransferResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubmitDataIncomeAndExpensesMonthSoapIn">
+    <wsdl:part name="parameters" element="tns:SubmitDataIncomeAndExpensesMonth" />
+  </wsdl:message>
+  <wsdl:message name="SubmitDataIncomeAndExpensesMonthSoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitDataIncomeAndExpensesMonthResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckCanSubmitSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckCanSubmit" />
+  </wsdl:message>
+  <wsdl:message name="CheckCanSubmitSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckCanSubmitResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubmitDataTrialBalanceQuarterSoapIn">
+    <wsdl:part name="parameters" element="tns:SubmitDataTrialBalanceQuarter" />
+  </wsdl:message>
+  <wsdl:message name="SubmitDataTrialBalanceQuarterSoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitDataTrialBalanceQuarterResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubmitDataPlanBudgetSoapIn">
+    <wsdl:part name="parameters" element="tns:SubmitDataPlanBudget" />
+  </wsdl:message>
+  <wsdl:message name="SubmitDataPlanBudgetSoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitDataPlanBudgetResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubmitCheckQualityReportSoapIn">
+    <wsdl:part name="parameters" element="tns:SubmitCheckQualityReport" />
+  </wsdl:message>
+  <wsdl:message name="SubmitCheckQualityReportSoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitCheckQualityReportResponse" />
+  </wsdl:message>
+  <wsdl:portType name="RiceServiceSoap">
+    <wsdl:operation name="Authenticate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ตรวจสอบสิทธิ์การเข้าใช้งานด้วย username และ password</wsdl:documentation>
+      <wsdl:input message="tns:AuthenticateSoapIn" />
+      <wsdl:output message="tns:AuthenticateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendFile">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">สำหรับ upload ไฟล์ข้อมูลเข้าสู่ระบบ</wsdl:documentation>
+      <wsdl:input message="tns:SendFileSoapIn" />
+      <wsdl:output message="tns:SendFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdateProvince">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ข้อมูลจังหวัด</wsdl:documentation>
+      <wsdl:input message="tns:GetUpdateProvinceSoapIn" />
+      <wsdl:output message="tns:GetUpdateProvinceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdateDistrict">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ข้อมูลอำเภอ/เขต</wsdl:documentation>
+      <wsdl:input message="tns:GetUpdateDistrictSoapIn" />
+      <wsdl:output message="tns:GetUpdateDistrictSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdateSubDistrict">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ข้อมูลตำบล/แขวง</wsdl:documentation>
+      <wsdl:input message="tns:GetUpdateSubDistrictSoapIn" />
+      <wsdl:output message="tns:GetUpdateSubDistrictSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSiteInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ข้อมูลหน่วยงาน</wsdl:documentation>
+      <wsdl:input message="tns:GetSiteInfoSoapIn" />
+      <wsdl:output message="tns:GetSiteInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Account">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ข้อมูล Account</wsdl:documentation>
+      <wsdl:input message="tns:AccountSoapIn" />
+      <wsdl:output message="tns:AccountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdatePlant">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ข้อมูลพืช</wsdl:documentation>
+      <wsdl:input message="tns:GetUpdatePlantSoapIn" />
+      <wsdl:output message="tns:GetUpdatePlantSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataKp2Report">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ส่งรายงาน ขพ.2</wsdl:documentation>
+      <wsdl:input message="tns:SubmitDataKp2ReportSoapIn" />
+      <wsdl:output message="tns:SubmitDataKp2ReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataKp3Report">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ส่งรายงาน ขพ.3</wsdl:documentation>
+      <wsdl:input message="tns:SubmitDataKp3ReportSoapIn" />
+      <wsdl:output message="tns:SubmitDataKp3ReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataKp5Report">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ส่งรายงาน ขพ.5</wsdl:documentation>
+      <wsdl:input message="tns:SubmitDataKp5ReportSoapIn" />
+      <wsdl:output message="tns:SubmitDataKp5ReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataPlanAndResultReport">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ส่งรายงาน แผนและผลการจัดทำแปลง</wsdl:documentation>
+      <wsdl:input message="tns:SubmitDataPlanAndResultReportSoapIn" />
+      <wsdl:output message="tns:SubmitDataPlanAndResultReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataCheckFarmReport">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ส่งรายงาน แบบบันทึกการตรวจตัดสินแปลงขยายพันธุ์ข้าวอย่างเป็นทางการ</wsdl:documentation>
+      <wsdl:input message="tns:SubmitDataCheckFarmReportSoapIn" />
+      <wsdl:output message="tns:SubmitDataCheckFarmReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataCheckFarmSummaryReport">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ส่งรายงาน ผลการตรวจตัดสินคุณภาพแปลงขยายพันธุ์</wsdl:documentation>
+      <wsdl:input message="tns:SubmitDataCheckFarmSummaryReportSoapIn" />
+      <wsdl:output message="tns:SubmitDataCheckFarmSummaryReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitCheckRedSeedReport">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ส่งรายงานปริมาณข้าวแดงที่ตรวจพบในการทดสอบคุณภาพเมล็ดพันธ์ข้าว</wsdl:documentation>
+      <wsdl:input message="tns:SubmitCheckRedSeedReportSoapIn" />
+      <wsdl:output message="tns:SubmitCheckRedSeedReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitCheckQualityForMonth">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ส่งรายงานปริมาณการตรวจสอบคุณภาพเมล็ดพันธุ์ข้าวประจำเดือน</wsdl:documentation>
+      <wsdl:input message="tns:SubmitCheckQualityForMonthSoapIn" />
+      <wsdl:output message="tns:SubmitCheckQualityForMonthSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataDailyProcessReport">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ส่งรายงาน แบบแผนสรุปผลการปรับปรุงสภาพเมล็ดพันธุ์รายวัน</wsdl:documentation>
+      <wsdl:input message="tns:SubmitDataDailyProcessReportSoapIn" />
+      <wsdl:output message="tns:SubmitDataDailyProcessReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataQualityForBuyReport">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ส่งรายงาน ผลการทดสอบคุณภาพเมล็ดพันธุ์เพื่อจัดซื้อ</wsdl:documentation>
+      <wsdl:input message="tns:SubmitDataQualityForBuyReportSoapIn" />
+      <wsdl:output message="tns:SubmitDataQualityForBuyReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataQualityHistoryReport">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ส่งรายงาน ประวัติคุณภาพเมล็ดพันธุ์</wsdl:documentation>
+      <wsdl:input message="tns:SubmitDataQualityHistoryReportSoapIn" />
+      <wsdl:output message="tns:SubmitDataQualityHistoryReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataQBS06Report">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ส่งรายงาน กคภ 06</wsdl:documentation>
+      <wsdl:input message="tns:SubmitDataQBS06ReportSoapIn" />
+      <wsdl:output message="tns:SubmitDataQBS06ReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataQualityActivityReport">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ส่งรายงานสรุปแผนและผลการดำเนินงานตามกิจกรรม</wsdl:documentation>
+      <wsdl:input message="tns:SubmitDataQualityActivityReportSoapIn" />
+      <wsdl:output message="tns:SubmitDataQualityActivityReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitReceiveSeed">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ส่งข้อมูลการรับเมล็ดพันธุ์</wsdl:documentation>
+      <wsdl:input message="tns:SubmitReceiveSeedSoapIn" />
+      <wsdl:output message="tns:SubmitReceiveSeedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataTrialBalance">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ส่งรายงาน งบทดลอง</wsdl:documentation>
+      <wsdl:input message="tns:SubmitDataTrialBalanceSoapIn" />
+      <wsdl:output message="tns:SubmitDataTrialBalanceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataPayDate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ส่งรายงาน เบิกจ่ายเกษตรกร</wsdl:documentation>
+      <wsdl:input message="tns:SubmitDataPayDateSoapIn" />
+      <wsdl:output message="tns:SubmitDataPayDateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataAccCost">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ส่งรายงาน ต้นทุนเมล็ดพันธุ์</wsdl:documentation>
+      <wsdl:input message="tns:SubmitDataAccCostSoapIn" />
+      <wsdl:output message="tns:SubmitDataAccCostSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataTrialBalanceMonth">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ส่งรายงาน งบทดลองรายเดือน</wsdl:documentation>
+      <wsdl:input message="tns:SubmitDataTrialBalanceMonthSoapIn" />
+      <wsdl:output message="tns:SubmitDataTrialBalanceMonthSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataPlanBudget02">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ส่งรายงาน สงป.302</wsdl:documentation>
+      <wsdl:input message="tns:SubmitDataPlanBudget02SoapIn" />
+      <wsdl:output message="tns:SubmitDataPlanBudget02SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataTrialBalanceTransfer">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ส่งรายงาน แผนการรับ - จ่าย เงินประจำปีงบประมาณ</wsdl:documentation>
+      <wsdl:input message="tns:SubmitDataTrialBalanceTransferSoapIn" />
+      <wsdl:output message="tns:SubmitDataTrialBalanceTransferSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataIncomeAndExpensesMonth">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ส่งรายงาน ผลการรับ - จ่าย เงินประจำเดือน</wsdl:documentation>
+      <wsdl:input message="tns:SubmitDataIncomeAndExpensesMonthSoapIn" />
+      <wsdl:output message="tns:SubmitDataIncomeAndExpensesMonthSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckCanSubmit">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ตรวสอบสถานะเปิด/ปิด</wsdl:documentation>
+      <wsdl:input message="tns:CheckCanSubmitSoapIn" />
+      <wsdl:output message="tns:CheckCanSubmitSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataTrialBalanceQuarter">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ส่งรายงาน งบทดลองรายไตรมาส</wsdl:documentation>
+      <wsdl:input message="tns:SubmitDataTrialBalanceQuarterSoapIn" />
+      <wsdl:output message="tns:SubmitDataTrialBalanceQuarterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataPlanBudget">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ส่งรายงาน สงป.301</wsdl:documentation>
+      <wsdl:input message="tns:SubmitDataPlanBudgetSoapIn" />
+      <wsdl:output message="tns:SubmitDataPlanBudgetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitCheckQualityReport">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">ส่งรายงาน กคภ2556/02</wsdl:documentation>
+      <wsdl:input message="tns:SubmitCheckQualityReportSoapIn" />
+      <wsdl:output message="tns:SubmitCheckQualityReportSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="RiceServiceSoap" type="tns:RiceServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Authenticate">
+      <soap:operation soapAction="http://rsms.ricethailand.go.th/webservices/Authenticate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendFile">
+      <soap:operation soapAction="http://rsms.ricethailand.go.th/webservices/SendFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdateProvince">
+      <soap:operation soapAction="http://rsms.ricethailand.go.th/webservices/GetUpdateProvince" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdateDistrict">
+      <soap:operation soapAction="http://rsms.ricethailand.go.th/webservices/GetUpdateDistrict" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdateSubDistrict">
+      <soap:operation soapAction="http://rsms.ricethailand.go.th/webservices/GetUpdateSubDistrict" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSiteInfo">
+      <soap:operation soapAction="http://rsms.ricethailand.go.th/webservices/GetSiteInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Account">
+      <soap:operation soapAction="http://rsms.ricethailand.go.th/webservices/Account" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdatePlant">
+      <soap:operation soapAction="http://rsms.ricethailand.go.th/webservices/GetUpdatePlant" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataKp2Report">
+      <soap:operation soapAction="http://rsms.ricethailand.go.th/webservices/SubmitDataKp2Report" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataKp3Report">
+      <soap:operation soapAction="http://rsms.ricethailand.go.th/webservices/SubmitDataKp3Report" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataKp5Report">
+      <soap:operation soapAction="http://rsms.ricethailand.go.th/webservices/SubmitDataKp5Report" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataPlanAndResultReport">
+      <soap:operation soapAction="http://rsms.ricethailand.go.th/webservices/SubmitDataPlanAndResultReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataCheckFarmReport">
+      <soap:operation soapAction="http://rsms.ricethailand.go.th/webservices/SubmitDataCheckFarmReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataCheckFarmSummaryReport">
+      <soap:operation soapAction="http://rsms.ricethailand.go.th/webservices/SubmitDataCheckFarmSummaryReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitCheckRedSeedReport">
+      <soap:operation soapAction="http://rsms.ricethailand.go.th/webservices/SubmitCheckRedSeedReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitCheckQualityForMonth">
+      <soap:operation soapAction="http://rsms.ricethailand.go.th/webservices/SubmitCheckQualityForMonth" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataDailyProcessReport">
+      <soap:operation soapAction="http://rsms.ricethailand.go.th/webservices/SubmitDataDailyProcessReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataQualityForBuyReport">
+      <soap:operation soapAction="http://rsms.ricethailand.go.th/webservices/SubmitDataQualityForBuyReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataQualityHistoryReport">
+      <soap:operation soapAction="http://rsms.ricethailand.go.th/webservices/SubmitDataQualityHistoryReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataQBS06Report">
+      <soap:operation soapAction="http://rsms.ricethailand.go.th/webservices/SubmitDataQBS06Report" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataQualityActivityReport">
+      <soap:operation soapAction="http://rsms.ricethailand.go.th/webservices/SubmitDataQualityActivityReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitReceiveSeed">
+      <soap:operation soapAction="http://rsms.ricethailand.go.th/webservices/SubmitReceiveSeed" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataTrialBalance">
+      <soap:operation soapAction="http://rsms.ricethailand.go.th/webservices/SubmitDataTrialBalance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataPayDate">
+      <soap:operation soapAction="http://rsms.ricethailand.go.th/webservices/SubmitDataPayDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataAccCost">
+      <soap:operation soapAction="http://rsms.ricethailand.go.th/webservices/SubmitDataAccCost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataTrialBalanceMonth">
+      <soap:operation soapAction="http://rsms.ricethailand.go.th/webservices/SubmitDataTrialBalanceMonth" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataPlanBudget02">
+      <soap:operation soapAction="http://rsms.ricethailand.go.th/webservices/SubmitDataPlanBudget02" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataTrialBalanceTransfer">
+      <soap:operation soapAction="http://rsms.ricethailand.go.th/webservices/SubmitDataTrialBalanceTransfer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataIncomeAndExpensesMonth">
+      <soap:operation soapAction="http://rsms.ricethailand.go.th/webservices/SubmitDataIncomeAndExpensesMonth" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckCanSubmit">
+      <soap:operation soapAction="http://rsms.ricethailand.go.th/webservices/CheckCanSubmit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataTrialBalanceQuarter">
+      <soap:operation soapAction="http://rsms.ricethailand.go.th/webservices/SubmitDataTrialBalanceQuarter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataPlanBudget">
+      <soap:operation soapAction="http://rsms.ricethailand.go.th/webservices/SubmitDataPlanBudget" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitCheckQualityReport">
+      <soap:operation soapAction="http://rsms.ricethailand.go.th/webservices/SubmitCheckQualityReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="RiceServiceSoap12" type="tns:RiceServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Authenticate">
+      <soap12:operation soapAction="http://rsms.ricethailand.go.th/webservices/Authenticate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendFile">
+      <soap12:operation soapAction="http://rsms.ricethailand.go.th/webservices/SendFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdateProvince">
+      <soap12:operation soapAction="http://rsms.ricethailand.go.th/webservices/GetUpdateProvince" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdateDistrict">
+      <soap12:operation soapAction="http://rsms.ricethailand.go.th/webservices/GetUpdateDistrict" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdateSubDistrict">
+      <soap12:operation soapAction="http://rsms.ricethailand.go.th/webservices/GetUpdateSubDistrict" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSiteInfo">
+      <soap12:operation soapAction="http://rsms.ricethailand.go.th/webservices/GetSiteInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Account">
+      <soap12:operation soapAction="http://rsms.ricethailand.go.th/webservices/Account" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdatePlant">
+      <soap12:operation soapAction="http://rsms.ricethailand.go.th/webservices/GetUpdatePlant" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataKp2Report">
+      <soap12:operation soapAction="http://rsms.ricethailand.go.th/webservices/SubmitDataKp2Report" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataKp3Report">
+      <soap12:operation soapAction="http://rsms.ricethailand.go.th/webservices/SubmitDataKp3Report" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataKp5Report">
+      <soap12:operation soapAction="http://rsms.ricethailand.go.th/webservices/SubmitDataKp5Report" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataPlanAndResultReport">
+      <soap12:operation soapAction="http://rsms.ricethailand.go.th/webservices/SubmitDataPlanAndResultReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataCheckFarmReport">
+      <soap12:operation soapAction="http://rsms.ricethailand.go.th/webservices/SubmitDataCheckFarmReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataCheckFarmSummaryReport">
+      <soap12:operation soapAction="http://rsms.ricethailand.go.th/webservices/SubmitDataCheckFarmSummaryReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitCheckRedSeedReport">
+      <soap12:operation soapAction="http://rsms.ricethailand.go.th/webservices/SubmitCheckRedSeedReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitCheckQualityForMonth">
+      <soap12:operation soapAction="http://rsms.ricethailand.go.th/webservices/SubmitCheckQualityForMonth" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataDailyProcessReport">
+      <soap12:operation soapAction="http://rsms.ricethailand.go.th/webservices/SubmitDataDailyProcessReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataQualityForBuyReport">
+      <soap12:operation soapAction="http://rsms.ricethailand.go.th/webservices/SubmitDataQualityForBuyReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataQualityHistoryReport">
+      <soap12:operation soapAction="http://rsms.ricethailand.go.th/webservices/SubmitDataQualityHistoryReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataQBS06Report">
+      <soap12:operation soapAction="http://rsms.ricethailand.go.th/webservices/SubmitDataQBS06Report" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataQualityActivityReport">
+      <soap12:operation soapAction="http://rsms.ricethailand.go.th/webservices/SubmitDataQualityActivityReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitReceiveSeed">
+      <soap12:operation soapAction="http://rsms.ricethailand.go.th/webservices/SubmitReceiveSeed" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataTrialBalance">
+      <soap12:operation soapAction="http://rsms.ricethailand.go.th/webservices/SubmitDataTrialBalance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataPayDate">
+      <soap12:operation soapAction="http://rsms.ricethailand.go.th/webservices/SubmitDataPayDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataAccCost">
+      <soap12:operation soapAction="http://rsms.ricethailand.go.th/webservices/SubmitDataAccCost" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataTrialBalanceMonth">
+      <soap12:operation soapAction="http://rsms.ricethailand.go.th/webservices/SubmitDataTrialBalanceMonth" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataPlanBudget02">
+      <soap12:operation soapAction="http://rsms.ricethailand.go.th/webservices/SubmitDataPlanBudget02" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataTrialBalanceTransfer">
+      <soap12:operation soapAction="http://rsms.ricethailand.go.th/webservices/SubmitDataTrialBalanceTransfer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataIncomeAndExpensesMonth">
+      <soap12:operation soapAction="http://rsms.ricethailand.go.th/webservices/SubmitDataIncomeAndExpensesMonth" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckCanSubmit">
+      <soap12:operation soapAction="http://rsms.ricethailand.go.th/webservices/CheckCanSubmit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataTrialBalanceQuarter">
+      <soap12:operation soapAction="http://rsms.ricethailand.go.th/webservices/SubmitDataTrialBalanceQuarter" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitDataPlanBudget">
+      <soap12:operation soapAction="http://rsms.ricethailand.go.th/webservices/SubmitDataPlanBudget" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitCheckQualityReport">
+      <soap12:operation soapAction="http://rsms.ricethailand.go.th/webservices/SubmitCheckQualityReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RiceService">
+    <wsdl:port name="RiceServiceSoap" binding="tns:RiceServiceSoap">
+      <soap:address location="http://rsms.me/webservices/riceservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="RiceServiceSoap12" binding="tns:RiceServiceSoap12">
+      <soap12:address location="http://rsms.me/webservices/riceservice.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,1492 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F622EA3C-2609-4BB3-B589-6B1F2CFBB035}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>RiceManagementApp.Module</RootNamespace>
+    <AssemblyName>RiceManagementApp.Module</AssemblyName>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>RiceManagementApp.Module.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>RiceManagementApp.Module.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'EasyTest|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\EasyTest\</OutputPath>
+    <DocumentationFile>RiceManagementApp.Module.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DefineConstants>EASYTEST</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v14.2.Core, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.ExpressApp.AuditTrail.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.ConditionalAppearance.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Objects.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.ReportsV2.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Security.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Validation.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.ViewVariantsModule.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Xpo.v14.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v14.2.Core, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v14.2.Core, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v14.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v14.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.v14.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Persistent.Base.v14.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Persistent.BaseImpl.v14.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v14.2.Core, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v14.2.Core, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v14.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v14.2.Core, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v14.2.Extensions, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ApplicationBlocks.Data">
+      <HintPath>..\..\..\..\..\Application\01Dev\App\RiceProduction\RiceProduction.Module\bin\Microsoft.ApplicationBlocks.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessObjects\Account\AccountChart\AccountPeriod.vb" />
+    <Compile Include="BusinessObjects\Account\AccountChart\AccountPeriodDetail.vb" />
+    <Compile Include="BusinessObjects\Account\AccountGFMIS\AccountGFMIS.vb" />
+    <Compile Include="BusinessObjects\Account\AccountGFMIS\AccountGFMISDetailPV.vb" />
+    <Compile Include="BusinessObjects\Account\AccountGFMIS\AccountGFMISDetailRV.vb" />
+    <Compile Include="BusinessObjects\Account\AccountReportNav.vb" />
+    <Compile Include="BusinessObjects\Account\AccountSettings\AccCost.vb" />
+    <Compile Include="BusinessObjects\Account\AccountSettings\Account.vb" />
+    <Compile Include="BusinessObjects\Account\AccountSettings\AccountBalanceType.vb" />
+    <Compile Include="BusinessObjects\Account\AccountSettings\AccountBookID.vb" />
+    <Compile Include="BusinessObjects\Account\AccountSettings\AccountGroup.vb" />
+    <Compile Include="BusinessObjects\Account\AccountSettings\AccountSummary.vb" />
+    <Compile Include="BusinessObjects\Account\AccountSettings\AccountType.vb" />
+    <Compile Include="BusinessObjects\Account\AccountSettings\ConfigAccount.vb" />
+    <Compile Include="BusinessObjects\Account\AccountSettings\CostTypeID.vb" />
+    <Compile Include="BusinessObjects\Account\AccountSettings\ExpenseCategories.vb" />
+    <Compile Include="BusinessObjects\Account\AccountSettings\SettingActivity.vb" />
+    <Compile Include="BusinessObjects\Account\AccountSettings\SettingPlan.vb" />
+    <Compile Include="BusinessObjects\Account\AccountSettings\SettingProject.vb" />
+    <Compile Include="BusinessObjects\Account\AccountSettings\SettingSubActivity.vb" />
+    <Compile Include="BusinessObjects\Account\AccountSettings\UnitID.vb" />
+    <Compile Include="BusinessObjects\Account\AccountSettings\Vacation.vb" />
+    <Compile Include="BusinessObjects\Account\AccountSettings\VacationDetail.vb" />
+    <Compile Include="BusinessObjects\Account\AccountSettings\VacationSetting.vb" />
+    <Compile Include="BusinessObjects\Account\EventAccCostID\AccCostID.vb" />
+    <Compile Include="BusinessObjects\Account\EventAccCostID\EventAccCostID.vb" />
+    <Compile Include="BusinessObjects\Account\EventAccountBAL\AccountBID.vb" />
+    <Compile Include="BusinessObjects\Account\EventAccountBAL\EventAccountBID.vb" />
+    <Compile Include="BusinessObjects\Account\EventBringforward\Bringforward.vb" />
+    <Compile Include="BusinessObjects\Account\EventBringforward\EventBringforward.vb" />
+    <Compile Include="BusinessObjects\Account\EventGL\GL.vb" />
+    <Compile Include="BusinessObjects\Account\EventPayDateID\EventPayDateID.vb" />
+    <Compile Include="BusinessObjects\Account\EventPayDateID\PayDateDetail.vb" />
+    <Compile Include="BusinessObjects\Account\GeneralLedger\AccountBookJV.vb" />
+    <Compile Include="BusinessObjects\Account\GeneralLedger\AccountBookPV.vb" />
+    <Compile Include="BusinessObjects\Account\GeneralLedger\AccountBookRV.vb" />
+    <Compile Include="BusinessObjects\Account\GeneralLedger\AccountID.vb" />
+    <Compile Include="BusinessObjects\Account\PlanBudget01\PlanBudget01.vb" />
+    <Compile Include="BusinessObjects\Account\PlanBudget01\PlanBudgetDetail01.vb" />
+    <Compile Include="BusinessObjects\Account\PlanBudget01\PlanBudgetDetailMonth01.vb" />
+    <Compile Include="BusinessObjects\Account\PlanBudget01\ResultBudget01.vb" />
+    <Compile Include="BusinessObjects\Account\PlanBudget02\DemoPlanBudget02.vb" />
+    <Compile Include="BusinessObjects\Account\PlanBudget02\DemoPlanBudgetDetail02.vb" />
+    <Compile Include="BusinessObjects\Account\PlanBudget02\DemoResultBudget02.vb" />
+    <Compile Include="BusinessObjects\Account\PlanBudget02\PlanBudget02.vb" />
+    <Compile Include="BusinessObjects\Account\PlanBudget02\PlanBudgetDetail02.vb" />
+    <Compile Include="BusinessObjects\Account\PlanBudget02\PlanBudgetDetailMonth02.vb" />
+    <Compile Include="BusinessObjects\Account\PlanBudget02\ResultBudget02.vb" />
+    <Compile Include="BusinessObjects\Account\ReportGL\AccountBook.Designer.vb">
+      <DependentUpon>AccountBook.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportGL\AccountBook.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportGL\BalanceSheet.Designer.vb">
+      <DependentUpon>BalanceSheet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportGL\BalanceSheet.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportGL\Cumulative.Designer.vb">
+      <DependentUpon>Cumulative.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportGL\Cumulative.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportGL\ForecastReport.Designer.vb">
+      <DependentUpon>ForecastReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportGL\ForecastReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportGL\GLMonthly.Designer.vb">
+      <DependentUpon>GLMonthly.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportGL\GLMonthly.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportGL\GLReport.Designer.vb">
+      <DependentUpon>GLReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportGL\GLReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportGL\StatementSheet.Designer.vb">
+      <DependentUpon>StatementSheet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportGL\StatementSheet.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportGL\TrialBalance.Designer.vb">
+      <DependentUpon>TrialBalance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportGL\TrialBalance.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportOther\AccountBalance.Designer.vb">
+      <DependentUpon>AccountBalance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportOther\AccountBalance.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportOther\AccountBringforward.Designer.vb">
+      <DependentUpon>AccountBringforward.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportOther\AccountBringforward.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportOther\AccountCost.Designer.vb">
+      <DependentUpon>AccountCost.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportOther\AccountCost.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportOther\AccountForecast.Designer.vb">
+      <DependentUpon>AccountForecast.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportOther\AccountForecast.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportOther\AccountGF.Designer.vb">
+      <DependentUpon>AccountGF.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportOther\AccountGF.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportOther\AccountPayDate.Designer.vb">
+      <DependentUpon>AccountPayDate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportOther\AccountPayDate.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportOther\ReportDemoPlanBudget01.Designer.vb">
+      <DependentUpon>ReportDemoPlanBudget01.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportOther\ReportDemoPlanBudget01.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportOther\ReportDemoPlanBudget02.Designer.vb">
+      <DependentUpon>ReportDemoPlanBudget02.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportOther\ReportDemoPlanBudget02.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportOther\ReportIncomeAndExpensesOfMonth.Designer.vb">
+      <DependentUpon>ReportIncomeAndExpensesOfMonth.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportOther\ReportIncomeAndExpensesOfMonth.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportOther\ReportInvestmentDetail.Designer.vb">
+      <DependentUpon>ReportInvestmentDetail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportOther\ReportInvestmentDetail.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportOther\ReportPlanBudget01.Designer.vb">
+      <DependentUpon>ReportPlanBudget01.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportOther\ReportPlanBudget01.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportOther\ReportPlanBudget02.Designer.vb">
+      <DependentUpon>ReportPlanBudget02.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportOther\ReportPlanBudget02.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportOther\ReportPlanTrialBalance03.Designer.vb">
+      <DependentUpon>ReportPlanTrialBalance03.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportOther\ReportPlanTrialBalance03.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportRevenue\BookDaily.Designer.vb">
+      <DependentUpon>BookDaily.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportRevenue\BookDaily.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportRevenue\BookDailyExpenses.Designer.vb">
+      <DependentUpon>BookDailyExpenses.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportRevenue\BookDailyExpenses.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportRevenue\BookLeafThroughDaily.Designer.vb">
+      <DependentUpon>BookLeafThroughDaily.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportRevenue\BookLeafThroughDaily.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportRevenue\CoverDaily.Designer.vb">
+      <DependentUpon>CoverDaily.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportRevenue\CoverDaily.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportRevenue\CoverDailyExpenses.Designer.vb">
+      <DependentUpon>CoverDailyExpenses.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportRevenue\CoverDailyExpenses.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportRevenue\CoverLeafThroughDaily.Designer.vb">
+      <DependentUpon>CoverLeafThroughDaily.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportRevenue\CoverLeafThroughDaily.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\RevenueForecast\Forecast.vb" />
+    <Compile Include="BusinessObjects\Account\RevenueForecast\ForecastDetail.vb" />
+    <Compile Include="BusinessObjects\Account\SubmitReport\AccCostData.vb" />
+    <Compile Include="BusinessObjects\Account\SubmitReport\AccountGFMISDetailPVData.vb" />
+    <Compile Include="BusinessObjects\Account\SubmitReport\AccountGFMISDetailRVData.vb" />
+    <Compile Include="BusinessObjects\Account\SubmitReport\PayDateData.vb" />
+    <Compile Include="BusinessObjects\Account\SubmitReport\PlanBudgetData01.vb" />
+    <Compile Include="BusinessObjects\Account\SubmitReport\PlanBudgetData02.vb" />
+    <Compile Include="BusinessObjects\Account\SubmitReport\PlanBudgetMonthData01.vb" />
+    <Compile Include="BusinessObjects\Account\SubmitReport\PlanBudgetMonthData02.vb" />
+    <Compile Include="BusinessObjects\Account\SubmitReport\PlanTransferDataExpenses.vb" />
+    <Compile Include="BusinessObjects\Account\SubmitReport\PlanTransferDataIncome.vb" />
+    <Compile Include="BusinessObjects\Account\SubmitReport\ResultBudgetData01.vb" />
+    <Compile Include="BusinessObjects\Account\SubmitReport\ResultBudgetData02.vb" />
+    <Compile Include="BusinessObjects\Account\SubmitReport\ResultMonthExpensesData.vb" />
+    <Compile Include="BusinessObjects\Account\SubmitReport\ResultMonthIncomeData.vb" />
+    <Compile Include="BusinessObjects\Account\SubmitReport\SubmitAccCostReport.vb" />
+    <Compile Include="BusinessObjects\Account\SubmitReport\SubmitIncomeAndExpensesMonthReport.vb" />
+    <Compile Include="BusinessObjects\Account\SubmitReport\SubmitPayDateReport.vb" />
+    <Compile Include="BusinessObjects\Account\SubmitReport\SubmitPlanBudget01Report.vb" />
+    <Compile Include="BusinessObjects\Account\SubmitReport\SubmitPlanBudget02Report.vb" />
+    <Compile Include="BusinessObjects\Account\SubmitReport\SubmitPlanTransferReport.vb" />
+    <Compile Include="BusinessObjects\Account\SubmitReport\SubmitTrialBalacneMonthReport.vb" />
+    <Compile Include="BusinessObjects\Account\SubmitReport\SubmitTrialBalacneQuarterReport.vb" />
+    <Compile Include="BusinessObjects\Account\SubmitReport\SubmitTrialBalacneReport.vb" />
+    <Compile Include="BusinessObjects\Account\SubmitReport\TrialBalanceData.vb" />
+    <Compile Include="BusinessObjects\Account\SubmitReport\TrialBalanceMonthData.vb" />
+    <Compile Include="BusinessObjects\Account\SubmitReport\TrialBalanceQuarterData.vb" />
+    <Compile Include="BusinessObjects\Account\TrialBalance03\CodeGFPV.vb" />
+    <Compile Include="BusinessObjects\Account\TrialBalance03\CodeGFRV.vb" />
+    <Compile Include="BusinessObjects\Account\TrialBalance03\IncomeAndExpensesOfMonth.vb" />
+    <Compile Include="BusinessObjects\Account\TrialBalance03\Investment.vb" />
+    <Compile Include="BusinessObjects\Account\TrialBalance03\InvestmentDetail.vb" />
+    <Compile Include="BusinessObjects\Account\TrialBalance03\SettingExpenses.vb" />
+    <Compile Include="BusinessObjects\Account\TrialBalance03\SettingIncome.vb" />
+    <Compile Include="BusinessObjects\Account\TrialBalance03\TrialBalanceExpenses.vb" />
+    <Compile Include="BusinessObjects\Account\TrialBalance03\TrialBalanceIncome.vb" />
+    <Compile Include="BusinessObjects\Account\TrialBalance03\TrialBalanceTransfer03.vb" />
+    <Compile Include="BusinessObjects\Account\TrialBalance03\TrialBalanceTransferDetailExpenses03.vb" />
+    <Compile Include="BusinessObjects\Account\TrialBalance03\TrialBalanceTransferDetailIncome03.vb" />
+    <Compile Include="BusinessObjects\Audit\SubmitReport\SubmitAuditActivity.vb" />
+    <Compile Include="BusinessObjects\Audit\SubmitReport\SubmitAuditActivityDetail.vb" />
+    <Compile Include="BusinessObjects\Audit\SubmitReport\SubmitCheckFarm.vb" />
+    <Compile Include="BusinessObjects\Audit\SubmitReport\SubmitCheckFarmDetail.vb" />
+    <Compile Include="BusinessObjects\Audit\SubmitReport\SubmitCheckFarmSummary.vb" />
+    <Compile Include="BusinessObjects\Audit\SubmitReport\SubmitCheckFarmSummaryDetail.vb" />
+    <Compile Include="BusinessObjects\Audit\SubmitReport\SubmitCheckQuality.vb" />
+    <Compile Include="BusinessObjects\Audit\SubmitReport\SubmitCheckQualityDetail.vb" />
+    <Compile Include="BusinessObjects\Audit\SubmitReport\SubmitCheckQualityForMonth.vb" />
+    <Compile Include="BusinessObjects\Audit\SubmitReport\SubmitCheckQualityForMonthDetail.vb" />
+    <Compile Include="BusinessObjects\Audit\SubmitReport\SubmitCheckRedSeed.vb" />
+    <Compile Include="BusinessObjects\Audit\SubmitReport\SubmitCheckRedSeedDetail.vb" />
+    <Compile Include="BusinessObjects\Audit\SubmitReport\SubmitQualityBetweenStorage.vb" />
+    <Compile Include="BusinessObjects\Audit\SubmitReport\SubmitQualityBetweenStorageDetail.vb" />
+    <Compile Include="BusinessObjects\Audit\SubmitReport\SubmitQualityForBuy.vb" />
+    <Compile Include="BusinessObjects\Audit\SubmitReport\SubmitQualityForBuyDetail.vb" />
+    <Compile Include="BusinessObjects\Audit\SubmitReport\SubmitQualityHistory.vb" />
+    <Compile Include="BusinessObjects\Audit\SubmitReport\SubmitQualityHistoryDetail.vb" />
+    <Compile Include="BusinessObjects\GetSiteSetting.vb" />
+    <Compile Include="BusinessObjects\GlobalSiteSetting.vb" />
+    <Compile Include="BusinessObjects\Plan\SeedPrice.vb" />
+    <Compile Include="BusinessObjects\ApproveBuy\ApproveBuy.vb" />
+    <Compile Include="BusinessObjects\ApproveBuy\BuyFarmer.vb" />
+    <Compile Include="BusinessObjects\ApproveBuy\BuyPosition.vb" />
+    <Compile Include="BusinessObjects\ApproveBuy\Reports\ApproveBuyReport.Designer.vb">
+      <DependentUpon>ApproveBuyReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\ApproveBuy\Reports\ApproveBuyReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Admin\AssociationBusiness.vb" />
+    <Compile Include="BusinessObjects\Association\AssociationDeal.vb" />
+    <Compile Include="BusinessObjects\Association\AssociationGroup.vb" />
+    <Compile Include="BusinessObjects\Association\AssociationMember.vb" />
+    <Compile Include="BusinessObjects\Admin\AssociationPosition.vb" />
+    <Compile Include="BusinessObjects\Association\AssociationSeed.vb" />
+    <Compile Include="BusinessObjects\Association\Report\AssociationCenter.Designer.vb">
+      <DependentUpon>AssociationCenter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Association\Report\AssociationCenter.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Association\Report\AssociationLocalReport.designer.vb">
+      <DependentUpon>AssociationLocalReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Association\Report\AssociationLocalReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Audit\ActivityPlanReport.vb" />
+    <Compile Include="BusinessObjects\Audit\AuditActivityPlan.vb" />
+    <Compile Include="BusinessObjects\Audit\AuditGrowPlanDetail.vb" />
+    <Compile Include="BusinessObjects\Audit\AuditCheckFarmPlanDetail.vb" />
+    <Compile Include="BusinessObjects\Audit\AuditBuyPlanDetail.vb" />
+    <Compile Include="BusinessObjects\Audit\AuditProcessPlanDetail.vb" />
+    <Compile Include="BusinessObjects\Audit\AuditKeepPlanDetail.vb" />
+    <Compile Include="BusinessObjects\Audit\AuditSalePlanDetail.vb" />
+    <Compile Include="BusinessObjects\Audit\CheckFarmSummary.vb" />
+    <Compile Include="BusinessObjects\Audit\Reports\CheckFarmSummaryReport.designer.vb">
+      <DependentUpon>CheckFarmSummaryReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Audit\Reports\CheckFarmSummaryReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Audit\Reports\QAActivityPlanReport.designer.vb">
+      <DependentUpon>QAActivityPlanReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Audit\Reports\QAActivityPlanReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Audit\Reports\CheckQualityForMonth.designer.vb">
+      <DependentUpon>CheckQualityForMonth.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Audit\Reports\CheckQualityForMonth.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Audit\Reports\HistoryQualityReport.designer.vb">
+      <DependentUpon>HistoryQualityReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Audit\Reports\HistoryQualityReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Audit\Reports\QualityBetweenStorage.designer.vb">
+      <DependentUpon>QualityBetweenStorage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Audit\Reports\QualityBetweenStorage.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Audit\Reports\RedRiceReport.designer.vb">
+      <DependentUpon>RedRiceReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Audit\Reports\RedRiceReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\IApproveBuy.vb" />
+    <Compile Include="BusinessObjects\IBuySeed.vb" />
+    <Compile Include="BusinessObjects\IApproveAble.vb" />
+    <Compile Include="BusinessObjects\Factory\FactoryPickProcess.vb" />
+    <Compile Include="BusinessObjects\Factory\FactoryPickProcessDetail.vb" />
+    <Compile Include="BusinessObjects\Factory\FactoryReturnSeed.vb" />
+    <Compile Include="BusinessObjects\Factory\FactoryReturnSeedDetail.vb" />
+    <Compile Include="BusinessObjects\Factory\FactorySeedProcess.vb" />
+    <Compile Include="BusinessObjects\Factory\FactorySeedProcessDetail.vb" />
+    <Compile Include="BusinessObjects\Factory\FactorySeedProcessToday.vb" />
+    <Compile Include="BusinessObjects\Factory\Report\PickProcess.designer.vb">
+      <DependentUpon>PickProcess.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Factory\Report\PickProcess.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Factory\FactoryMaterialTransaction.vb" />
+    <Compile Include="BusinessObjects\Factory\FactoryMaterialInventory.vb" />
+    <Compile Include="BusinessObjects\Factory\FactoryPickMaterial.vb" />
+    <Compile Include="BusinessObjects\Factory\FactoryPickMaterialDetail.vb" />
+    <Compile Include="BusinessObjects\Factory\Report\DailyProcess.Designer.vb">
+      <DependentUpon>DailyProcess.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Factory\Report\DailyProcess.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Factory\SubmitReport\SubmitProcess.vb" />
+    <Compile Include="BusinessObjects\Factory\SubmitReport\SubmitProcessDetail.vb" />
+    <Compile Include="BusinessObjects\Plan\BuyQualitySettings.vb" />
+    <Compile Include="BusinessObjects\Plan\BuySeed.vb" />
+    <Compile Include="BusinessObjects\Plan\BuySeedWeight.vb" />
+    <Compile Include="BusinessObjects\Audit\CheckFarm.vb" />
+    <Compile Include="BusinessObjects\Admin\OrganizationSection.vb" />
+    <Compile Include="BusinessObjects\Plan\EstimateByGrowType.vb" />
+    <Compile Include="BusinessObjects\Factory\FactoryInventory.vb" />
+    <Compile Include="BusinessObjects\Factory\FactoryPickSeed.vb" />
+    <Compile Include="BusinessObjects\Factory\FactoryPickSeedDetail.vb" />
+    <Compile Include="BusinessObjects\Factory\FactoryTransaction.vb" />
+    <Compile Include="BusinessObjects\Plan\BuyPlan.vb" />
+    <Compile Include="BusinessObjects\Plan\BuyPlanDetail.vb" />
+    <Compile Include="BusinessObjects\Plan\ActivityPlan.vb" />
+    <Compile Include="BusinessObjects\Plan\PlanFarmerFarm.vb" />
+    <Compile Include="BusinessObjects\Plan\HarvestPlanDetail.vb" />
+    <Compile Include="BusinessObjects\Plan\GrowPlanDetail.vb" />
+    <Compile Include="BusinessObjects\Plan\HarvestPlan.vb" />
+    <Compile Include="BusinessObjects\Plan\GrowPlan.vb" />
+    <Compile Include="BusinessObjects\Plan\PlanAssignBuyTeam.vb" />
+    <Compile Include="BusinessObjects\Plan\PlanFarmerGroup.vb" />
+    <Compile Include="BusinessObjects\Plan\PlanFarmerGrow.vb" />
+    <Compile Include="BusinessObjects\Plan\PlanFarmerSeedSouce.vb" />
+    <Compile Include="BusinessObjects\Plan\PlanSeedNeed.vb" />
+    <Compile Include="BusinessObjects\Plan\Reports\FarmerExpandSeason.designer.vb">
+      <DependentUpon>FarmerExpandSeason.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Plan\Reports\FarmerExpandSeason.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Plan\Reports\SummaryBuyTransactionReport.Designer.vb">
+      <DependentUpon>SummaryBuyTransactionReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Plan\Reports\SummaryBuyTransactionReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Plan\Reports\ReportK2v2.Designer.vb">
+      <DependentUpon>ReportK2v2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Plan\Reports\ReportK2v2.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Plan\Reports\ReportK2.Designer.vb">
+      <DependentUpon>ReportK2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Plan\Reports\ReportK2.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Plan\Reports\ReportSMK20101.Designer.vb">
+      <DependentUpon>ReportSMK20101.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Plan\Reports\ReportSMK20101.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Plan\Reports\ReportSMK20103.Designer.vb">
+      <DependentUpon>ReportSMK20103.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Plan\Reports\ReportSMK20103.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Plan\Reports\ReportSMK20104.designer.vb">
+      <DependentUpon>ReportSMK20104.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Plan\Reports\ReportSMK20104.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Plan\Reports\ReportSMK20105.Designer.vb">
+      <DependentUpon>ReportSMK20105.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Plan\Reports\ReportSMK20105.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Plan\Reports\DataExpandSeed.designer.vb">
+      <DependentUpon>DataExpandSeed.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Plan\Reports\DataExpandSeed.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Plan\Reports\SummaryBuyReport.Designer.vb">
+      <DependentUpon>SummaryBuyReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Plan\Reports\SummaryBuyReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Plan\SummaryBuy.vb" />
+    <Compile Include="BusinessObjects\Plan\SummaryBuyFarmer.vb" />
+    <Compile Include="BusinessObjects\SeedAssosiation\BusinessClass.vb" />
+    <Compile Include="BusinessObjects\SeedAssosiation\Positions.vb" />
+    <Compile Include="BusinessObjects\SeedAssosiation\SeedClubs.vb" />
+    <Compile Include="BusinessObjects\SeedAssosiation\SeedMembers.vb" />
+    <Compile Include="BusinessObjects\SIMS\Material\ReceiveTransferMaterialDetail.vb" />
+    <Compile Include="BusinessObjects\SIMS\Material\ReceiveTransferMaterial.vb" />
+    <Compile Include="BusinessObjects\SIMS\Material\Report\PickMaterialReport.Designer.vb">
+      <DependentUpon>PickMaterialReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\SIMS\Material\Report\PickMaterialReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\SIMS\Material\Report\ReceiveMaterialReport.Designer.vb">
+      <DependentUpon>ReceiveMaterialReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\SIMS\Material\Report\ReceiveMaterialReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\SIMS\Material\Report\RestoreMaterialReport.Designer.vb">
+      <DependentUpon>RestoreMaterialReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\SIMS\Material\Report\RestoreMaterialReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\SIMS\Material\TransferMaterialDetail.vb" />
+    <Compile Include="BusinessObjects\SIMS\Material\PickMaterial.vb" />
+    <Compile Include="BusinessObjects\SIMS\Material\PickMaterialDetail.vb" />
+    <Compile Include="BusinessObjects\SIMS\Material\ReceiveMaterial.vb" />
+    <Compile Include="BusinessObjects\SIMS\Material\ReceiveMaterialDetail.vb" />
+    <Compile Include="BusinessObjects\SIMS\Material\MaterialTransaction.vb" />
+    <Compile Include="BusinessObjects\SIMS\Material\RestoreMaterial.vb" />
+    <Compile Include="BusinessObjects\SIMS\Material\RestoreMaterialDetail.vb" />
+    <Compile Include="BusinessObjects\SIMS\Material\TransferMaterial.vb" />
+    <Compile Include="BusinessObjects\SIMS\Seed\ArrangeSeedLot.vb" />
+    <Compile Include="BusinessObjects\SIMS\Seed\ArrangeSeedLotDetail.vb" />
+    <Compile Include="BusinessObjects\SIMS\Material\MaterialProduct.vb" />
+    <Compile Include="BusinessObjects\Admin\Material.vb" />
+    <Compile Include="BusinessObjects\SIMS\Seed\ReceiveTransferSeedDetail.vb" />
+    <Compile Include="BusinessObjects\SIMS\Seed\ReceiveTransferSeed.vb" />
+    <Compile Include="BusinessObjects\ISubmitReportAble.vb" />
+    <Compile Include="BusinessObjects\Plan\SubmitReports\SubmitPlantKP2.vb" />
+    <Compile Include="BusinessObjects\Plan\SubmitReports\SubmitPlantKP2Detail.vb" />
+    <Compile Include="BusinessObjects\Plan\SubmitReports\SubmitPlantKP3.vb" />
+    <Compile Include="BusinessObjects\Plan\SubmitReports\SubmitPlantKP3Detail.vb" />
+    <Compile Include="BusinessObjects\Plan\SubmitReports\SubmitPlantKP5.vb" />
+    <Compile Include="BusinessObjects\Plan\SubmitReports\SubmitPlantKP5Detail.vb" />
+    <Compile Include="Controllers\ApproveBuyController.Designer.vb">
+      <DependentUpon>ApproveBuyController.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\ApproveBuyController.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\BuySeedApproveController.Designer.vb">
+      <DependentUpon>BuySeedApproveController.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\BuySeedApproveController.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\DeactivateNewActionInLookupsController.Designer.vb">
+      <DependentUpon>DeactivateNewActionInLookupsController.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\DeactivateNewActionInLookupsController.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Plan\LoadPlanFarmerByMainPlanStatus.Designer.vb">
+      <DependentUpon>LoadPlanFarmerByMainPlanStatus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Plan\LoadPlanFarmerByMainPlanStatus.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\SearchMaterial\ctlTransferMaterialSearchPanel.Designer.vb">
+      <DependentUpon>ctlTransferMaterialSearchPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\SearchMaterial\ctlTransferMaterialSearchPanel.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\SearchMaterial\ctlReceiveTransferMaterialSearchPanel.Designer.vb">
+      <DependentUpon>ctlReceiveTransferMaterialSearchPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\SearchMaterial\ctlReceiveTransferMaterialSearchPanel.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\SearchMaterial\ctlRestoreMaterialSearchPanel.Designer.vb">
+      <DependentUpon>ctlRestoreMaterialSearchPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\SearchMaterial\ctlRestoreMaterialSearchPanel.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\SearchMaterial\ctlPickMaterialSearchPanel.Designer.vb">
+      <DependentUpon>ctlPickMaterialSearchPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\SearchMaterial\ctlPickMaterialSearchPanel.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\SearchMaterial\ctlReceiveMaterialSearchPanel.Designer.vb">
+      <DependentUpon>ctlReceiveMaterialSearchPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\SearchMaterial\ctlReceiveMaterialSearchPanel.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\SearchMaterial\SearchDataObject\SearchTransferMaterial.vb" />
+    <Compile Include="Controllers\SearchMaterial\SearchDataObject\SearchReceiveTransferMaterial.vb" />
+    <Compile Include="Controllers\SearchMaterial\SearchDataObject\SearchRestoreMaterial.vb" />
+    <Compile Include="Controllers\SearchMaterial\SearchDataObject\SearchPickMaterial.vb" />
+    <Compile Include="Controllers\SearchSeed\ctlSeedProductSearchPanel.Designer.vb">
+      <DependentUpon>ctlSeedProductSearchPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\SearchSeed\ctlSeedProductSearchPanel.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\SearchSeed\ctlReserveSeedSearchPanel.Designer.vb">
+      <DependentUpon>ctlReserveSeedSearchPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\SearchSeed\ctlReserveSeedSearchPanel.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\SearchSeed\ctlSaleSeedSearchPanel.Designer.vb">
+      <DependentUpon>ctlSaleSeedSearchPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\SearchSeed\ctlSaleSeedSearchPanel.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\SearchSeed\ctlTransferSeedSearchPanel.Designer.vb">
+      <DependentUpon>ctlTransferSeedSearchPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\SearchSeed\ctlTransferSeedSearchPanel.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\SearchSeed\ctlReceiceTransferSeedSearchPanel.Designer.vb">
+      <DependentUpon>ctlReceiceTransferSeedSearchPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\SearchSeed\ctlReceiceTransferSeedSearchPanel.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\SearchSeed\ctlPickSeedSearchPanel.Designer.vb">
+      <DependentUpon>ctlPickSeedSearchPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\SearchSeed\ctlPickSeedSearchPanel.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\SearchMaterial\SearchDataObject\SearchReceiveMaterial.vb" />
+    <Compile Include="BusinessObjects\SIMS\Seed\SeedQualityHistory.vb" />
+    <Compile Include="BusinessObjects\SIMS\Seed\ReferenceLotNo.vb" />
+    <Compile Include="BusinessObjects\SIMS\Seed\ReserveSeed.vb" />
+    <Compile Include="BusinessObjects\SIMS\Seed\ReserveSeedDetail.vb" />
+    <Compile Include="BusinessObjects\Audit\Reports\CheckQualityReport.Designer.vb">
+      <DependentUpon>CheckQualityReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Audit\Reports\CheckQualityReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Audit\Reports\QualityForBuyReport.Designer.vb">
+      <DependentUpon>QualityForBuyReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Audit\Reports\QualityForBuyReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\SIMS\Seed\Sale.vb" />
+    <Compile Include="BusinessObjects\SIMS\Seed\SaleDetail.vb" />
+    <Compile Include="BusinessObjects\Admin\SalePrice.vb" />
+    <Compile Include="BusinessObjects\SIMS\SIMSReport\SaleDOI.Designer.vb">
+      <DependentUpon>SaleDOI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\SIMS\SIMSReport\SaleDOI.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\SIMS\SIMSReport\InvoiceSeedReport.Designer.vb">
+      <DependentUpon>InvoiceSeedReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\SIMS\SIMSReport\InvoiceSeedReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\SIMS\SIMSReport\PickSeedReport.Designer.vb">
+      <DependentUpon>PickSeedReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\SIMS\SIMSReport\PickSeedReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\SIMS\SIMSReport\ReceiveSeedReport.Designer.vb">
+      <DependentUpon>ReceiveSeedReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\SIMS\SIMSReport\ReceiveSeedReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Admin\TransferType.vb" />
+    <Compile Include="BusinessObjects\SIMS\Seed\Member.vb" />
+    <Compile Include="BusinessObjects\Admin\PickType.vb" />
+    <Compile Include="BusinessObjects\SIMS\Seed\PickSeed.vb" />
+    <Compile Include="BusinessObjects\SIMS\Seed\PickSeedDetail.vb" />
+    <Compile Include="BusinessObjects\Admin\ReceiveType.vb" />
+    <Compile Include="BusinessObjects\CustomAddress.vb" />
+    <Compile Include="BusinessObjects\Admin\District.vb" />
+    <Compile Include="BusinessObjects\Employee.vb" />
+    <Compile Include="BusinessObjects\Plan\Farm.vb" />
+    <Compile Include="BusinessObjects\Plan\Farmer.vb" />
+    <Compile Include="BusinessObjects\Plan\FarmerGroup.vb" />
+    <Compile Include="BusinessObjects\Admin\GrowType.vb" />
+    <Compile Include="BusinessObjects\Plan\MainPlan.vb" />
+    <Compile Include="BusinessObjects\Admin\MoneyType.vb" />
+    <Compile Include="BusinessObjects\Plan\PlanFarmer.vb" />
+    <Compile Include="BusinessObjects\Admin\Plant.vb" />
+    <Compile Include="BusinessObjects\Admin\PrefixName.vb" />
+    <Compile Include="BusinessObjects\Admin\Province.vb" />
+    <Compile Include="BusinessObjects\PublicEnum.vb" />
+    <Compile Include="BusinessObjects\Admin\CustomSecuritySetting\Role.vb" />
+    <Compile Include="BusinessObjects\Audit\QualityAudit.vb" />
+    <Compile Include="BusinessObjects\Admin\QualityAuditStep.vb" />
+    <Compile Include="BusinessObjects\Admin\Season.vb" />
+    <Compile Include="BusinessObjects\Admin\SeedClass.vb" />
+    <Compile Include="BusinessObjects\Admin\SeedType.vb" />
+    <Compile Include="BusinessObjects\SIMS\Seed\ReceiveSeed.vb" />
+    <Compile Include="BusinessObjects\SIMS\Seed\ReceiveSeedDetail.vb" />
+    <Compile Include="BusinessObjects\Admin\SeedStatus.vb" />
+    <Compile Include="BusinessObjects\SIMS\Seed\SeedProduct.vb" />
+    <Compile Include="BusinessObjects\SIMS\Seed\SeedTransaction.vb" />
+    <Compile Include="BusinessObjects\SIMS\Seed\TransferSeed.vb" />
+    <Compile Include="BusinessObjects\SIMS\Seed\TransferSeedDetail.vb" />
+    <Compile Include="BusinessObjects\Plan\Reports\ReportWeight.Designer.vb">
+      <DependentUpon>ReportWeight.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Plan\Reports\ReportWeight.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Admin\Site.vb" />
+    <Compile Include="BusinessObjects\SIMS\SIMSReport\TransferSeedReport.Designer.vb">
+      <DependentUpon>TransferSeedReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\SIMS\SIMSReport\TransferSeedReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\SiteSetting.vb" />
+    <Compile Include="BusinessObjects\Admin\SubDistrict.vb" />
+    <Compile Include="BusinessObjects\Admin\CustomSecuritySetting\User.vb" />
+    <Compile Include="BusinessObjects\Plan\SubmitReports\SubmitActivityPlanReport.vb" />
+    <Compile Include="Controllers\Account\AccountModule.vb" />
+    <Compile Include="Controllers\Account\BringViewController.Designer.vb">
+      <DependentUpon>BringViewController.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Account\BringViewController.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Account\CurrentListViewController.Designer.vb">
+      <DependentUpon>CurrentListViewController.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Account\CurrentListViewController.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Account\SortGL.Designer.vb">
+      <DependentUpon>SortGL.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Account\SortGL.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Account\ViewController1.Designer.vb">
+      <DependentUpon>ViewController1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Account\ViewController1.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Audit\LoadCheckFarmByMainPlanStatus.Designer.vb">
+      <DependentUpon>LoadCheckFarmByMainPlanStatus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Audit\LoadCheckFarmByMainPlanStatus.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\ConnectionSettingWController.Designer.vb">
+      <DependentUpon>ConnectionSettingWController.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\ConnectionSettingWController.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\HideItemWindowController.Designer.vb">
+      <DependentUpon>HideItemWindowController.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\HideItemWindowController.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Plan\LoadBuySeedByMainPlanStatus.Designer.vb">
+      <DependentUpon>LoadBuySeedByMainPlanStatus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Plan\LoadBuySeedByMainPlanStatus.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Plan\LoadApproveBuyByMainPlanStatus.Designer.vb">
+      <DependentUpon>LoadApproveBuyByMainPlanStatus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Plan\LoadApproveBuyByMainPlanStatus.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Plan\LoadActivityPlanByMainPlanStatus.Designer.vb">
+      <DependentUpon>LoadActivityPlanByMainPlanStatus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Plan\LoadActivityPlanByMainPlanStatus.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Plan\LoadHarvestPlanByMainPlanStatus.Designer.vb">
+      <DependentUpon>LoadHarvestPlanByMainPlanStatus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Plan\LoadHarvestPlanByMainPlanStatus.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Plan\LoadBuyPlanByMainPlanStatus.Designer.vb">
+      <DependentUpon>LoadBuyPlanByMainPlanStatus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Plan\LoadBuyPlanByMainPlanStatus.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Plan\LoadGrowPlanByMainPlanStatus.Designer.vb">
+      <DependentUpon>LoadGrowPlanByMainPlanStatus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Plan\LoadGrowPlanByMainPlanStatus.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\Plan\LoadMainPlanByStatus.Designer.vb">
+      <DependentUpon>LoadMainPlanByStatus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Plan\LoadMainPlanByStatus.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\SearchSeed\ctlReceiveSeedSearchPanel.Designer.vb">
+      <DependentUpon>ctlReceiveSeedSearchPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\SearchSeed\ctlReceiveSeedSearchPanel.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\SearchSeed\SearchDataObject\SearchSeedProduct.vb" />
+    <Compile Include="Controllers\SearchSeed\SearchDataObject\SearchReserveSeed.vb" />
+    <Compile Include="Controllers\SearchSeed\SearchDataObject\SearchSaleSeed.vb" />
+    <Compile Include="Controllers\SearchSeed\SearchDataObject\SearchPickSeed.vb" />
+    <Compile Include="Controllers\SearchSeed\SearchDataObject\SearchReceiveTransferSeed.vb" />
+    <Compile Include="Controllers\SearchSeed\SearchDataObject\SearchSeedDetail.vb" />
+    <Compile Include="Controllers\SearchSeed\SearchDataObject\SearchTransferSeed.vb" />
+    <Compile Include="Controllers\SimsApproveController.Designer.vb">
+      <DependentUpon>SimsApproveController.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\SimsApproveController.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\SubmitReportController.Designer.vb">
+      <DependentUpon>SubmitReportController.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\SubmitReportController.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\SummaryBuyController.Designer.vb">
+      <DependentUpon>SummaryBuyController.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\SummaryBuyController.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module.Designer.vb">
+      <DependentUpon>Module.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Module.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="DatabaseUpdate\Updater.vb" />
+    <Compile Include="BusinessObjects\Audit\Reports\CheckFarmReport.Designer.vb">
+      <DependentUpon>CheckFarmReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Audit\Reports\CheckFarmReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Plan\Reports\KP2Report.Designer.vb">
+      <DependentUpon>KP2Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Plan\Reports\KP2Report.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Plan\Reports\KP3Report.Designer.vb">
+      <DependentUpon>KP3Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Plan\Reports\KP3Report.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Plan\Reports\KP3ReportForLocal.Designer.vb">
+      <DependentUpon>KP3ReportForLocal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Plan\Reports\KP3ReportForLocal.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Plan\Reports\KP5Report.Designer.vb">
+      <DependentUpon>KP5Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Plan\Reports\KP5Report.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Plan\Reports\ReportKP3.Designer.vb">
+      <DependentUpon>ReportKP3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Plan\Reports\ReportKP3.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Plan\Reports\XtraReport1.Designer.vb">
+      <DependentUpon>XtraReport1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Plan\Reports\XtraReport1.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Plan\Reports\XtraReport2.Designer.vb">
+      <DependentUpon>XtraReport2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Plan\Reports\XtraReport2.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Web References\RiceService\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BusinessObjects\Account\ReportGL\AccountBook.resx">
+      <DependentUpon>AccountBook.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Account\ReportGL\BalanceSheet.resx">
+      <DependentUpon>BalanceSheet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Account\ReportGL\Cumulative.resx">
+      <DependentUpon>Cumulative.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Account\ReportGL\ForecastReport.resx">
+      <DependentUpon>ForecastReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Account\ReportGL\GLMonthly.resx">
+      <DependentUpon>GLMonthly.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Account\ReportGL\GLReport.resx">
+      <DependentUpon>GLReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Account\ReportGL\StatementSheet.resx">
+      <DependentUpon>StatementSheet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Account\ReportGL\TrialBalance.resx">
+      <DependentUpon>TrialBalance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Account\ReportOther\AccountBalance.resx">
+      <DependentUpon>AccountBalance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Account\ReportOther\AccountBringforward.resx">
+      <DependentUpon>AccountBringforward.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Account\ReportOther\AccountCost.resx">
+      <DependentUpon>AccountCost.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Account\ReportOther\AccountForecast.resx">
+      <DependentUpon>AccountForecast.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Account\ReportOther\AccountGF.resx">
+      <DependentUpon>AccountGF.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Account\ReportOther\AccountPayDate.resx">
+      <DependentUpon>AccountPayDate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Account\ReportOther\ReportDemoPlanBudget01.resx">
+      <DependentUpon>ReportDemoPlanBudget01.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Account\ReportOther\ReportDemoPlanBudget02.resx">
+      <DependentUpon>ReportDemoPlanBudget02.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Account\ReportOther\ReportIncomeAndExpensesOfMonth.resx">
+      <DependentUpon>ReportIncomeAndExpensesOfMonth.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Account\ReportOther\ReportInvestmentDetail.resx">
+      <DependentUpon>ReportInvestmentDetail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Account\ReportOther\ReportPlanBudget01.resx">
+      <DependentUpon>ReportPlanBudget01.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Account\ReportOther\ReportPlanBudget02.resx">
+      <DependentUpon>ReportPlanBudget02.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Account\ReportOther\ReportPlanTrialBalance03.resx">
+      <DependentUpon>ReportPlanTrialBalance03.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Account\ReportRevenue\BookDaily.resx">
+      <DependentUpon>BookDaily.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Account\ReportRevenue\BookDailyExpenses.resx">
+      <DependentUpon>BookDailyExpenses.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Account\ReportRevenue\BookLeafThroughDaily.resx">
+      <DependentUpon>BookLeafThroughDaily.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Account\ReportRevenue\CoverDaily.resx">
+      <DependentUpon>CoverDaily.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Account\ReportRevenue\CoverDailyExpenses.resx">
+      <DependentUpon>CoverDailyExpenses.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Account\ReportRevenue\CoverLeafThroughDaily.resx">
+      <DependentUpon>CoverLeafThroughDaily.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\ApproveBuy\Reports\ApproveBuyReport.resx">
+      <DependentUpon>ApproveBuyReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Association\Report\AssociationCenter.resx">
+      <DependentUpon>AssociationCenter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Association\Report\AssociationLocalReport.resx">
+      <DependentUpon>AssociationLocalReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Audit\Reports\CheckFarmSummaryReport.resx">
+      <DependentUpon>CheckFarmSummaryReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Audit\Reports\QAActivityPlanReport.resx">
+      <DependentUpon>QAActivityPlanReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Audit\Reports\CheckQualityForMonth.resx">
+      <DependentUpon>CheckQualityForMonth.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Audit\Reports\CheckQualityReport.resx">
+      <DependentUpon>CheckQualityReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Audit\Reports\HistoryQualityReport.resx">
+      <DependentUpon>HistoryQualityReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Audit\Reports\QualityBetweenStorage.resx">
+      <DependentUpon>QualityBetweenStorage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Audit\Reports\QualityForBuyReport.resx">
+      <DependentUpon>QualityForBuyReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Audit\Reports\RedRiceReport.resx">
+      <DependentUpon>RedRiceReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Factory\Report\PickProcess.resx">
+      <DependentUpon>PickProcess.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Factory\Report\DailyProcess.resx">
+      <DependentUpon>DailyProcess.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Plan\Reports\FarmerExpandSeason.resx">
+      <DependentUpon>FarmerExpandSeason.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Plan\Reports\SummaryBuyTransactionReport.resx">
+      <DependentUpon>SummaryBuyTransactionReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Plan\Reports\ReportK2v2.resx">
+      <DependentUpon>ReportK2v2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Plan\Reports\ReportK2.resx">
+      <DependentUpon>ReportK2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Plan\Reports\ReportSMK20101.resx">
+      <DependentUpon>ReportSMK20101.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Plan\Reports\ReportSMK20103.resx">
+      <DependentUpon>ReportSMK20103.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Plan\Reports\ReportSMK20104.resx">
+      <DependentUpon>ReportSMK20104.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Plan\Reports\ReportSMK20105.resx">
+      <DependentUpon>ReportSMK20105.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Plan\Reports\DataExpandSeed.resx">
+      <DependentUpon>DataExpandSeed.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Plan\Reports\SummaryBuyReport.resx">
+      <DependentUpon>SummaryBuyReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\SIMS\Material\Report\PickMaterialReport.resx">
+      <DependentUpon>PickMaterialReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\SIMS\Material\Report\ReceiveMaterialReport.resx">
+      <DependentUpon>ReceiveMaterialReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\SIMS\Material\Report\RestoreMaterialReport.resx">
+      <DependentUpon>RestoreMaterialReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\SIMS\SIMSReport\SaleDOI.resx">
+      <DependentUpon>SaleDOI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\SIMS\SIMSReport\InvoiceSeedReport.resx">
+      <DependentUpon>InvoiceSeedReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\SIMS\SIMSReport\PickSeedReport.resx">
+      <DependentUpon>PickSeedReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\SIMS\SIMSReport\ReceiveSeedReport.resx">
+      <DependentUpon>ReceiveSeedReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Plan\Reports\ReportWeight.resx">
+      <DependentUpon>ReportWeight.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\SIMS\SIMSReport\TransferSeedReport.resx">
+      <DependentUpon>TransferSeedReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\Account\BringViewController.resx">
+      <DependentUpon>BringViewController.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\ApproveBuyController.resx">
+      <DependentUpon>ApproveBuyController.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\Audit\LoadCheckFarmByMainPlanStatus.resx">
+      <DependentUpon>LoadCheckFarmByMainPlanStatus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\BuySeedApproveController.resx">
+      <DependentUpon>BuySeedApproveController.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\ConnectionSettingWController.resx">
+      <DependentUpon>ConnectionSettingWController.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\Plan\LoadPlanFarmerByMainPlanStatus.resx">
+      <DependentUpon>LoadPlanFarmerByMainPlanStatus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\Plan\LoadBuySeedByMainPlanStatus.resx">
+      <DependentUpon>LoadBuySeedByMainPlanStatus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\Plan\LoadApproveBuyByMainPlanStatus.resx">
+      <DependentUpon>LoadApproveBuyByMainPlanStatus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\Plan\LoadActivityPlanByMainPlanStatus.resx">
+      <DependentUpon>LoadActivityPlanByMainPlanStatus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\Plan\LoadHarvestPlanByMainPlanStatus.resx">
+      <DependentUpon>LoadHarvestPlanByMainPlanStatus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\Plan\LoadBuyPlanByMainPlanStatus.resx">
+      <DependentUpon>LoadBuyPlanByMainPlanStatus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\Plan\LoadGrowPlanByMainPlanStatus.resx">
+      <DependentUpon>LoadGrowPlanByMainPlanStatus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\Plan\LoadMainPlanByStatus.resx">
+      <DependentUpon>LoadMainPlanByStatus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\SearchMaterial\ctlTransferMaterialSearchPanel.resx">
+      <DependentUpon>ctlTransferMaterialSearchPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\SearchMaterial\ctlReceiveTransferMaterialSearchPanel.resx">
+      <DependentUpon>ctlReceiveTransferMaterialSearchPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\SearchMaterial\ctlRestoreMaterialSearchPanel.resx">
+      <DependentUpon>ctlRestoreMaterialSearchPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\SearchMaterial\ctlPickMaterialSearchPanel.resx">
+      <DependentUpon>ctlPickMaterialSearchPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\SearchMaterial\ctlReceiveMaterialSearchPanel.resx">
+      <DependentUpon>ctlReceiveMaterialSearchPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\SearchSeed\ctlSeedProductSearchPanel.resx">
+      <DependentUpon>ctlSeedProductSearchPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\SearchSeed\ctlReserveSeedSearchPanel.resx">
+      <DependentUpon>ctlReserveSeedSearchPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\SearchSeed\ctlSaleSeedSearchPanel.resx">
+      <DependentUpon>ctlSaleSeedSearchPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\SearchSeed\ctlTransferSeedSearchPanel.resx">
+      <DependentUpon>ctlTransferSeedSearchPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\SearchSeed\ctlReceiceTransferSeedSearchPanel.resx">
+      <DependentUpon>ctlReceiceTransferSeedSearchPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\SearchSeed\ctlPickSeedSearchPanel.resx">
+      <DependentUpon>ctlPickSeedSearchPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\SearchSeed\ctlReceiveSeedSearchPanel.resx">
+      <DependentUpon>ctlReceiveSeedSearchPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\SimsApproveController.resx">
+      <DependentUpon>SimsApproveController.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\SubmitReportController.resx">
+      <DependentUpon>SubmitReportController.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\SummaryBuyController.resx">
+      <DependentUpon>SummaryBuyController.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\RiceManagementApp.Module.Images.RiceLogo.png" />
+    <EmbeddedResource Include="Module.resx">
+      <DependentUpon>Module.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Audit\Reports\CheckFarmReport.resx">
+      <DependentUpon>CheckFarmReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Plan\Reports\KP2Report.resx">
+      <DependentUpon>KP2Report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Plan\Reports\KP3Report.resx">
+      <DependentUpon>KP3Report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Plan\Reports\KP3ReportForLocal.resx">
+      <DependentUpon>KP3ReportForLocal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Plan\Reports\KP5Report.resx">
+      <DependentUpon>KP5Report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Plan\Reports\ReportKP3.resx">
+      <DependentUpon>ReportKP3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Plan\Reports\XtraReport1.resx">
+      <DependentUpon>XtraReport1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Plan\Reports\XtraReport2.resx">
+      <DependentUpon>XtraReport2.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="FunctionalTests\sample.ets" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\DataSources\System.Data.DataTable.datasource" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\RiceService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\RiceService\riceservice.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Model.DesignedDiffs.xafml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BusinessObjects\ReadMe.txt" />
+    <None Include="Controllers\ReadMe.txt" />
+    <None Include="DatabaseUpdate\ReadMe.txt" />
+    <None Include="FunctionalTests\ReadMe.txt" />
+    <None Include="Images\ReadMe.txt" />
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FunctionalTests\config.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BusinessObjects\SIMS\SIMSReport\rice.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Controllers\Account\ReadMe.txt" />
+    <EmbeddedResource Include="Images\RiceManagementApp.Module.Images.DBSetting.png" />
+    <None Include="Web References\RiceService\riceservice.disco" />
+    <EmbeddedResource Include="Images\RiceManagementApp.Module.Images.sent1.png" />
+    <EmbeddedResource Include="Images\RiceManagementApp.Module.Images.sent2_32x32.png" />
+    <EmbeddedResource Include="Images\RiceManagementApp.Module.Images.sent3.png" />
+    <EmbeddedResource Include="Images\RiceManagementApp.Module.Images.accounting.png" />
+    <EmbeddedResource Include="Images\RiceManagementApp.Module.Images.CustomSearch_48x48.png" />
+    <EmbeddedResource Include="Images\RiceManagementApp.Module.Images.blue_barn.png" />
+    <EmbeddedResource Include="Images\RiceManagementApp.Module.Images.blue_barn_32x32.png" />
+    <Content Include="Images\RiceManagementApp.Module.Images.CustomSearch.png" />
+    <EmbeddedResource Include="Images\RiceManagementApp.Module.Images.CustomSearch_32x32.png" />
+    <EmbeddedResource Include="Images\RiceManagementApp.Module.Images.SearchIcon.png" />
+    <EmbeddedResource Include="Images\RiceManagementApp.Module.Images.SearchIcon_32x32.png" />
+    <EmbeddedResource Include="Images\RiceManagementApp.Module.Images.DBSetting_32x32.png" />
+    <EmbeddedResource Include="Images\RiceManagementApp.Module.Images.sent2.png" />
+    <EmbeddedResource Include="Images\RiceManagementApp.Module.Images.sent1_32x32.png" />
+    <EmbeddedResource Include="Images\RiceManagementApp.Module.Images.sent3_32x32.png" />
+    <EmbeddedResource Include="Images\RiceManagementApp.Module.Images.Palet.png" />
+    <EmbeddedResource Include="Images\RiceManagementApp.Module.Images.Palet_32x32.png" />
+    <None Include="UnusableNodes.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes1.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes2.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes3.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes4.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes5.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes6.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes7.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes8.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes9.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Welcome.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://rsms.me/webservices/riceservice.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\RiceService\</RelPath>
+      <UpdateFromURL>http://rsms.me/webservices/riceservice.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>RiceManagementApp_Module_RiceService_RiceService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

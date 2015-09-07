@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <ActionDesign Id="ActionDesign">
+    <Actions Id="Actions">
+      <Action Id="PickMaterial.MarkAsComplete" ValidationContexts="Approval" />
+      <Action Id="PickSeed.MarkAsComplete" ValidationContexts="Approval" />
+      <Action Id="ReceiveMaterial.MarkAsComplete" ValidationContexts="Approval" />
+      <Action Id="ReceiveSeed.MarkAsComplete" ValidationContexts="Approval" />
+      <Action Id="RestoreMaterial.MarkAsComplete" ValidationContexts="Approval" />
+      <Action Id="TransferMaterial.MarkAsComplete" ValidationContexts="Approval" />
+      <Action Id="TransferSeed.MarkAsComplete" ValidationContexts="Approval" />
+    </Actions>
+  </ActionDesign>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="Default">
+        <Items Id="Items">
+          <Item Id="FactoryProcessSeed_ListView" ViewId="FactoryProcessSeed_ListView" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <Views Id="Views">
+    <DetailView Id="PlanBudget02_DetailView">
+      <Items Id="Items">
+        <ActionContainerViewItem Id="Action_Planbudget02" ActionContainer="ACT_Planbudget02" />
+      </Items>
+    </DetailView>
+    <DetailView Id="SubmitAccCostReport_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Item1">
+              <LayoutGroup Id="Autob389072c-1a9b-46e1-87f1-16126c58b530">
+                <LayoutItem Id="CostPriceSeedOutUsage" ViewItem="CostPriceSeedOutUsage" />
+                <LayoutItem Id="CostPriceSeedGood" ViewItem="CostPriceSeedGood" />
+                <LayoutItem Id="PriceSeedOutUsage" ViewItem="PriceSeedOutUsage" />
+                <LayoutItem Id="PriceSeedGood" ViewItem="PriceSeedGood" />
+                <LayoutItem Id="TotalChemical" ViewItem="TotalChemical" />
+              </LayoutGroup>
+              <LayoutGroup Id="Auto9036d15b-acc5-4d58-b500-477483b737b5">
+                <LayoutItem Id="TotalOil" ViewItem="TotalOil" />
+                <LayoutItem Id="TotalMaterials" ViewItem="TotalMaterials" />
+                <LayoutItem Id="TotalSeed" ViewItem="TotalSeed" />
+                <LayoutItem Id="AmountSeedOut" ViewItem="AmountSeedOut" />
+                <LayoutItem Id="AmountSeedGood" ViewItem="AmountSeedGood" />
+                <LayoutItem Id="AmountSeed" ViewItem="AmountSeed" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="TransferMaterial_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="TransferMaterial">
+              <LayoutGroup Id="TransferMaterial_col2">
+                <LayoutItem Id="ReceiveDate" ViewItem="ReceiveDate" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="AccountGFMIS_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="Tabs">
+            <LayoutGroup Id="AccountGFMISDetailRV">
+              <LayoutGroup Id="Autoc48cf057-37ea-4259-b7e6-8e754176c7bd">
+                <LayoutItem Id="TotalRV" ViewItem="TotalRV" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="AccountGFMISDetailPV">
+              <LayoutGroup Id="Auto6531fa2a-a028-4b37-bf59-6e91428b5ffc">
+                <LayoutItem Id="TotalPV" ViewItem="TotalPV" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="SubmitTrialBalacneQuarterReport_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="SubmitTrialBalacneQuarterReport">
+              <LayoutGroup Id="SubmitTrialBalacneQuarterReport_col1">
+                <LayoutItem Id="BalanceMonth" SizeConstraintsType="Default" RelativeSize="27.272727272727273" />
+              </LayoutGroup>
+              <LayoutGroup Id="SubmitTrialBalacneQuarterReport_col2">
+                <LayoutItem Id="SubmitDate" SizeConstraintsType="Default" RelativeSize="36.363636363636367" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="AdminNav">
+        <Items Id="Items">
+          <Item Id="AccountSettingNav">
+            <Items Id="Items">
+              <Item Id="ProjectName_ListView" ViewId="ProjectName_ListView" />
+            </Items>
+          </Item>
+        </Items>
+      </Item>
+      <Item Id="AccountNav">
+        <Items Id="Items">
+          <Item Id="งบประมาณ สงป302">
+            <Items Id="Items">
+              <Item Id="PlanBudget02_Detail_ListView" ViewId="PlanBudget02_Detail_ListView" />
+            </Items>
+          </Item>
+        </Items>
+      </Item>
+      <Item Id="Default">
+        <Items Id="Items">
+          <Item Id="FactoryProcessSeed_ListView" ViewId="FactoryProcessSeed_ListView" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+</Application>
