@@ -81,12 +81,16 @@ Public NotInheritable Class [RiceManagementAppModule]
         predefinedReportsUpdater.AddPredefinedReport(Of AssociationLocalReport)("รายชื่อสมาชิกสมาคม/ชมรม", GetType(AssociationGroup), True)
        
         '-------------------------------------- Account Report --------------------------------------------------------
-        predefinedReportsUpdater.AddPredefinedReport(Of GLReport)("1. บัญชีแยกประเภททั่วไป", GetType(AccountReportNav), True)
-        predefinedReportsUpdater.AddPredefinedReport(Of TrialBalance)("2. งบทดลอง02", GetType(AccountReportNav), True)
-        predefinedReportsUpdater.AddPredefinedReport(Of GLMonthly)("3. งบทดลองรายเดือน", GetType(AccountReportNav), True)
-        predefinedReportsUpdater.AddPredefinedReport(Of StatementSheet)("4. งบดุล", GetType(AccountReportNav), True)
-        predefinedReportsUpdater.AddPredefinedReport(Of BalanceSheet)("5. งบกำไรขาดทุน", GetType(AccountReportNav), True)
-        predefinedReportsUpdater.AddPredefinedReport(Of Cumulative)("6. รายจ่ายสะสม", GetType(AccountReportNav), True)
+        predefinedReportsUpdater.AddPredefinedReport(Of GLReport)("01. บัญชีแยกประเภททั่วไป", GetType(AccountReportNav), True)
+        predefinedReportsUpdater.AddPredefinedReport(Of TrialBalance)("02. งบทดลอง02", GetType(AccountReportNav), True)
+        predefinedReportsUpdater.AddPredefinedReport(Of TrialBalanceV2)("03. งบทดลอง02 (บัญชีหลัก)", GetType(AccountReportNav), True)
+        predefinedReportsUpdater.AddPredefinedReport(Of GLMonthly)("04. งบทดลองรายเดือน", GetType(AccountReportNav), True)
+        predefinedReportsUpdater.AddPredefinedReport(Of GLMonthlyV2)("05. งบทดลองรายเดือน (บัญชีหลัก)", GetType(AccountReportNav), True)
+        predefinedReportsUpdater.AddPredefinedReport(Of StatementSheet)("06. งบดุล", GetType(AccountReportNav), True)
+        predefinedReportsUpdater.AddPredefinedReport(Of StatementSheetV2)("07. งบดุล (บัญชีหลัก)", GetType(AccountReportNav), True)
+        predefinedReportsUpdater.AddPredefinedReport(Of BalanceSheet)("08. งบกำไรขาดทุน", GetType(AccountReportNav), True)
+        predefinedReportsUpdater.AddPredefinedReport(Of BalanceSheetV2)("09. งบกำไรขาดทุน (บัญชีหลัก)", GetType(AccountReportNav), True)
+        predefinedReportsUpdater.AddPredefinedReport(Of Cumulative)("10. รายจ่ายสะสม", GetType(AccountReportNav), True)
         '--------------------------------------------------------------------------------------------------------------
 
         predefinedReportsUpdater.AddPredefinedReport(Of ApproveBuyReport)("ขออนุมัติจัดซื้อ", GetType(ApproveBuy), True)

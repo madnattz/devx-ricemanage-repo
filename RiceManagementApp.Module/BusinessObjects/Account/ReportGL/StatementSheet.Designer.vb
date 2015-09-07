@@ -35,18 +35,8 @@ Partial Public Class StatementSheet
         Me.TopMargin = New DevExpress.XtraReports.UI.TopMarginBand()
         Me.BottomMargin = New DevExpress.XtraReports.UI.BottomMarginBand()
         Me.PageHeader = New DevExpress.XtraReports.UI.PageHeaderBand()
-        Me.XrLabel6 = New DevExpress.XtraReports.UI.XRLabel()
         Me.EndDate = New DevExpress.XtraReports.Parameters.Parameter()
-        Me.XrLabel3 = New DevExpress.XtraReports.UI.XRLabel()
         Me.StartDate = New DevExpress.XtraReports.Parameters.Parameter()
-        Me.XrLabel2 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.XrLabel4 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.XrTable1 = New DevExpress.XtraReports.UI.XRTable()
-        Me.XrTableRow1 = New DevExpress.XtraReports.UI.XRTableRow()
-        Me.XrTableCell3 = New DevExpress.XtraReports.UI.XRTableCell()
-        Me.dbSite = New DevExpress.Persistent.Base.ReportsV2.CollectionDataSource()
-        Me.XrTableRow3 = New DevExpress.XtraReports.UI.XRTableRow()
-        Me.XrTableCell7 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.PageFooter = New DevExpress.XtraReports.UI.PageFooterBand()
         Me.XrPageInfo2 = New DevExpress.XtraReports.UI.XRPageInfo()
         Me.XrPageInfo1 = New DevExpress.XtraReports.UI.XRPageInfo()
@@ -57,7 +47,6 @@ Partial Public Class StatementSheet
         Me.XrTableCell15 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.XrTableCell8 = New DevExpress.XtraReports.UI.XRTableCell()
         Me.CalculatedField1 = New DevExpress.XtraReports.UI.CalculatedField()
-        Me.GroupHeader1 = New DevExpress.XtraReports.UI.GroupHeaderBand()
         Me.CalculatedField2 = New DevExpress.XtraReports.UI.CalculatedField()
         Me.SqlDataSource1 = New DevExpress.DataAccess.Sql.SqlDataSource()
         Me.เครดิต = New DevExpress.XtraReports.UI.CalculatedField()
@@ -69,7 +58,6 @@ Partial Public Class StatementSheet
         Me.SUMTotalCr = New DevExpress.XtraReports.UI.CalculatedField()
         Me.SUMDr = New DevExpress.XtraReports.UI.CalculatedField()
         Me.SUMCr = New DevExpress.XtraReports.UI.CalculatedField()
-        Me.AccountID = New DevExpress.Persistent.Base.ReportsV2.CollectionDataSource()
         Me.GroupFooter1 = New DevExpress.XtraReports.UI.GroupFooterBand()
         Me.XrTable4 = New DevExpress.XtraReports.UI.XRTable()
         Me.XrTableRow2 = New DevExpress.XtraReports.UI.XRTableRow()
@@ -81,12 +69,24 @@ Partial Public Class StatementSheet
         Me.XrLabel1 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLine1 = New DevExpress.XtraReports.UI.XRLine()
         Me.XrLine2 = New DevExpress.XtraReports.UI.XRLine()
+        Me.dbSite = New DevExpress.Persistent.Base.ReportsV2.CollectionDataSource()
+        Me.AccountID = New DevExpress.Persistent.Base.ReportsV2.CollectionDataSource()
+        Me.ReportHeader = New DevExpress.XtraReports.UI.ReportHeaderBand()
+        Me.XrTable1 = New DevExpress.XtraReports.UI.XRTable()
+        Me.XrTableRow1 = New DevExpress.XtraReports.UI.XRTableRow()
+        Me.XrTableCell3 = New DevExpress.XtraReports.UI.XRTableCell()
+        Me.XrTableRow3 = New DevExpress.XtraReports.UI.XRTableRow()
+        Me.XrTableCell7 = New DevExpress.XtraReports.UI.XRTableCell()
+        Me.XrLabel4 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel2 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel3 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel6 = New DevExpress.XtraReports.UI.XRLabel()
         CType(Me.XrTable3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.XrTable1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.dbSite, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XrTable2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.AccountID, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XrTable4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dbSite, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AccountID, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.XrTable1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         '
         'Detail
@@ -179,119 +179,23 @@ Partial Public Class StatementSheet
         '
         'PageHeader
         '
-        Me.PageHeader.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel6, Me.XrLabel3, Me.XrLabel2, Me.XrLabel4, Me.XrTable1})
-        Me.PageHeader.HeightF = 89.99999!
+        Me.PageHeader.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrTable2})
+        Me.PageHeader.HeightF = 25.0!
         Me.PageHeader.Name = "PageHeader"
-        '
-        'XrLabel6
-        '
-        Me.XrLabel6.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding(Me.EndDate, "Text", "{0:d MMMM yyyy}")})
-        Me.XrLabel6.Font = New System.Drawing.Font("AngsanaUPC", 12.0!)
-        Me.XrLabel6.LocationFloat = New DevExpress.Utils.PointFloat(407.5914!, 51.86111!)
-        Me.XrLabel6.Name = "XrLabel6"
-        Me.XrLabel6.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.XrLabel6.SizeF = New System.Drawing.SizeF(123.9582!, 22.99999!)
-        Me.XrLabel6.StylePriority.UseFont = False
-        Me.XrLabel6.StylePriority.UseTextAlignment = False
-        Me.XrLabel6.Text = "XrLabel4"
-        Me.XrLabel6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
         '
         'EndDate
         '
         Me.EndDate.Description = "ถึง"
         Me.EndDate.Name = "EndDate"
         Me.EndDate.Type = GetType(Date)
-        Me.EndDate.Value = Today
-        '
-        'XrLabel3
-        '
-        Me.XrLabel3.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding(Me.StartDate, "Text", "{0:d MMMM yyyy}")})
-        Me.XrLabel3.Font = New System.Drawing.Font("AngsanaUPC", 12.0!)
-        Me.XrLabel3.LocationFloat = New DevExpress.Utils.PointFloat(264.1086!, 51.86111!)
-        Me.XrLabel3.Name = "XrLabel3"
-        Me.XrLabel3.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.XrLabel3.SizeF = New System.Drawing.SizeF(123.9582!, 22.99999!)
-        Me.XrLabel3.StylePriority.UseFont = False
-        Me.XrLabel3.StylePriority.UseTextAlignment = False
-        Me.XrLabel3.Text = "XrLabel3"
-        Me.XrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
+        Me.EndDate.ValueInfo = "2015-09-05"
         '
         'StartDate
         '
         Me.StartDate.Description = "วันที่"
         Me.StartDate.Name = "StartDate"
         Me.StartDate.Type = GetType(Date)
-        Me.StartDate.Value = Today
-        '
-        'XrLabel2
-        '
-        Me.XrLabel2.Font = New System.Drawing.Font("AngsanaUPC", 12.0!)
-        Me.XrLabel2.LocationFloat = New DevExpress.Utils.PointFloat(388.0667!, 51.86111!)
-        Me.XrLabel2.Name = "XrLabel2"
-        Me.XrLabel2.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.XrLabel2.SizeF = New System.Drawing.SizeF(19.52466!, 22.99999!)
-        Me.XrLabel2.StylePriority.UseFont = False
-        Me.XrLabel2.StylePriority.UseTextAlignment = False
-        Me.XrLabel2.Text = "ถึง"
-        Me.XrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
-        '
-        'XrLabel4
-        '
-        Me.XrLabel4.Font = New System.Drawing.Font("AngsanaUPC", 12.0!)
-        Me.XrLabel4.LocationFloat = New DevExpress.Utils.PointFloat(229.4503!, 51.86111!)
-        Me.XrLabel4.Name = "XrLabel4"
-        Me.XrLabel4.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.XrLabel4.SizeF = New System.Drawing.SizeF(34.6582!, 22.99999!)
-        Me.XrLabel4.StylePriority.UseFont = False
-        Me.XrLabel4.StylePriority.UseTextAlignment = False
-        Me.XrLabel4.Text = "วันที่"
-        Me.XrLabel4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
-        '
-        'XrTable1
-        '
-        Me.XrTable1.Font = New System.Drawing.Font("AngsanaUPC", 14.0!)
-        Me.XrTable1.LocationFloat = New DevExpress.Utils.PointFloat(0.0!, 0.0!)
-        Me.XrTable1.Name = "XrTable1"
-        Me.XrTable1.Rows.AddRange(New DevExpress.XtraReports.UI.XRTableRow() {Me.XrTableRow1, Me.XrTableRow3})
-        Me.XrTable1.SizeF = New System.Drawing.SizeF(761.0!, 51.86111!)
-        Me.XrTable1.StylePriority.UseFont = False
-        Me.XrTable1.StylePriority.UseTextAlignment = False
-        Me.XrTable1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
-        '
-        'XrTableRow1
-        '
-        Me.XrTableRow1.Cells.AddRange(New DevExpress.XtraReports.UI.XRTableCell() {Me.XrTableCell3})
-        Me.XrTableRow1.Name = "XrTableRow1"
-        Me.XrTableRow1.Weight = 1.0R
-        '
-        'XrTableCell3
-        '
-        Me.XrTableCell3.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Me.dbSite, "SiteName")})
-        Me.XrTableCell3.Font = New System.Drawing.Font("AngsanaUPC", 14.0!, System.Drawing.FontStyle.Bold)
-        Me.XrTableCell3.Name = "XrTableCell3"
-        Me.XrTableCell3.StylePriority.UseFont = False
-        Me.XrTableCell3.Text = "ศูนย์เมล็ดพันธุ์ข้าวนครสวรรค์"
-        Me.XrTableCell3.Weight = 3.0R
-        '
-        'dbSite
-        '
-        Me.dbSite.Name = "dbSite"
-        Me.dbSite.ObjectTypeName = "RiceManagementApp.Module.SiteSetting"
-        Me.dbSite.TopReturnedRecords = 0
-        '
-        'XrTableRow3
-        '
-        Me.XrTableRow3.Cells.AddRange(New DevExpress.XtraReports.UI.XRTableCell() {Me.XrTableCell7})
-        Me.XrTableRow3.Name = "XrTableRow3"
-        Me.XrTableRow3.Weight = 1.0R
-        '
-        'XrTableCell7
-        '
-        Me.XrTableCell7.Font = New System.Drawing.Font("AngsanaUPC", 14.0!, System.Drawing.FontStyle.Bold)
-        Me.XrTableCell7.Name = "XrTableCell7"
-        Me.XrTableCell7.StylePriority.UseFont = False
-        Me.XrTableCell7.Text = "งบดุล"
-        Me.XrTableCell7.Weight = 3.0R
+        Me.StartDate.ValueInfo = "2015-09-05"
         '
         'PageFooter
         '
@@ -379,12 +283,6 @@ Partial Public Class StatementSheet
         Me.CalculatedField1.Expression = "[].Sum([TotalDr]) - [].Sum([TotalCr])"
         Me.CalculatedField1.Name = "CalculatedField1"
         '
-        'GroupHeader1
-        '
-        Me.GroupHeader1.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrTable2})
-        Me.GroupHeader1.HeightF = 25.0!
-        Me.GroupHeader1.Name = "GroupHeader1"
-        '
         'CalculatedField2
         '
         Me.CalculatedField2.DataMember = "SP_GetTrialBalanceV7"
@@ -462,13 +360,6 @@ Partial Public Class StatementSheet
         Me.SUMCr.DataMember = "SP_GetTrialBalanceV8"
         Me.SUMCr.Expression = "[].Sum([TotalCr])"
         Me.SUMCr.Name = "SUMCr"
-        '
-        'AccountID
-        '
-        Me.AccountID.Name = "AccountID"
-        Me.AccountID.ObjectTypeName = "RiceManagementApp.Module.Account"
-        Me.AccountID.Sorting.AddRange(New DevExpress.Xpo.SortProperty() {New DevExpress.Xpo.SortProperty("[AccountID]", DevExpress.Xpo.DB.SortingDirection.Ascending)})
-        Me.AccountID.TopReturnedRecords = 0
         '
         'GroupFooter1
         '
@@ -587,9 +478,118 @@ Partial Public Class StatementSheet
         Me.XrLine2.Name = "XrLine2"
         Me.XrLine2.SizeF = New System.Drawing.SizeF(276.9194!, 2.0!)
         '
+        'dbSite
+        '
+        Me.dbSite.Name = "dbSite"
+        Me.dbSite.ObjectTypeName = "RiceManagementApp.Module.SiteSetting"
+        Me.dbSite.TopReturnedRecords = 0
+        '
+        'AccountID
+        '
+        Me.AccountID.Name = "AccountID"
+        Me.AccountID.ObjectTypeName = "RiceManagementApp.Module.Account"
+        Me.AccountID.Sorting.AddRange(New DevExpress.Xpo.SortProperty() {New DevExpress.Xpo.SortProperty("[AccountID]", DevExpress.Xpo.DB.SortingDirection.Ascending)})
+        Me.AccountID.TopReturnedRecords = 0
+        '
+        'ReportHeader
+        '
+        Me.ReportHeader.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrTable1, Me.XrLabel4, Me.XrLabel2, Me.XrLabel3, Me.XrLabel6})
+        Me.ReportHeader.HeightF = 93.61108!
+        Me.ReportHeader.Name = "ReportHeader"
+        '
+        'XrTable1
+        '
+        Me.XrTable1.Font = New System.Drawing.Font("AngsanaUPC", 14.0!)
+        Me.XrTable1.LocationFloat = New DevExpress.Utils.PointFloat(0.0!, 0.0!)
+        Me.XrTable1.Name = "XrTable1"
+        Me.XrTable1.Rows.AddRange(New DevExpress.XtraReports.UI.XRTableRow() {Me.XrTableRow1, Me.XrTableRow3})
+        Me.XrTable1.SizeF = New System.Drawing.SizeF(761.0!, 51.86111!)
+        Me.XrTable1.StylePriority.UseFont = False
+        Me.XrTable1.StylePriority.UseTextAlignment = False
+        Me.XrTable1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
+        '
+        'XrTableRow1
+        '
+        Me.XrTableRow1.Cells.AddRange(New DevExpress.XtraReports.UI.XRTableCell() {Me.XrTableCell3})
+        Me.XrTableRow1.Name = "XrTableRow1"
+        Me.XrTableRow1.Weight = 1.0R
+        '
+        'XrTableCell3
+        '
+        Me.XrTableCell3.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding("Text", Me.dbSite, "SiteName")})
+        Me.XrTableCell3.Font = New System.Drawing.Font("AngsanaUPC", 14.0!, System.Drawing.FontStyle.Bold)
+        Me.XrTableCell3.Name = "XrTableCell3"
+        Me.XrTableCell3.StylePriority.UseFont = False
+        Me.XrTableCell3.Text = "ศูนย์เมล็ดพันธุ์ข้าวนครสวรรค์"
+        Me.XrTableCell3.Weight = 3.0R
+        '
+        'XrTableRow3
+        '
+        Me.XrTableRow3.Cells.AddRange(New DevExpress.XtraReports.UI.XRTableCell() {Me.XrTableCell7})
+        Me.XrTableRow3.Name = "XrTableRow3"
+        Me.XrTableRow3.Weight = 1.0R
+        '
+        'XrTableCell7
+        '
+        Me.XrTableCell7.Font = New System.Drawing.Font("AngsanaUPC", 14.0!, System.Drawing.FontStyle.Bold)
+        Me.XrTableCell7.Name = "XrTableCell7"
+        Me.XrTableCell7.StylePriority.UseFont = False
+        Me.XrTableCell7.Text = "งบดุล"
+        Me.XrTableCell7.Weight = 3.0R
+        '
+        'XrLabel4
+        '
+        Me.XrLabel4.Font = New System.Drawing.Font("AngsanaUPC", 12.0!)
+        Me.XrLabel4.LocationFloat = New DevExpress.Utils.PointFloat(229.4503!, 51.86111!)
+        Me.XrLabel4.Name = "XrLabel4"
+        Me.XrLabel4.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel4.SizeF = New System.Drawing.SizeF(34.6582!, 22.99999!)
+        Me.XrLabel4.StylePriority.UseFont = False
+        Me.XrLabel4.StylePriority.UseTextAlignment = False
+        Me.XrLabel4.Text = "วันที่"
+        Me.XrLabel4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
+        '
+        'XrLabel2
+        '
+        Me.XrLabel2.Font = New System.Drawing.Font("AngsanaUPC", 12.0!)
+        Me.XrLabel2.LocationFloat = New DevExpress.Utils.PointFloat(388.0667!, 51.86111!)
+        Me.XrLabel2.Name = "XrLabel2"
+        Me.XrLabel2.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel2.SizeF = New System.Drawing.SizeF(19.52466!, 22.99999!)
+        Me.XrLabel2.StylePriority.UseFont = False
+        Me.XrLabel2.StylePriority.UseTextAlignment = False
+        Me.XrLabel2.Text = "ถึง"
+        Me.XrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
+        '
+        'XrLabel3
+        '
+        Me.XrLabel3.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding(Me.StartDate, "Text", "{0:d MMMM yyyy}")})
+        Me.XrLabel3.Font = New System.Drawing.Font("AngsanaUPC", 12.0!)
+        Me.XrLabel3.LocationFloat = New DevExpress.Utils.PointFloat(264.1086!, 51.86111!)
+        Me.XrLabel3.Name = "XrLabel3"
+        Me.XrLabel3.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel3.SizeF = New System.Drawing.SizeF(123.9582!, 22.99999!)
+        Me.XrLabel3.StylePriority.UseFont = False
+        Me.XrLabel3.StylePriority.UseTextAlignment = False
+        Me.XrLabel3.Text = "XrLabel3"
+        Me.XrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
+        '
+        'XrLabel6
+        '
+        Me.XrLabel6.DataBindings.AddRange(New DevExpress.XtraReports.UI.XRBinding() {New DevExpress.XtraReports.UI.XRBinding(Me.EndDate, "Text", "{0:d MMMM yyyy}")})
+        Me.XrLabel6.Font = New System.Drawing.Font("AngsanaUPC", 12.0!)
+        Me.XrLabel6.LocationFloat = New DevExpress.Utils.PointFloat(407.5914!, 51.86111!)
+        Me.XrLabel6.Name = "XrLabel6"
+        Me.XrLabel6.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel6.SizeF = New System.Drawing.SizeF(123.9582!, 22.99999!)
+        Me.XrLabel6.StylePriority.UseFont = False
+        Me.XrLabel6.StylePriority.UseTextAlignment = False
+        Me.XrLabel6.Text = "XrLabel4"
+        Me.XrLabel6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
+        '
         'StatementSheet
         '
-        Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.Detail, Me.TopMargin, Me.BottomMargin, Me.PageHeader, Me.PageFooter, Me.GroupHeader1, Me.GroupFooter1})
+        Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.Detail, Me.TopMargin, Me.BottomMargin, Me.PageHeader, Me.PageFooter, Me.GroupFooter1, Me.ReportHeader})
         Me.CalculatedFields.AddRange(New DevExpress.XtraReports.UI.CalculatedField() {Me.CalculatedField1, Me.CalculatedField2, Me.เครดิต, Me.CalculatedField4, Me.เดบิต, Me.CalculatedField6, Me.CalculatedField7, Me.SUMTotalDr, Me.SUMTotalCr, Me.SUMDr, Me.SUMCr})
         Me.ComponentStorage.Add(Me.AccountID)
         Me.ComponentStorage.Add(Me.SqlDataSource1)
@@ -604,11 +604,11 @@ Partial Public Class StatementSheet
         Me.ScriptLanguage = DevExpress.XtraReports.ScriptLanguage.VisualBasic
         Me.Version = "14.2"
         CType(Me.XrTable3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.XrTable1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.dbSite, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.XrTable2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.AccountID, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.XrTable4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dbSite, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AccountID, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.XrTable1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
 
     End Sub
@@ -616,11 +616,6 @@ Partial Public Class StatementSheet
     Friend WithEvents TopMargin As DevExpress.XtraReports.UI.TopMarginBand
     Friend WithEvents BottomMargin As DevExpress.XtraReports.UI.BottomMarginBand
     Friend WithEvents PageHeader As DevExpress.XtraReports.UI.PageHeaderBand
-    Friend WithEvents XrTable1 As DevExpress.XtraReports.UI.XRTable
-    Friend WithEvents XrTableRow1 As DevExpress.XtraReports.UI.XRTableRow
-    Friend WithEvents XrTableCell3 As DevExpress.XtraReports.UI.XRTableCell
-    Friend WithEvents XrTableRow3 As DevExpress.XtraReports.UI.XRTableRow
-    Friend WithEvents XrTableCell7 As DevExpress.XtraReports.UI.XRTableCell
     Protected WithEvents AccountID As DevExpress.Persistent.Base.ReportsV2.CollectionDataSource
     Friend WithEvents StartDate As DevExpress.XtraReports.Parameters.Parameter
     Friend WithEvents EndDate As DevExpress.XtraReports.Parameters.Parameter
@@ -636,7 +631,6 @@ Partial Public Class StatementSheet
     Friend WithEvents XrTableCell5 As DevExpress.XtraReports.UI.XRTableCell
     Friend WithEvents XrTableCell8 As DevExpress.XtraReports.UI.XRTableCell
     Friend WithEvents CalculatedField1 As DevExpress.XtraReports.UI.CalculatedField
-    Friend WithEvents GroupHeader1 As DevExpress.XtraReports.UI.GroupHeaderBand
     Friend WithEvents XrTableCell16 As DevExpress.XtraReports.UI.XRTableCell
     Friend WithEvents XrTableCell15 As DevExpress.XtraReports.UI.XRTableCell
     Friend WithEvents CalculatedField2 As DevExpress.XtraReports.UI.CalculatedField
@@ -644,10 +638,6 @@ Partial Public Class StatementSheet
     Friend WithEvents XrPageInfo1 As DevExpress.XtraReports.UI.XRPageInfo
     Friend WithEvents SqlDataSource1 As DevExpress.DataAccess.Sql.SqlDataSource
     Friend WithEvents เครดิต As DevExpress.XtraReports.UI.CalculatedField
-    Friend WithEvents XrLabel6 As DevExpress.XtraReports.UI.XRLabel
-    Friend WithEvents XrLabel3 As DevExpress.XtraReports.UI.XRLabel
-    Friend WithEvents XrLabel2 As DevExpress.XtraReports.UI.XRLabel
-    Friend WithEvents XrLabel4 As DevExpress.XtraReports.UI.XRLabel
     Protected WithEvents dbSite As DevExpress.Persistent.Base.ReportsV2.CollectionDataSource
     Friend WithEvents CalculatedField4 As DevExpress.XtraReports.UI.CalculatedField
     Friend WithEvents เดบิต As DevExpress.XtraReports.UI.CalculatedField
@@ -668,4 +658,14 @@ Partial Public Class StatementSheet
     Friend WithEvents XrLabel1 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrLine1 As DevExpress.XtraReports.UI.XRLine
     Friend WithEvents XrLine2 As DevExpress.XtraReports.UI.XRLine
+    Friend WithEvents ReportHeader As DevExpress.XtraReports.UI.ReportHeaderBand
+    Friend WithEvents XrTable1 As DevExpress.XtraReports.UI.XRTable
+    Friend WithEvents XrTableRow1 As DevExpress.XtraReports.UI.XRTableRow
+    Friend WithEvents XrTableCell3 As DevExpress.XtraReports.UI.XRTableCell
+    Friend WithEvents XrTableRow3 As DevExpress.XtraReports.UI.XRTableRow
+    Friend WithEvents XrTableCell7 As DevExpress.XtraReports.UI.XRTableCell
+    Friend WithEvents XrLabel4 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrLabel2 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrLabel3 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrLabel6 As DevExpress.XtraReports.UI.XRLabel
 End Class

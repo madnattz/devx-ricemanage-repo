@@ -255,7 +255,7 @@ Partial Public Class GLMonthly
         Me.EndDate.Description = "ถึงวันที่"
         Me.EndDate.Name = "EndDate"
         Me.EndDate.Type = GetType(Date)
-        Me.EndDate.Value = Today
+        Me.EndDate.ValueInfo = "2015-09-05"
         '
         'XrLabel5
         '
@@ -275,7 +275,7 @@ Partial Public Class GLMonthly
         Me.StartDate.Description = "วันที่"
         Me.StartDate.Name = "StartDate"
         Me.StartDate.Type = GetType(Date)
-        Me.StartDate.Value = Today
+        Me.StartDate.ValueInfo = "2015-09-05"
         '
         'XrLabel7
         '

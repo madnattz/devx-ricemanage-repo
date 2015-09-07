@@ -8273,7 +8273,7 @@
         <ColumnInfo Id="Receive.SeedProduct.ProductName" PropertyName="Receive.SeedProduct.ProductCode" IsNewNode="True" />
       </Columns>
     </ListView>
-    <ListView Id="ReportDataV2_ListView_Copy" ClassName="DevExpress.Persistent.BaseImpl.ReportDataV2" Criteria="[DisplayName] = '1. บัญชีแยกประเภททั่วไป' Or StartsWith([DisplayName], '2. งบทดลอง02') Or StartsWith([DisplayName], '3. งบทดลองรายเดือน') Or StartsWith([DisplayName], '4. งบดุล') Or StartsWith([DisplayName], '5. งบกำไรขาดทุน') Or StartsWith([DisplayName], '6. รายจ่ายสะสม')" IsNewNode="True">
+    <ListView Id="ReportDataV2_ListView_Copy" ClassName="DevExpress.Persistent.BaseImpl.ReportDataV2" Criteria="[DisplayName] = '01. บัญชีแยกประเภททั่วไป' Or StartsWith([DisplayName], '02. งบทดลอง02') Or StartsWith([DisplayName], '03. งบทดลอง02 (บัญชีหลัก)') Or StartsWith([DisplayName], '04. งบทดลองรายเดือน') Or StartsWith([DisplayName], '05. งบทดลองรายเดือน (บัญชีหลัก)') Or StartsWith([DisplayName], '06. งบดุล') Or StartsWith([DisplayName], '07. งบดุล (บัญชีหลัก)') Or StartsWith([DisplayName], '08. งบกำไรขาดทุน') Or StartsWith([DisplayName], '09. งบกำไรขาดทุน (บัญชีหลัก)') Or StartsWith([DisplayName], '10. รายจ่ายสะสม')" IsNewNode="True">
       <Columns IsNewNode="True">
         <ColumnInfo Id="IsInplaceReport" PropertyName="IsInplaceReport" Width="50" Index="-1" IsNewNode="True" />
         <ColumnInfo Id="IsPredefined" PropertyName="IsPredefined" Width="50" Index="-1" IsNewNode="True" />
