@@ -225,6 +225,12 @@
     <Compile Include="BusinessObjects\Account\ReportGL\BalanceSheet.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="BusinessObjects\Account\ReportGL\BalanceSheetV2.Designer.vb">
+      <DependentUpon>BalanceSheetV2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportGL\BalanceSheetV2.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="BusinessObjects\Account\ReportGL\Cumulative.Designer.vb">
       <DependentUpon>Cumulative.vb</DependentUpon>
     </Compile>
@@ -243,6 +249,12 @@
     <Compile Include="BusinessObjects\Account\ReportGL\GLMonthly.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="BusinessObjects\Account\ReportGL\GLMonthlyV2.Designer.vb">
+      <DependentUpon>GLMonthlyV2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportGL\GLMonthlyV2.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="BusinessObjects\Account\ReportGL\GLReport.Designer.vb">
       <DependentUpon>GLReport.vb</DependentUpon>
     </Compile>
@@ -255,10 +267,22 @@
     <Compile Include="BusinessObjects\Account\ReportGL\StatementSheet.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="BusinessObjects\Account\ReportGL\StatementSheetV2.Designer.vb">
+      <DependentUpon>StatementSheetV2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportGL\StatementSheetV2.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="BusinessObjects\Account\ReportGL\TrialBalance.Designer.vb">
       <DependentUpon>TrialBalance.vb</DependentUpon>
     </Compile>
     <Compile Include="BusinessObjects\Account\ReportGL\TrialBalance.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportGL\TrialBalanceV2.Designer.vb">
+      <DependentUpon>TrialBalanceV2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Account\ReportGL\TrialBalanceV2.vb">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="BusinessObjects\Account\ReportOther\AccountBalance.Designer.vb">
@@ -1054,6 +1078,9 @@
     <EmbeddedResource Include="BusinessObjects\Account\ReportGL\BalanceSheet.resx">
       <DependentUpon>BalanceSheet.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Account\ReportGL\BalanceSheetV2.resx">
+      <DependentUpon>BalanceSheetV2.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BusinessObjects\Account\ReportGL\Cumulative.resx">
       <DependentUpon>Cumulative.vb</DependentUpon>
     </EmbeddedResource>
@@ -1063,14 +1090,23 @@
     <EmbeddedResource Include="BusinessObjects\Account\ReportGL\GLMonthly.resx">
       <DependentUpon>GLMonthly.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Account\ReportGL\GLMonthlyV2.resx">
+      <DependentUpon>GLMonthlyV2.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BusinessObjects\Account\ReportGL\GLReport.resx">
       <DependentUpon>GLReport.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BusinessObjects\Account\ReportGL\StatementSheet.resx">
       <DependentUpon>StatementSheet.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Account\ReportGL\StatementSheetV2.resx">
+      <DependentUpon>StatementSheetV2.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BusinessObjects\Account\ReportGL\TrialBalance.resx">
       <DependentUpon>TrialBalance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessObjects\Account\ReportGL\TrialBalanceV2.resx">
+      <DependentUpon>TrialBalanceV2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BusinessObjects\Account\ReportOther\AccountBalance.resx">
       <DependentUpon>AccountBalance.vb</DependentUpon>

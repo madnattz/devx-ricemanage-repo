@@ -33,7 +33,6 @@ Partial Public Class TrialBalance
         Dim QueryParameter3 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
         Dim QueryParameter4 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(TrialBalance))
-        Me.AccountDs = New DevExpress.Persistent.Base.ReportsV2.CollectionDataSource()
         Me.label3 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label2 = New DevExpress.XtraReports.UI.XRLabel()
         Me.reportHeaderBand1 = New DevExpress.XtraReports.UI.ReportHeaderBand()
@@ -44,7 +43,6 @@ Partial Public Class TrialBalance
         Me.XrLabel2 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel1 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label1 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.dbSite = New DevExpress.Persistent.Base.ReportsV2.CollectionDataSource()
         Me.label5 = New DevExpress.XtraReports.UI.XRLabel()
         Me.topMarginBand1 = New DevExpress.XtraReports.UI.TopMarginBand()
         Me.detailBand1 = New DevExpress.XtraReports.UI.DetailBand()
@@ -93,20 +91,15 @@ Partial Public Class TrialBalance
         Me.label27 = New DevExpress.XtraReports.UI.XRLabel()
         Me.label10 = New DevExpress.XtraReports.UI.XRLabel()
         Me.SqlDataSource1 = New DevExpress.DataAccess.Sql.SqlDataSource()
+        Me.dbSite = New DevExpress.Persistent.Base.ReportsV2.CollectionDataSource()
         Me.AccIDDS = New DevExpress.Persistent.Base.ReportsV2.CollectionDataSource()
-        CType(Me.AccountDs, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.dbSite, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.AccountDs = New DevExpress.Persistent.Base.ReportsV2.CollectionDataSource()
         CType(Me.XrTable1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XrTable2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dbSite, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AccIDDS, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AccountDs, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
-        '
-        'AccountDs
-        '
-        Me.AccountDs.Name = "AccountDs"
-        Me.AccountDs.ObjectTypeName = "RiceManagementApp.Module.Account"
-        Me.AccountDs.Sorting.AddRange(New DevExpress.Xpo.SortProperty() {New DevExpress.Xpo.SortProperty("[AccountID]", DevExpress.Xpo.DB.SortingDirection.Ascending)})
-        Me.AccountDs.TopReturnedRecords = 0
         '
         'label3
         '
@@ -159,7 +152,7 @@ Partial Public Class TrialBalance
         Me.EndDate.Description = "ถึง"
         Me.EndDate.Name = "EndDate"
         Me.EndDate.Type = GetType(Date)
-        Me.EndDate.Value = Today
+        Me.EndDate.ValueInfo = "2015-09-04"
         '
         'XrLabel3
         '
@@ -179,7 +172,7 @@ Partial Public Class TrialBalance
         Me.StartDate.Description = "วันที่"
         Me.StartDate.Name = "StartDate"
         Me.StartDate.Type = GetType(Date)
-        Me.StartDate.Value = Today
+        Me.StartDate.ValueInfo = "2015-09-04"
         '
         'XrLabel2
         '
@@ -217,12 +210,6 @@ Partial Public Class TrialBalance
         Me.label1.StylePriority.UseTextAlignment = False
         Me.label1.Text = "ศูนย์เมล็ดพันธุ์ข้าวนครสวรรค์"
         Me.label1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
-        '
-        'dbSite
-        '
-        Me.dbSite.Name = "dbSite"
-        Me.dbSite.ObjectTypeName = "RiceManagementApp.Module.SiteSetting"
-        Me.dbSite.TopReturnedRecords = 0
         '
         'label5
         '
@@ -773,12 +760,25 @@ Partial Public Class TrialBalance
         Me.SqlDataSource1.Queries.AddRange(New DevExpress.DataAccess.Sql.SqlQuery() {StoredProcQuery1})
         Me.SqlDataSource1.ResultSchemaSerializable = resources.GetString("SqlDataSource1.ResultSchemaSerializable")
         '
+        'dbSite
+        '
+        Me.dbSite.Name = "dbSite"
+        Me.dbSite.ObjectTypeName = "RiceManagementApp.Module.SiteSetting"
+        Me.dbSite.TopReturnedRecords = 0
+        '
         'AccIDDS
         '
         Me.AccIDDS.Name = "AccIDDS"
         Me.AccIDDS.ObjectTypeName = "RiceManagementApp.Module.AccountGroup"
         Me.AccIDDS.Sorting.AddRange(New DevExpress.Xpo.SortProperty() {New DevExpress.Xpo.SortProperty("[AccountGroupID]", DevExpress.Xpo.DB.SortingDirection.Ascending)})
         Me.AccIDDS.TopReturnedRecords = 0
+        '
+        'AccountDs
+        '
+        Me.AccountDs.Name = "AccountDs"
+        Me.AccountDs.ObjectTypeName = "RiceManagementApp.Module.Account"
+        Me.AccountDs.Sorting.AddRange(New DevExpress.Xpo.SortProperty() {New DevExpress.Xpo.SortProperty("[AccountID]", DevExpress.Xpo.DB.SortingDirection.Ascending)})
+        Me.AccountDs.TopReturnedRecords = 0
         '
         'TrialBalance
         '
@@ -801,11 +801,11 @@ Partial Public Class TrialBalance
         Me.Parameters.AddRange(New DevExpress.XtraReports.Parameters.Parameter() {Me.StartAccount, Me.EndAccount, Me.StartDate, Me.EndDate})
         Me.StyleSheet.AddRange(New DevExpress.XtraReports.UI.XRControlStyle() {Me.Title, Me.FieldCaption, Me.PageInfo, Me.DataField})
         Me.Version = "14.2"
-        CType(Me.AccountDs, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.dbSite, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.XrTable1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.XrTable2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dbSite, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AccIDDS, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AccountDs, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
 
     End Sub
