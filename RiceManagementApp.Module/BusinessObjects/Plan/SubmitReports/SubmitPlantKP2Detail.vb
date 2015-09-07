@@ -12,6 +12,7 @@ Imports System.Collections.Generic
 Imports DevExpress.ExpressApp.Model
 Imports DevExpress.Persistent.BaseImpl
 Imports DevExpress.Persistent.Validation
+Imports DevExpress.ExpressApp.ConditionalAppearance
 
 
 <ImageName("BO_Department")> _
@@ -38,6 +39,7 @@ Public Class SubmitPlantKP2Detail
     Dim fPlanFarmerNo As String
     <Index(1)> _
     <XafDisplayName("รหัสเกษตกร")> _
+    <Appearance("PlanFarmerNo", Enabled:=False)> _
     <VisibleInListView(True), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     Public Property PlanFarmerNo() As String
         Get
@@ -51,6 +53,7 @@ Public Class SubmitPlantKP2Detail
     Dim fFullName As String
     <Index(2)> _
     <XafDisplayName("ชื่อ-นามสกุล")> _
+    <Appearance("FullName", Enabled:=False)> _
     <VisibleInListView(True), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     Public Property FullName() As String
         Get
@@ -64,6 +67,7 @@ Public Class SubmitPlantKP2Detail
     Dim fGroupCode As String
     <Index(3)> _
     <XafDisplayName("รหัสกลุ่ม")> _
+    <Appearance("GroupCode", Enabled:=False)> _
     <VisibleInListView(False), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     Public Property GroupCode() As String
         Get
@@ -77,6 +81,7 @@ Public Class SubmitPlantKP2Detail
     Dim fGroupName As String
     <Index(4)> _
     <XafDisplayName("ชื่อกลุ่ม")> _
+    <Appearance("GroupName", Enabled:=False)> _
     <VisibleInListView(True), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     Public Property GroupName() As String
         Get
@@ -90,6 +95,7 @@ Public Class SubmitPlantKP2Detail
     Dim fAddressNo As String
     <Index(5)> _
     <XafDisplayName("เลขที่")> _
+    <Appearance("AddressNo", Enabled:=False)> _
     <VisibleInListView(True), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     Public Property AddressNo() As String
         Get
@@ -103,6 +109,7 @@ Public Class SubmitPlantKP2Detail
     Dim fMoo As String
     <Index(6)> _
     <XafDisplayName("หมู่ที่")> _
+    <Appearance("Moo", Enabled:=False)> _
     <VisibleInListView(True), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     Public Property Moo() As String
         Get
@@ -116,6 +123,7 @@ Public Class SubmitPlantKP2Detail
     Dim fSubDistrictName As String
     <Index(7)> _
     <XafDisplayName("ตำบล")> _
+    <Appearance("SubDistrictName", Enabled:=False)> _
     <VisibleInListView(True), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     Public Property SubDistrictName() As String
         Get
@@ -129,6 +137,7 @@ Public Class SubmitPlantKP2Detail
     Dim fDistrictName As String
     <Index(8)> _
     <XafDisplayName("อำเภอ")> _
+    <Appearance("DistrictName", Enabled:=False)> _
     <VisibleInListView(True), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     Public Property DistrictName() As String
         Get
@@ -142,6 +151,7 @@ Public Class SubmitPlantKP2Detail
     Dim fProvinceName As String
     <Index(9)> _
     <XafDisplayName("จังหวัด")> _
+    <Appearance("ProvinceName", Enabled:=False)> _
     <VisibleInListView(True), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     Public Property ProvinceName() As String
         Get
@@ -155,6 +165,7 @@ Public Class SubmitPlantKP2Detail
     Dim fTotalGrowArea As Integer
     <Index(10)> _
     <XafDisplayName("พื้นที่ปลูกรวม(ไร่)")> _
+    <Appearance("TotalGrowArea", Enabled:=False)> _
     <VisibleInListView(True), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     Public Property TotalGrowArea() As Integer
         Get
@@ -168,6 +179,7 @@ Public Class SubmitPlantKP2Detail
     Dim fTotalSeedUse As Integer
     <Index(11)> _
     <XafDisplayName("รวมใช้เมล็ดพันธุ์(กก.)")> _
+    <Appearance("TotalSeedUse", Enabled:=False)> _
     <VisibleInListView(True), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     Public Property TotalSeedUse() As Integer
         Get
@@ -181,6 +193,7 @@ Public Class SubmitPlantKP2Detail
     Dim fTotalSeedReceive As Integer
     <Index(12)> _
     <XafDisplayName("รวมรับเมล็ดพันธุ์(กก.)")> _
+    <Appearance("TotalSeedReceive", Enabled:=False)> _
     <VisibleInListView(True), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     Public Property TotalSeedReceive() As Integer
         Get
@@ -194,6 +207,7 @@ Public Class SubmitPlantKP2Detail
     Dim fFullSeedLotName As String
     <Index(13)> _
     <XafDisplayName("แหล่งที่มาเมล็ดพันธุ์")> _
+    <Appearance("FullSeedLotName", Enabled:=False)> _
     <VisibleInListView(True), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     Public Property FullSeedLotName() As String
         Get
@@ -207,6 +221,7 @@ Public Class SubmitPlantKP2Detail
     Dim fMaxBuyQuantity As Integer
     <Index(12)> _
     <XafDisplayName("เป้าซื้อคืน(กก.)")> _
+    <Appearance("MaxBuyQuantity", Enabled:=False)> _
     <VisibleInListView(True), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     Public Property MaxBuyQuantity() As Integer
         Get
@@ -220,6 +235,7 @@ Public Class SubmitPlantKP2Detail
     Dim fIsMaximumFarmer As Boolean
     <Index(14)> _
     <XafDisplayName("รายสูงสุด")> _
+    <Appearance("IsMaximumFarmer", Enabled:=False)> _
     <VisibleInListView(True), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     Public Property IsMaximumFarmer() As Boolean
         Get

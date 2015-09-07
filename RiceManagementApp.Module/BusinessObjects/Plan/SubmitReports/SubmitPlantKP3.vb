@@ -16,7 +16,7 @@ Imports DevExpress.ExpressApp.ConditionalAppearance
 Imports DevExpress.Xpo.DB
 
 <ImageName("sent3")> _
-<XafDisplayName("ส่งรายงาน ขพ.3")> _
+<XafDisplayName("ขพ.3")> _
 <DefaultClassOptions()> _
 <RuleCriteria("SubmitPlantKP3.NotDelete", DefaultContexts.Delete, "Status='Draft'", CustomMessageTemplate:="ไม่สามารถลบข้อมูลนี้ได้")> _
 <ConditionalAppearance.Appearance("SubmitPlanKP3DisableAllItems", criteria:="Status!='Draft'", Enabled:=False, TargetItems:="*", Context:="DetailView")> _

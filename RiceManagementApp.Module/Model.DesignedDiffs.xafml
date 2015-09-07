@@ -195,7 +195,7 @@
         <Member Name="Status" Caption="สถานะ" />
       </OwnMembers>
     </Class>
-    <Class Name="RiceManagementApp.Module.BuyQualitySettings" Caption="ตั้งค่าคุณภาพซื้อคืนเมล็ดพันธุ์" ImageName="BO_Unknown">
+    <Class Name="RiceManagementApp.Module.BuyQualitySettings" Caption="ตั้งค่าคุณภาพซื้อคืนเมล็ดพันธุ์" ImageName="BO_Unknown" DefaultDetailViewImage="ModelEditor_Settings" DefaultListViewImage="ModelEditor_Settings">
       <OwnMembers>
         <Member Name="Compound" Caption="สิ่งเจอปน(%)" />
         <Member Name="Plant" Caption="พืช" />
@@ -694,7 +694,7 @@
         <Member Name="BuyEndDate" Caption="ถึงวันที่" />
       </OwnMembers>
     </Class>
-    <Class Name="RiceManagementApp.Module.PlanFarmerGrow" Caption="ข้อมูลการลงแปลงปลูก">
+    <Class Name="RiceManagementApp.Module.PlanFarmerGrow" Caption="ข้อมูลการลงแปลงปลูก" ImageName="BO_List">
       <OwnMembers>
         <Member Name="GrowType" DataSourceCriteria="[SeedPrice.SeedType] = '@this.PlanFarmerFarm.PlanFarmer.PlanFarmerGroup.MainPlan.SeedType' And [SeedPrice.SeedClass] = '@this.PlanFarmerFarm.PlanFarmer.PlanFarmerGroup.MainPlan.SeedClass' And [SeedPrice.Season] = '@this.PlanFarmerFarm.PlanFarmer.PlanFarmerGroup.MainPlan.Season' And [SeedPrice.SeedYear] = '@this.PlanFarmerFarm.PlanFarmer.PlanFarmerGroup.MainPlan.SeedYear'" LookupProperty="GrowType.GrowName" />
       </OwnMembers>
@@ -1124,6 +1124,7 @@
         <Member Name="District" Caption="อำเภอ" />
       </OwnMembers>
     </Class>
+    <Class Name="RiceManagementApp.Module.SubmitQualityBetweenStorageDetail" DefaultDetailViewImage="BO_List" DefaultListViewImage="BO_List" />
     <Class Name="RiceManagementApp.Module.SummaryBuy" ImageName="BO_Sale_Item_v92">
       <OwnMembers>
         <Member Name="ApproveStatus" AllowEdit="False" />
@@ -1451,10 +1452,10 @@
           <Item Id="FactoryReportNav_Copy" Caption="รายงาน" Index="6" ViewId="PlanReport_Nav" IsNewNode="True" />
           <Item Id="SubmitReportNav" Caption="ส่งรายงาน" ViewId="" ImageName="sent1" Index="7" IsNewNode="True">
             <Items IsNewNode="True">
-              <Item Id="SubmitPlantKP2_ListView" Index="0" ViewId="SubmitPlantKP2_ListView" ObjectKey="" IsNewNode="True" />
-              <Item Id="SubmitPlantKP3_ListView" Index="1" ViewId="SubmitPlantKP3_ListView" ObjectKey="" IsNewNode="True" />
-              <Item Id="SubmitPlantKP5_ListView" Index="2" ObjectKey="" ViewId="SubmitPlantKP5_ListView" IsNewNode="True" />
-              <Item Id="SubmitActivityPlanReport_Nav" Caption="รายงาน แผนและผลการจัดทำแปลง" Index="3" ViewId="SubmitActivityPlanReport_ListView" ImageName="sent3" IsNewNode="True" />
+              <Item Id="SubmitPlantKP2_ListView" Index="0" ViewId="SubmitPlantKP2_ListView" ObjectKey="" Caption="ขพ.2" IsNewNode="True" />
+              <Item Id="SubmitPlantKP3_ListView" Index="1" ViewId="SubmitPlantKP3_ListView" ObjectKey="" Caption="ขพ.3" IsNewNode="True" />
+              <Item Id="SubmitPlantKP5_ListView" Index="2" ObjectKey="" ViewId="SubmitPlantKP5_ListView" Caption="ขพ.5" IsNewNode="True" />
+              <Item Id="SubmitActivityPlanReport_Nav" Caption="แผนและผลการจัดทำแปลง" Index="3" ViewId="SubmitActivityPlanReport_ListView" ImageName="sent3" IsNewNode="True" />
             </Items>
           </Item>
           <Item Id="PlanAssignBuyTeam_ListView" Index="8" ViewId="PlanAssignBuyTeam_ListView" ObjectKey="" ImageName="BO_Lead" Visible="False" IsNewNode="True" />
@@ -5268,7 +5269,7 @@
         </LayoutGroup>
       </Layout>
     </DetailView>
-    <ListView Id="Farmer_Farms_ListView">
+    <ListView Id="Farmer_Farms_ListView" ImageName="BO_List">
       <Columns>
         <ColumnInfo Id="Address.Email" Index="-1" />
         <ColumnInfo Id="Address.Fax" Index="-1" />
@@ -5291,6 +5292,10 @@
         <ColumnInfo Id="LastUpdateBy" Removed="True" />
         <ColumnInfo Id="Status" PropertyName="Status" IsNewNode="True" Removed="True" />
       </Columns>
+      <HiddenActions>
+        <ActionLink ActionId="Link" IsNewNode="True" />
+        <ActionLink ActionId="Unlink" IsNewNode="True" />
+      </HiddenActions>
       <Sorting>
         <SortProperty Id="ItemNo" PropertyName="ItemNo" Index="0" IsNewNode="True" />
       </Sorting>
@@ -5917,7 +5922,7 @@
         <SortProperty Id="PlanRefNo_Asc" PropertyName="PlanRefNo" IsNewNode="True" />
       </Sorting>
     </ListView>
-    <ListView Id="MainPlan_PlanFarmerGroups_ListView">
+    <ListView Id="MainPlan_PlanFarmerGroups_ListView" ImageName="BO_Department">
       <Columns>
         <ColumnInfo Id="BuyEndDate" Index="-1" />
         <ColumnInfo Id="BuyStartDate" Index="-1" />
@@ -7021,7 +7026,7 @@
         <ColumnInfo Id="SeedUse" Caption="จำนวนที่ใช้(กก.)" />
       </Columns>
     </ListView>
-    <DetailView Id="PlanFarmerFarm_DetailView">
+    <DetailView Id="PlanFarmerFarm_DetailView" ImageName="BO_List">
       <Layout>
         <LayoutGroup Id="Main" RelativeSize="100">
           <LayoutGroup Id="SimpleEditors" RelativeSize="16.933333333333334">
@@ -7229,7 +7234,7 @@
         </LayoutGroup>
       </Layout>
     </DetailView>
-    <DetailView Id="PlanFarmerSeedSouce_DetailView">
+    <DetailView Id="PlanFarmerSeedSouce_DetailView" ImageName="BO_List">
       <Layout>
         <LayoutGroup Id="Main" RelativeSize="100">
           <LayoutGroup Id="SimpleEditors" RelativeSize="100">
@@ -7238,7 +7243,7 @@
         </LayoutGroup>
       </Layout>
     </DetailView>
-    <ListView Id="PlanFarmerSeedSouce_ListView">
+    <ListView Id="PlanFarmerSeedSouce_ListView" ImageName="BO_List">
       <Columns>
         <ColumnInfo Id="PlanFarmer" Index="-1" />
         <ColumnInfo Id="Site" Index="0" />
@@ -9496,7 +9501,7 @@
         </LayoutGroup>
       </Layout>
     </DetailView>
-    <ListView Id="SeedPrice_EstimateByGrowTypes_ListView">
+    <ListView Id="SeedPrice_EstimateByGrowTypes_ListView" ImageName="BO_Invoice">
       <Columns>
         <ColumnInfo Id="GrowType" Width="114" />
         <ColumnInfo Id="SeedUsePerArea" Width="157" />
@@ -10682,6 +10687,59 @@
         </LayoutGroup>
       </Layout>
     </DetailView>
+    <ListView Id="SubmitQualityBetweenStorage_SubmitQualityBetweenStorageDetails_ListView" AllowDelete="False" AllowNew="False" />
+    <DetailView Id="SubmitQualityBetweenStorageDetail_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="SubmitQualityBetweenStorageDetail" Caption="ข้อมูลผลการตรวจสอบคุณภาพเมล็ดพันธุ์ระหว่างการเก็บรักษา" RelativeSize="100">
+              <LayoutGroup Id="SubmitQualityBetweenStorageDetail_col1" RelativeSize="50">
+                <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" Index="0" RelativeSize="100" Caption="เมล็ดพันธุ์" IsNewNode="True">
+                  <LayoutItem Id="PlantName" ViewItem="PlantName" SizeConstraintsType="Default" Index="0" RelativeSize="8.0604534005037785" IsNewNode="True" />
+                  <LayoutItem Id="SeedTypeName" ViewItem="SeedTypeName" SizeConstraintsType="Default" Index="1" RelativeSize="6.0453400503778338" IsNewNode="True" />
+                  <LayoutItem Id="SeedClassName" ViewItem="SeedClassName" SizeConstraintsType="Default" Index="2" RelativeSize="6.0453400503778338" IsNewNode="True" />
+                  <LayoutItem Id="SeasonName" ViewItem="SeasonName" SizeConstraintsType="Default" Index="3" RelativeSize="6.0453400503778338" IsNewNode="True" />
+                  <LayoutItem Id="SeedYear" ViewItem="SeedYear" SizeConstraintsType="Default" Index="4" RelativeSize="6.0453400503778338" IsNewNode="True" />
+                  <LayoutItem Id="SeedLot" ViewItem="SeedLot" SizeConstraintsType="Default" Index="5" RelativeSize="6.0453400503778338" IsNewNode="True" />
+                  <LayoutItem Id="Item3" ShowCaption="False" ViewItem="" SizeConstraintsType="Default" Index="6" RelativeSize="61.712846347607055" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutItem Id="BuyDate" SizeConstraintsType="Default" RelativeSize="55.93607305936073" Index="1" Removed="True" />
+                <LayoutItem Id="DiffMonthBuy" SizeConstraintsType="Default" RelativeSize="50.456621004566209" Index="2" Removed="True" />
+                <LayoutItem Id="PlantName" SizeConstraintsType="Default" RelativeSize="4.5133991537376588" Removed="True" />
+                <LayoutItem Id="SeasonName" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" Removed="True" />
+                <LayoutItem Id="SeedClassName" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" Removed="True" />
+                <LayoutItem Id="SeedLot" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" Removed="True" />
+                <LayoutItem Id="SeedTypeName" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" Removed="True" />
+                <LayoutItem Id="SeedYear" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="SubmitQualityBetweenStorageDetail_col2" RelativeSize="50">
+                <LayoutItem Id="DiffProcess" SizeConstraintsType="Default" RelativeSize="7.30593607305936" Index="0" Removed="True" />
+                <LayoutItem Id="Grow" SizeConstraintsType="Default" RelativeSize="7.30593607305936" Index="0" Removed="True" />
+                <LayoutGroup Id="Item2" ShowCaption="True" CaptionLocation="Top" Index="0" RelativeSize="100" Caption="ผลการตรวจสอบ" IsNewNode="True">
+                  <LayoutItem Id="LabDate" ViewItem="LabDate" SizeConstraintsType="Default" Index="0" RelativeSize="8.0604534005037785" IsNewNode="True" />
+                  <LayoutItem Id="Strong" ViewItem="Strong" SizeConstraintsType="Default" Index="1" RelativeSize="6.0453400503778338" IsNewNode="True" />
+                  <LayoutItem Id="Grow" ViewItem="Grow" SizeConstraintsType="Default" Index="2" RelativeSize="6.0453400503778338" IsNewNode="True" />
+                  <LayoutItem Id="Wet" ViewItem="Wet" SizeConstraintsType="Default" Index="3" RelativeSize="6.0453400503778338" IsNewNode="True" />
+                  <LayoutItem Id="DiffProcess" ViewItem="DiffProcess" SizeConstraintsType="Default" Index="4" RelativeSize="6.0453400503778338" IsNewNode="True" />
+                  <LayoutItem Id="SeedWeight" ViewItem="SeedWeight" SizeConstraintsType="Default" Index="5" RelativeSize="6.0453400503778338" IsNewNode="True" />
+                  <LayoutItem Id="BuyDate" ViewItem="BuyDate" SizeConstraintsType="Default" Index="6" RelativeSize="6.0453400503778338" IsNewNode="True" />
+                  <LayoutItem Id="DiffMonthBuy" ViewItem="DiffMonthBuy" SizeConstraintsType="Default" Index="7" RelativeSize="6.0453400503778338" IsNewNode="True" />
+                  <LayoutItem Id="ProcessDate" ViewItem="ProcessDate" SizeConstraintsType="Default" Index="8" RelativeSize="6.0453400503778338" IsNewNode="True" />
+                  <LayoutItem Id="Remark" ViewItem="Remark" SizeConstraintsType="Default" Index="9" RelativeSize="6.0453400503778338" IsNewNode="True" />
+                  <LayoutItem Id="Item4" ShowCaption="False" ViewItem="" SizeConstraintsType="Default" Index="10" RelativeSize="37.531486146095716" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutItem Id="LabDate" SizeConstraintsType="Default" RelativeSize="7.30593607305936" Index="0" Removed="True" />
+                <LayoutItem Id="SeedWeight" SizeConstraintsType="Default" RelativeSize="7.30593607305936" Index="0" Removed="True" />
+                <LayoutItem Id="Strong" SizeConstraintsType="Default" RelativeSize="7.30593607305936" Index="0" Removed="True" />
+                <LayoutItem Id="Wet" SizeConstraintsType="Default" RelativeSize="7.30593607305936" Index="0" Removed="True" />
+                <LayoutItem Id="ProcessDate" SizeConstraintsType="Default" RelativeSize="4.5133991537376588" Removed="True" />
+                <LayoutItem Id="Remark" SizeConstraintsType="Default" RelativeSize="75.176304654442873" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
     <DetailView Id="SubmitQualityForBuy_DetailView">
       <Items>
         <PropertyEditor Id="Status" AllowEdit="False" />
@@ -10710,6 +10768,7 @@
         </LayoutGroup>
       </Layout>
     </DetailView>
+    <ListView Id="SubmitQualityForBuy_SubmitQualityForBuyReportDetails_ListView" AllowDelete="False" AllowNew="False" />
     <DetailView Id="SubmitQualityHistory_DetailView" Caption="ส่งรายงาน ประวัติคุณภาพเมล็ดพันธุ์">
       <Items>
         <PropertyEditor Id="Status" AllowEdit="False" />

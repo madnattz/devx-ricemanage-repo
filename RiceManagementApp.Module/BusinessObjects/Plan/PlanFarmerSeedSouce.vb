@@ -13,6 +13,7 @@ Imports DevExpress.ExpressApp.Model
 Imports DevExpress.Persistent.BaseImpl
 Imports DevExpress.Persistent.Validation
 
+<ImageName("BO_List")> _
 <DefaultClassOptions()> _
 Public Class PlanFarmerSeedSouce
     Inherits BaseObject
