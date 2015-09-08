@@ -240,7 +240,6 @@
     <None Include="Controllers\ReadMe.txt" />
     <None Include="Editors\ReadMe.txt" />
     <None Include="Images\ReadMe.txt" />
-    <None Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
