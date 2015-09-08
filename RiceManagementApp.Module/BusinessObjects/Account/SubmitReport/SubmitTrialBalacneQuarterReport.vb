@@ -24,6 +24,8 @@ Imports DevExpress.ExpressApp.ConditionalAppearance
 <DefaultClassOptions()> _
 Public Class SubmitTrialBalacneQuarterReport ' Specify more UI options using a declarative approach (http://documentation.devexpress.com/#Xaf/CustomDocument2701).
     Inherits BaseObject ' Inherit from a different class to provide a custom primary key, concurrency and deletion behavior, etc. (http://documentation.devexpress.com/#Xaf/CustomDocument3146).
+    Implements ISubmitReportAble
+
     Public Sub New(ByVal session As Session)
         MyBase.New(session)
     End Sub
@@ -130,12 +132,12 @@ Public Class SubmitTrialBalacneQuarterReport ' Specify more UI options using a d
         End Get
     End Property
 
-    <Action(Caption:="ส่งรายงาน", ConfirmationMessage:="ท่านต้องการส่งข้อมูลรายงานนี้ ใช่หรือไม่?", ImageName:="Action_Grant", AutoCommit:=True, TargetObjectsCriteria:="Status='Draft'")> _
-    Public Sub MarkAsComplete()
+    '<Action(Caption:="ส่งรายงาน", ConfirmationMessage:="ท่านต้องการส่งข้อมูลรายงานนี้ ใช่หรือไม่?", ImageName:="Action_Grant", AutoCommit:=True, TargetObjectsCriteria:="Status='Draft'")> _
+    Public Function MarkAsComplete() As Boolean
         If Not IsDeleted Then
             If Not TrialBalanceQuarterDatas.Count > 0 Then
                 MsgBox("ไม่พบข้อมูลงบทดลอง กรุณาตรวจสอบข้อมูลอีกครั้ง", MsgBoxStyle.Information, "")
-                Exit Sub
+                Exit Function
             End If
             Try
                 '//ประกาศตัวแปล webservice
@@ -149,7 +151,7 @@ Public Class SubmitTrialBalacneQuarterReport ' Specify more UI options using a d
 
                 If objService.CheckCanSubmit(objSiteInfo.SiteNo, "รายงาน รายไตรมาส (งบดุล งบรายได้ค่าใช้จ่าย)", BalanceQuarter, BalanceYear, 1) = False Then
                     MsgBox("ขณะนี้ได้มีการปิดการรับส่งข้อมูล")
-                    Exit Sub
+                    Exit Function
                 End If
 
                 '//ใส่ค่าให้กับ object รายงาน ขพ.2 (ข้อมูลส่วน Header)
@@ -191,20 +193,20 @@ Public Class SubmitTrialBalacneQuarterReport ' Specify more UI options using a d
                     Me.SubmitDate = Date.Now
                     Me.SubmitBy = CType(SecuritySystem.CurrentUser, User).DisplayName
                     '//บันทึกข้อมูล
-                    MsgBox("ส่งข้อมูลรายงาน เรียบร้อยแล้ว", MsgBoxStyle.Information)
                     Me.Save()
+                    Return True
                 Else
-                    MsgBox("เกิดข้อผิดพลาด ไม่สามารถส่งรายงานได้ กรุณาติดต่อผู้ดูแลระบบ", MsgBoxStyle.Critical)
+                    Return False
                 End If
 
             Catch ex As Exception
-                MsgBox("เกิดข้อผิดพลาด ไม่สามารถส่งรายงานได้ กรุณาติดต่อผู้ดูแลระบบ", MsgBoxStyle.Critical)
+                Return False
             End Try
 
         End If
-    End Sub
+    End Function
 
-    <Action(Caption:="ดึงข้อมูล", ConfirmationMessage:="ท่านต้องการดึงข้อมูล ใช่หรือไม่?", ImageName:="BO_Note", AutoCommit:=True, TargetObjectsCriteria:="Status='Draft'")> _
+    '<Action(Caption:="ดึงข้อมูล", ConfirmationMessage:="ท่านต้องการดึงข้อมูล ใช่หรือไม่?", ImageName:="BO_Note", AutoCommit:=True, TargetObjectsCriteria:="Status='Draft'")> _
     Public Sub ImportData()
         Session.Delete(TrialBalanceQuarterDatas)
         ' Dim fAccountBalances As New BindingList(Of TrialBalanceMonthData)
@@ -277,5 +279,13 @@ Public Class SubmitTrialBalacneQuarterReport ' Specify more UI options using a d
     Protected Function GetSiteInfo() As SiteSetting
         Dim objSite As New XPCollection(Of SiteSetting)(Session)
         Return objSite(0)
+    End Function
+
+    Public Sub DoLoadData() Implements ISubmitReportAble.DoLoadData
+        ImportData()
+    End Sub
+
+    Public Function DoSubmitReport() As Boolean Implements ISubmitReportAble.DoSubmitReport
+        MarkAsComplete()
     End Function
 End Class
