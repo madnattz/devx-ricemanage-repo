@@ -38,13 +38,3 @@ and providing 50+ cutting-edge libraries containing tools and reusable modules t
 business scenarios. The main idea behind eXpand is to offer as many features as possible to 
 developers/business users through a declarative approach (configuring files rather than writing code).
 
-
-natthapong edit
-
-server text
-
-natthapong pongrat again
-
-server again
-
-xxxxxxxxxxx
