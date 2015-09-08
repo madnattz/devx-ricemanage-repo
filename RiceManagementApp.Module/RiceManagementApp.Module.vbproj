@@ -1455,6 +1455,10 @@
     <EmbeddedResource Include="Images\RiceManagementApp.Module.Images.sent3_32x32.png" />
     <EmbeddedResource Include="Images\RiceManagementApp.Module.Images.Palet.png" />
     <EmbeddedResource Include="Images\RiceManagementApp.Module.Images.Palet_32x32.png" />
+    <None Include="UnusableNodes.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
     <Content Include="Welcome.html" />
   </ItemGroup>
   <ItemGroup>

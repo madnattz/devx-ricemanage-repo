@@ -10432,15 +10432,19 @@
     <DetailView Id="SubmitPlantKP2_DetailView">
       <Layout>
         <LayoutGroup Id="Main" RelativeSize="100">
-          <LayoutGroup Id="SimpleEditors" RelativeSize="12.836438923395445">
-            <LayoutGroup Id="SubmitPlantKP2" RelativeSize="100" Direction="Horizontal">
-              <LayoutGroup Id="Auto784c511a-af1d-40a3-8f01-4e0a332e07f9" ShowCaption="False" Caption="" Index="0" RelativeSize="50" IsNewNode="True">
-                <LayoutItem Id="MainPlan" ViewItem="MainPlan" SizeConstraintsType="Default" Index="0" RelativeSize="51.612903225806448" IsNewNode="True" />
-                <LayoutItem Id="Status" ViewItem="Status" SizeConstraintsType="Default" Index="1" RelativeSize="48.387096774193552" IsNewNode="True" />
-              </LayoutGroup>
-              <LayoutGroup Id="Auto53500a5a-883f-4c00-a2d4-b0a3774fcbe0" ShowCaption="False" Caption="" Index="1" RelativeSize="50" IsNewNode="True">
-                <LayoutItem Id="SubmitDate" ViewItem="SubmitDate" SizeConstraintsType="Default" Index="0" RelativeSize="51.612903225806448" IsNewNode="True" />
-                <LayoutItem Id="SubmitBy" ViewItem="SubmitBy" SizeConstraintsType="Default" Index="1" RelativeSize="48.387096774193552" IsNewNode="True" />
+          <LayoutGroup Id="SimpleEditors" RelativeSize="21.503131524008349">
+            <LayoutGroup Id="SubmitPlantKP2" RelativeSize="100" Direction="Vertical">
+              <LayoutGroup Id="Auto53500a5a-883f-4c00-a2d4-b0a3774fcbe0" ShowCaption="False" Caption="Auto53500a5a-883f-4c00-a2d4-b0a3774fcbe0(7)" Index="0" RelativeSize="100" IsNewNode="True">
+                <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" Index="0" RelativeSize="100" Direction="Horizontal" Caption="ส่งรายงาน ขพ.2" IsNewNode="True">
+                  <LayoutGroup Id="Autoc4f47693-f54a-4acd-b9d8-3ac5316c3a08" ShowCaption="False" Caption="" Index="0" RelativeSize="50" IsNewNode="True">
+                    <LayoutItem Id="SubmitDate" ViewItem="SubmitDate" SizeConstraintsType="Default" Index="0" RelativeSize="50" IsNewNode="True" />
+                    <LayoutItem Id="SubmitBy" ViewItem="SubmitBy" SizeConstraintsType="Default" Index="1" RelativeSize="50" IsNewNode="True" />
+                  </LayoutGroup>
+                  <LayoutGroup Id="Auto975f48f8-3a30-4e0b-9e25-ba9ab142e515" ShowCaption="False" Caption="" Index="1" RelativeSize="50" IsNewNode="True">
+                    <LayoutItem Id="MainPlan" ViewItem="MainPlan" SizeConstraintsType="Default" Index="0" RelativeSize="50" IsNewNode="True" />
+                    <LayoutItem Id="Status" ViewItem="Status" SizeConstraintsType="Default" Index="1" RelativeSize="50" IsNewNode="True" />
+                  </LayoutGroup>
+                </LayoutGroup>
               </LayoutGroup>
               <LayoutItem Id="SubmitBy" SizeConstraintsType="Default" Index="1" RelativeSize="27.906976744186046" Removed="True" />
               <LayoutItem Id="Status" SizeConstraintsType="Default" Index="2" RelativeSize="34.883720930232556" Removed="True" />
@@ -10448,7 +10452,7 @@
               <LayoutItem Id="SubmitDate" Removed="True" />
             </LayoutGroup>
           </LayoutGroup>
-          <LayoutGroup Id="SubmitPlantKP2Details_Group" Direction="Vertical" RelativeSize="87.163561076604552">
+          <LayoutGroup Id="SubmitPlantKP2Details_Group" Direction="Vertical" RelativeSize="78.496868475991647">
             <LayoutItem Id="SubmitPlantKP2Details" SizeConstraintsType="Default" RelativeSize="100" />
           </LayoutGroup>
         </LayoutGroup>
@@ -10460,25 +10464,28 @@
         <LayoutGroup Id="Main" RelativeSize="100">
           <LayoutGroup Id="SimpleEditors" RelativeSize="100">
             <LayoutGroup Id="SubmitPlantKP2Detail" Caption="เกษตรกรผู้จัดทำแปลง" RelativeSize="100">
-              <LayoutGroup Id="SubmitPlantKP2Detail_col1" RelativeSize="66.342412451361866">
-                <LayoutItem Id="PlanFarmerNo" SizeConstraintsType="Default" RelativeSize="7.30593607305936" />
-                <LayoutItem Id="FullName" SizeConstraintsType="Default" RelativeSize="5.47945205479452" />
-                <LayoutItem Id="GroupCode" SizeConstraintsType="Default" RelativeSize="5.47945205479452" />
-                <LayoutItem Id="GroupName" SizeConstraintsType="Default" RelativeSize="5.47945205479452" />
-                <LayoutItem Id="AddressNo" ViewItem="AddressNo" SizeConstraintsType="Default" Index="4" RelativeSize="5.47945205479452" IsNewNode="True" Removed="True" />
-                <LayoutItem Id="DistrictName" ViewItem="DistrictName" SizeConstraintsType="Default" Index="5" RelativeSize="5.47945205479452" IsNewNode="True" Removed="True" />
-                <LayoutItem Id="Moo" ViewItem="Moo" SizeConstraintsType="Default" Index="6" RelativeSize="5.47945205479452" IsNewNode="True" Removed="True" />
-                <LayoutItem Id="SubDistrictName" ViewItem="SubDistrictName" SizeConstraintsType="Default" Index="7" RelativeSize="5.47945205479452" IsNewNode="True" Removed="True" />
-                <LayoutItem Id="ProvinceName" ViewItem="ProvinceName" SizeConstraintsType="Default" Index="8" RelativeSize="54.337899543378995" IsNewNode="True" />
+              <LayoutGroup Id="SubmitPlantKP2Detail_col1" RelativeSize="50">
+                <LayoutItem Id="PlanFarmerNo" SizeConstraintsType="Default" RelativeSize="7.0329670329670328" />
+                <LayoutItem Id="FullName" SizeConstraintsType="Default" RelativeSize="5.2747252747252746" />
+                <LayoutItem Id="GroupCode" SizeConstraintsType="Default" RelativeSize="5.2747252747252746" />
+                <LayoutItem Id="GroupName" SizeConstraintsType="Default" RelativeSize="5.2747252747252746" />
+                <LayoutItem Id="AddressNo" SizeConstraintsType="Default" RelativeSize="5.2747252747252746" />
+                <LayoutItem Id="Moo" SizeConstraintsType="Default" RelativeSize="5.2747252747252746" />
+                <LayoutItem Id="DistrictName" SizeConstraintsType="Default" RelativeSize="5.2747252747252746" Index="6" Removed="True" />
+                <LayoutItem Id="Item1" ShowCaption="False" ViewItem="" SizeConstraintsType="Default" Index="6" RelativeSize="66.5934065934066" IsNewNode="True" />
+                <LayoutItem Id="SubDistrictName" SizeConstraintsType="Default" RelativeSize="5.2747252747252746" Removed="True" />
               </LayoutGroup>
-              <LayoutGroup Id="SubmitPlantKP2Detail_col2" RelativeSize="33.657587548638134">
-                <LayoutItem Id="TotalGrowArea" SizeConstraintsType="Default" RelativeSize="7.30593607305936" Index="0" />
-                <LayoutItem Id="TotalSeedUse" SizeConstraintsType="Default" RelativeSize="5.47945205479452" Index="1" />
-                <LayoutItem Id="TotalSeedReceive" ViewItem="TotalSeedReceive" SizeConstraintsType="Default" Index="2" RelativeSize="5.47945205479452" IsNewNode="True" Removed="True" />
-                <LayoutItem Id="FullSeedLotName" ViewItem="FullSeedLotName" SizeConstraintsType="Default" Index="3" RelativeSize="5.47945205479452" IsNewNode="True" Removed="True" />
-                <LayoutItem Id="MaxBuyQuantity" ViewItem="MaxBuyQuantity" SizeConstraintsType="Default" Index="4" RelativeSize="5.47945205479452" IsNewNode="True" Removed="True" />
-                <LayoutItem Id="IsMaximumFarmer" ViewItem="IsMaximumFarmer" SizeConstraintsType="Default" Index="5" RelativeSize="70.776255707762559" IsNewNode="True" Removed="True" />
-                <LayoutItem Id="ProvinceName" SizeConstraintsType="Default" RelativeSize="4.5133991537376588" Removed="True" />
+              <LayoutGroup Id="SubmitPlantKP2Detail_col2" RelativeSize="50">
+                <LayoutItem Id="SubDistrictName" ViewItem="SubDistrictName" SizeConstraintsType="Default" Index="0" RelativeSize="7.0329670329670328" IsNewNode="True" />
+                <LayoutItem Id="DistrictName" ViewItem="DistrictName" SizeConstraintsType="Default" Index="1" RelativeSize="5.2747252747252746" IsNewNode="True" />
+                <LayoutItem Id="ProvinceName" ViewItem="ProvinceName" SizeConstraintsType="Default" Index="2" RelativeSize="5.2747252747252746" IsNewNode="True" Removed="True" />
+                <LayoutItem Id="TotalGrowArea" SizeConstraintsType="Default" RelativeSize="5.2747252747252746" Index="3" />
+                <LayoutItem Id="TotalSeedUse" SizeConstraintsType="Default" RelativeSize="5.2747252747252746" Index="4" />
+                <LayoutItem Id="TotalSeedReceive" SizeConstraintsType="Default" RelativeSize="5.2747252747252746" Index="5" />
+                <LayoutItem Id="MaxBuyQuantity" SizeConstraintsType="Default" RelativeSize="5.2747252747252746" Index="6" />
+                <LayoutItem Id="FullSeedLotName" SizeConstraintsType="Default" RelativeSize="5.2747252747252746" Index="7" />
+                <LayoutItem Id="IsMaximumFarmer" SizeConstraintsType="Default" RelativeSize="5.2747252747252746" Index="8" />
+                <LayoutItem Id="Item2" ShowCaption="False" ViewItem="" SizeConstraintsType="Default" Index="9" RelativeSize="50.769230769230766" IsNewNode="True" />
               </LayoutGroup>
             </LayoutGroup>
           </LayoutGroup>
@@ -10520,18 +10527,54 @@
         <ColumnInfo Id="FullName" Width="332" />
       </Columns>
     </ListView>
+    <DetailView Id="SubmitPlantKP3Detail_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="SubmitPlantKP3Detail" Caption="เกษตรกรผู้จัดทำแปลง" RelativeSize="100">
+              <LayoutGroup Id="SubmitPlantKP3Detail_col1" RelativeSize="50">
+                <LayoutItem Id="FarmerNo" SizeConstraintsType="Default" RelativeSize="4.5133991537376588" />
+                <LayoutItem Id="FullName" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="GroupCode" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="GroupName" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="AddressNo" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="Moo" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="SubDistrictName" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="DistrictName" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="ProvinceName" SizeConstraintsType="Default" RelativeSize="71.791255289139627" />
+              </LayoutGroup>
+              <LayoutGroup Id="SubmitPlantKP3Detail_col2" RelativeSize="50">
+                <LayoutItem Id="GroupAddressNo" SizeConstraintsType="Default" RelativeSize="4.5133991537376588" />
+                <LayoutItem Id="GroupMoo" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="GroupSubDistrictName" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="GroupDistrictName" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="GroupProvinceName" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="TotalGrowArea" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="TotalSeedReceive" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="TotalSeedUse" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="MaxBuyQuantity" SizeConstraintsType="Default" RelativeSize="71.791255289139627" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
     <DetailView Id="SubmitPlantKP5_DetailView">
       <Layout>
         <LayoutGroup Id="Main" RelativeSize="100">
-          <LayoutGroup Id="SimpleEditors" RelativeSize="12.5">
-            <LayoutGroup Id="SubmitPlantKP5" RelativeSize="100" Direction="Horizontal">
-              <LayoutGroup Id="Autoa24c3db6-6ae0-43a5-a744-c56426b6fc6f" ShowCaption="False" Caption="" Index="0" RelativeSize="49.908925318761383" IsNewNode="True">
-                <LayoutItem Id="MainPlan" ViewItem="MainPlan" SizeConstraintsType="Default" Index="0" RelativeSize="51.612903225806448" IsNewNode="True" />
-                <LayoutItem Id="Status" ViewItem="Status" SizeConstraintsType="Default" Index="1" RelativeSize="48.387096774193552" IsNewNode="True" />
-              </LayoutGroup>
-              <LayoutGroup Id="Auto9f1ee9ff-d019-4e95-9e8a-65bc8cb1f7e9" ShowCaption="False" Caption="" Index="1" RelativeSize="50.091074681238617" IsNewNode="True">
-                <LayoutItem Id="SubmitDate" ViewItem="SubmitDate" SizeConstraintsType="Default" Index="0" RelativeSize="51.612903225806448" IsNewNode="True" />
-                <LayoutItem Id="SubmitBy" ViewItem="SubmitBy" SizeConstraintsType="Default" Index="1" RelativeSize="48.387096774193552" IsNewNode="True" />
+          <LayoutGroup Id="SimpleEditors" RelativeSize="13.733333333333333">
+            <LayoutGroup Id="SubmitPlantKP5" RelativeSize="100" Direction="Vertical">
+              <LayoutGroup Id="Auto9f1ee9ff-d019-4e95-9e8a-65bc8cb1f7e9" ShowCaption="False" Caption="Auto9f1ee9ff-d019-4e95-9e8a-65bc8cb1f7e9(7)" Index="0" RelativeSize="100" IsNewNode="True">
+                <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" Index="0" RelativeSize="100" Direction="Horizontal" Caption="ส่งรายงาน ขพ.5" IsNewNode="True">
+                  <LayoutGroup Id="Autoccfd46de-107d-4a37-98de-3607001ba8d9" ShowCaption="False" Caption="Autoccfd46de-107d-4a37-98de-3607001ba8d9(7)" Index="0" RelativeSize="50" IsNewNode="True">
+                    <LayoutItem Id="SubmitDate" ViewItem="SubmitDate" SizeConstraintsType="Default" Index="0" RelativeSize="50" IsNewNode="True" />
+                    <LayoutItem Id="SubmitBy" ViewItem="SubmitBy" SizeConstraintsType="Default" Index="1" RelativeSize="50" IsNewNode="True" />
+                  </LayoutGroup>
+                  <LayoutGroup Id="Autoac59f201-2800-43e7-8ec6-8b050d1a001e" ShowCaption="False" Caption="Autoac59f201-2800-43e7-8ec6-8b050d1a001e(10)" Index="1" RelativeSize="50" IsNewNode="True">
+                    <LayoutItem Id="MainPlan" ViewItem="MainPlan" SizeConstraintsType="Default" Index="0" RelativeSize="50" IsNewNode="True" />
+                    <LayoutItem Id="Status" ViewItem="Status" SizeConstraintsType="Default" Index="1" RelativeSize="50" IsNewNode="True" />
+                  </LayoutGroup>
+                </LayoutGroup>
               </LayoutGroup>
               <LayoutItem Id="SubmitBy" SizeConstraintsType="Default" Index="1" RelativeSize="27.906976744186046" Removed="True" />
               <LayoutItem Id="Status" SizeConstraintsType="Default" Index="2" RelativeSize="34.883720930232556" Removed="True" />
@@ -10539,13 +10582,41 @@
               <LayoutItem Id="SubmitDate" Removed="True" />
             </LayoutGroup>
           </LayoutGroup>
-          <LayoutGroup Id="SubmitPlantKP5Details_Group" Direction="Vertical" RelativeSize="87.5">
+          <LayoutGroup Id="SubmitPlantKP5Details_Group" Direction="Vertical" RelativeSize="86.266666666666666">
             <LayoutItem Id="SubmitPlantKP5Details" SizeConstraintsType="Default" RelativeSize="100" />
           </LayoutGroup>
         </LayoutGroup>
       </Layout>
     </DetailView>
     <ListView Id="SubmitPlantKP5_SubmitPlantKP5Details_ListView" AllowDelete="False" AllowNew="False" />
+    <DetailView Id="SubmitPlantKP5Detail_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="SubmitPlantKP5Detail" Caption="เกษตรกรผู้จัดทำแปลง" RelativeSize="100">
+              <LayoutGroup Id="SubmitPlantKP5Detail_col1" RelativeSize="50">
+                <LayoutItem Id="FarmerNo" SizeConstraintsType="Default" RelativeSize="4.5133991537376588" />
+                <LayoutItem Id="FarmerName" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="FarmerGroupNo" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="FarmerGroupName" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="AddressNo" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="Moo" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="Tambol" SizeConstraintsType="Default" RelativeSize="78.561354019746119" />
+              </LayoutGroup>
+              <LayoutGroup Id="SubmitPlantKP5Detail_col2" RelativeSize="50">
+                <LayoutItem Id="Amphur" SizeConstraintsType="Default" RelativeSize="4.5133991537376588" />
+                <LayoutItem Id="Province" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="AreaSize" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="BuyQuantity" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="QuantityPerUnit" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="SeedPrice" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="IsMaxBuyFarmer" SizeConstraintsType="Default" RelativeSize="78.561354019746119" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
     <DetailView Id="SubmitPlanTransferReport_DetailView">
       <Layout>
         <LayoutGroup Id="Main" RelativeSize="100">
