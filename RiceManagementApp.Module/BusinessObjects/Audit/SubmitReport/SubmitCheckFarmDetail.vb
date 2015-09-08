@@ -12,6 +12,7 @@ Imports System.Collections.Generic
 Imports DevExpress.ExpressApp.Model
 Imports DevExpress.Persistent.BaseImpl
 Imports DevExpress.Persistent.Validation
+Imports DevExpress.ExpressApp.ConditionalAppearance
 
 <ImageName("BO_Department")> _
 Public Class SubmitCheckFarmDetail
@@ -37,6 +38,7 @@ Public Class SubmitCheckFarmDetail
     Dim fFarmerNo As String
     <Index(1)> _
     <XafDisplayName("รหัสเกษตกร")> _
+    <Appearance("FarmerNo", Enabled:=False)> _
     <VisibleInListView(True), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     Public Property FarmerNo() As String
         Get
@@ -50,6 +52,7 @@ Public Class SubmitCheckFarmDetail
     Dim fFarmerName As String
     <Index(2)> _
     <XafDisplayName("ชื่อ - นามสกุล")> _
+    <Appearance("FarmerName", Enabled:=False)> _
     <VisibleInListView(True), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     Public Property FarmerName() As String
         Get
@@ -63,6 +66,7 @@ Public Class SubmitCheckFarmDetail
     Dim fGrowAreaSize As String
     <Index(3)> _
     <XafDisplayName("พื้นที่ปลูก (ไร่)")> _
+    <Appearance("GrowAreaSize", Enabled:=False)> _
     <VisibleInListView(True), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     Public Property GrowAreaSize() As String
         Get
@@ -76,6 +80,7 @@ Public Class SubmitCheckFarmDetail
     Dim fEstimateResultPerArea As String
     <Index(4)> _
     <XafDisplayName("ประเมินผลผลิต (กก./ไร่)")> _
+    <Appearance("EstimateResultPerArea", Enabled:=False)> _
     <VisibleInListView(True), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     Public Property EstimateResultPerArea() As String
         Get
@@ -89,6 +94,7 @@ Public Class SubmitCheckFarmDetail
     Dim fCheckPeriod As String
     <Index(5)> _
     <XafDisplayName("ระยะที่ตรวจ")> _
+    <Appearance("CheckPeriod", Enabled:=False)> _
     <VisibleInListView(True), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     Public Property CheckPeriod() As String
         Get
@@ -103,6 +109,7 @@ Public Class SubmitCheckFarmDetail
     <Index(6)> _
     <VisibleInListView(True), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     <XafDisplayName("วิธีปลูก")> _
+    <Appearance("GrowTypeString", Enabled:=False)> _
     Public Property GrowTypeString() As String
         Get
             Return fGrowTypeString
@@ -115,7 +122,8 @@ Public Class SubmitCheckFarmDetail
     Dim fRandom1 As String
     <Index(7)> _
     <XafDisplayName("จุดที่ 1")> _
-    <VisibleInListView(False), VisibleInDetailView(True), VisibleInLookupListView(False)> _
+    <Appearance("Random1", Enabled:=False)> _
+    <VisibleInListView(False), VisibleInDetailView(False), VisibleInLookupListView(False)> _
     Public Property Random1() As String
         Get
             Return fRandom1
@@ -128,7 +136,8 @@ Public Class SubmitCheckFarmDetail
     Dim fRandom2 As String
     <Index(8)> _
     <XafDisplayName("จุดที่ 2")> _
-    <VisibleInListView(False), VisibleInDetailView(True), VisibleInLookupListView(False)> _
+    <Appearance("Random2", Enabled:=False)> _
+    <VisibleInListView(False), VisibleInDetailView(False), VisibleInLookupListView(False)> _
     Public Property Random2() As String
         Get
             Return fRandom2
@@ -141,7 +150,8 @@ Public Class SubmitCheckFarmDetail
     Dim fRandom3 As String
     <Index(9)> _
     <XafDisplayName("จุดที่ 3")> _
-    <VisibleInListView(False), VisibleInDetailView(True), VisibleInLookupListView(False)> _
+    <Appearance("Random3", Enabled:=False)> _
+    <VisibleInListView(False), VisibleInDetailView(False), VisibleInLookupListView(False)> _
     Public Property Random3() As String
         Get
             Return fRandom3
@@ -154,7 +164,8 @@ Public Class SubmitCheckFarmDetail
     Dim fRandom4 As String
     <Index(10)> _
     <XafDisplayName("จุดที่ 4")> _
-    <VisibleInListView(False), VisibleInDetailView(True), VisibleInLookupListView(False)> _
+    <Appearance("Random4", Enabled:=False)> _
+    <VisibleInListView(False), VisibleInDetailView(False), VisibleInLookupListView(False)> _
     Public Property Random4() As String
         Get
             Return fRandom4
@@ -164,11 +175,11 @@ Public Class SubmitCheckFarmDetail
         End Set
     End Property
 
-
     Dim fRandom5 As String
     <Index(11)> _
     <XafDisplayName("จุดที่ 5")> _
-    <VisibleInListView(False), VisibleInDetailView(True), VisibleInLookupListView(False)> _
+    <Appearance("Random5", Enabled:=False)> _
+    <VisibleInListView(False), VisibleInDetailView(False), VisibleInLookupListView(False)> _
     Public Property Random5() As String
         Get
             Return fRandom5
@@ -181,6 +192,7 @@ Public Class SubmitCheckFarmDetail
     Dim fOtherSeedValue As Double
     <Index(12)> _
     <XafDisplayName("พันธุ์ปน")> _
+    <Appearance("OtherSeedValue", Enabled:=False)> _
     <VisibleInListView(True), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     Public Property OtherSeedValue() As Double
         Get
@@ -194,6 +206,7 @@ Public Class SubmitCheckFarmDetail
     Dim fRedSeedValue As Double
     <Index(13)> _
     <XafDisplayName("ข้าวแดง")> _
+    <Appearance("RedSeedValue", Enabled:=False)> _
     <VisibleInListView(True), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     Public Property RedSeedValue() As Double
         Get
@@ -207,6 +220,7 @@ Public Class SubmitCheckFarmDetail
     Dim fDisease As String
     <Index(14)> _
     <XafDisplayName("โรค")> _
+    <Appearance("Disease", Enabled:=False)> _
     <VisibleInListView(False), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     Public Property Disease() As String
         Get
@@ -220,6 +234,7 @@ Public Class SubmitCheckFarmDetail
     Dim fBug As String
     <Index(15)> _
     <XafDisplayName("แมลง")> _
+    <Appearance("Bug", Enabled:=False)> _
     <VisibleInListView(False), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     Public Property Bug() As String
         Get
@@ -233,6 +248,7 @@ Public Class SubmitCheckFarmDetail
     Dim fWeed As String
     <Index(16)> _
     <XafDisplayName("วัชพืช")> _
+    <Appearance("Weed", Enabled:=False)> _
     <VisibleInListView(False), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     Public Property Weed() As String
         Get
@@ -246,6 +262,7 @@ Public Class SubmitCheckFarmDetail
     Dim fBroken As String
     <Index(17)> _
     <XafDisplayName("หักล้ม")> _
+    <Appearance("Broken", Enabled:=False)> _
     <VisibleInListView(False), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     Public Property Broken() As String
         Get
@@ -259,6 +276,7 @@ Public Class SubmitCheckFarmDetail
     Dim fDistance As String
     <Index(18)> _
     <XafDisplayName("ระยะ")> _
+    <Appearance("Distance", Enabled:=False)> _
     <VisibleInListView(False), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     Public Property Distance() As String
         Get
@@ -272,6 +290,7 @@ Public Class SubmitCheckFarmDetail
     Dim fDamageArea As String
     <Index(19)> _
     <XafDisplayName("เสียหาย (ไร่)")> _
+    <Appearance("DamageArea", Enabled:=False)> _
      <VisibleInListView(False), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     Public Property DamageArea() As String
         Get
@@ -285,6 +304,7 @@ Public Class SubmitCheckFarmDetail
     Dim fCheckDate As String
     <Index(20)> _
     <XafDisplayName("วันที่ตรวจ")> _
+    <Appearance("CheckDate", Enabled:=False)> _
     <VisibleInListView(True), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     Public Property CheckDate() As String
         Get
@@ -298,6 +318,7 @@ Public Class SubmitCheckFarmDetail
     Dim fCheckResults As PublicEnum.CheckResults
     <Index(21)> _
     <XafDisplayName("ผลการตรวจ")> _
+    <Appearance("CheckResults", Enabled:=False)> _
     <VisibleInListView(True), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     Public Property CheckResults() As PublicEnum.CheckResults
         Get
@@ -311,6 +332,7 @@ Public Class SubmitCheckFarmDetail
     Dim fRemark As String
     <Index(22)> _
     <XafDisplayName("หมายเหตุ")> _
+    <Appearance("Remark", Enabled:=False)> _
     <VisibleInListView(False), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     Public Property Remark() As String
         Get

@@ -12,6 +12,7 @@ Imports System.Collections.Generic
 Imports DevExpress.ExpressApp.Model
 Imports DevExpress.Persistent.BaseImpl
 Imports DevExpress.Persistent.Validation
+Imports DevExpress.ExpressApp.ConditionalAppearance
 
 <ImageName("BO_List")> _
 <DefaultClassOptions()> _
@@ -39,6 +40,7 @@ Public Class SubmitCheckQualityDetail
     Dim fSampleNo As String
     <Index(1)>
     <XafDisplayName("ทะเบียนตรวจสอบ")> _
+    <Appearance("SampleNo", Enabled:=False)> _
     Public Property SampleNo() As String
         Get
             Return fSampleNo
@@ -51,6 +53,7 @@ Public Class SubmitCheckQualityDetail
     Dim fSeedTypeName As String
     <Index(2)>
     <XafDisplayName("พันธุ์")> _
+    <Appearance("SeedTypeName", Enabled:=False)> _
     Public Property SeedTypeName() As String
         Get
             Return fSeedTypeName
@@ -63,6 +66,7 @@ Public Class SubmitCheckQualityDetail
     Dim fSeedLot As String
     <Index(3)>
     <XafDisplayName("ล็อต")> _
+    <Appearance("SeedLot", Enabled:=False)> _
     Public Property SeedLot() As String
         Get
             Return fSeedLot
@@ -75,6 +79,7 @@ Public Class SubmitCheckQualityDetail
     Dim fHarvestDate As DateTime
     <Index(4)>
     <XafDisplayName("วันที่เก็บเกี่ยว")> _
+    <Appearance("HarvestDate", Enabled:=False)> _
     Public Property HarvestDate() As DateTime
         Get
             Return fHarvestDate
@@ -87,6 +92,7 @@ Public Class SubmitCheckQualityDetail
     Dim fSeedSource As String
     <Index(5)>
     <XafDisplayName("แหล่งรับเมล็ดพันธุ์")> _
+    <Appearance("SeedSource", Enabled:=False)> _
     Public Property SeedSource() As String
         Get
             Return fSeedSource
@@ -99,6 +105,7 @@ Public Class SubmitCheckQualityDetail
     Dim fBags As String
     <Index(6)>
     <XafDisplayName("กระสอบ")> _
+    <Appearance("Bags", Enabled:=False)> _
     Public Property Bags() As String
         Get
             Return fBags
@@ -111,6 +118,7 @@ Public Class SubmitCheckQualityDetail
     Dim fQuantity As String
     <Index(7)>
     <XafDisplayName("น้ำหนัก(กก.)")> _
+    <Appearance("Quantity", Enabled:=False)> _
     Public Property Quantity() As String
         Get
             Return fQuantity
@@ -123,6 +131,7 @@ Public Class SubmitCheckQualityDetail
     Dim fWet As String
     <Index(8)>
     <XafDisplayName("ความชื้น")> _
+    <Appearance("Wet", Enabled:=False)> _
     Public Property Wet() As String
         Get
             Return fWet
@@ -135,6 +144,7 @@ Public Class SubmitCheckQualityDetail
     Dim fGrow As String
     <Index(9)>
     <XafDisplayName("ความงอก")> _
+    <Appearance("Grow", Enabled:=False)> _
     Public Property Grow() As String
         Get
             Return fGrow
@@ -147,6 +157,7 @@ Public Class SubmitCheckQualityDetail
     Dim fPureSeed As String
     <Index(10)>
     <XafDisplayName("เมล็ดพันธุ์บริสุทธิ์")> _
+    <Appearance("PureSeed", Enabled:=False)> _
     Public Property PureSeed() As String
         Get
             Return fPureSeed
@@ -159,6 +170,7 @@ Public Class SubmitCheckQualityDetail
     Dim fOtherSeed As String
     <Index(11)>
     <XafDisplayName("เมล็ดพันธุ์อื่น")> _
+    <Appearance("OtherSeed", Enabled:=False)> _
     Public Property OtherSeed() As String
         Get
             Return fOtherSeed
@@ -171,6 +183,7 @@ Public Class SubmitCheckQualityDetail
     Dim fCompound As String
     <Index(12)>
     <XafDisplayName("สิ่งเจือปน")> _
+    <Appearance("Compound", Enabled:=False)> _
     Public Property Compound() As String
         Get
             Return fCompound
@@ -183,6 +196,7 @@ Public Class SubmitCheckQualityDetail
     Dim fRedSeed As String
     <Index(13)>
     <XafDisplayName("ข้าวแดง")> _
+    <Appearance("RedSeed", Enabled:=False)> _
     Public Property RedSeed() As String
         Get
             Return fRedSeed
@@ -195,6 +209,7 @@ Public Class SubmitCheckQualityDetail
     Dim fStickySeed As String
     <Index(14)>
     <XafDisplayName("ข้าวเหนียว")> _
+    <Appearance("StickySeed", Enabled:=False)> _
     Public Property StickySeed() As String
         Get
             Return fStickySeed
@@ -207,6 +222,7 @@ Public Class SubmitCheckQualityDetail
     Dim fStrong As String
     <Index(15)>
     <XafDisplayName("ความแข็งแรง")> _
+    <Appearance("Strong", Enabled:=False)> _
     Public Property Strong() As String
         Get
             Return fStrong
@@ -219,6 +235,7 @@ Public Class SubmitCheckQualityDetail
     Dim fCheckDate As DateTime
     <Index(16)>
     <XafDisplayName("วันที่ทดสอบ")> _
+    <Appearance("CheckDate", Enabled:=False)> _
     Public Property CheckDate() As DateTime
         Get
             Return fCheckDate
@@ -231,6 +248,7 @@ Public Class SubmitCheckQualityDetail
     Dim fCheckResult As PublicEnum.AuditCheckResults
     <Index(17)>
     <XafDisplayName("สถานะ")> _
+    <Appearance("CheckResult", Enabled:=False)> _
     Public Property CheckResult() As PublicEnum.AuditCheckResults
         Get
             Return fCheckResult
@@ -243,6 +261,7 @@ Public Class SubmitCheckQualityDetail
     Dim fRemark As String
     <Index(18)>
     <XafDisplayName("หมายเหตุ")> _
+    <Appearance("Remark", Enabled:=False)> _
     Public Property Remark() As String
         Get
             Return fRemark

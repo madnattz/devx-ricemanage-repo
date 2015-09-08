@@ -13,6 +13,7 @@ Imports DevExpress.ExpressApp.Model
 Imports DevExpress.Persistent.BaseImpl
 Imports DevExpress.Persistent.Validation
 Imports DevExpress.Xpo.DB
+Imports DevExpress.ExpressApp.ConditionalAppearance
 
 
 <ConditionalAppearance.Appearance("SubmitQualityBetweenStorageDisableAllItems", criteria:="Status!='Draft'", Enabled:=False, TargetItems:="*", Context:="DetailView")> _
@@ -62,9 +63,9 @@ Public Class SubmitQualityBetweenStorage
         End Set
     End Property
 
-
     Dim fSubmitDate As Date
     <XafDisplayName("วันที่ส่งรายงาน")> _
+     <Appearance("SubmitDate", Enabled:=False)> _
     Public Property SubmitDate() As Date
         Get
             Return fSubmitDate
@@ -73,8 +74,10 @@ Public Class SubmitQualityBetweenStorage
             SetPropertyValue(Of Date)("SubmitDate", fSubmitDate, value)
         End Set
     End Property
+
     Dim fSubmitBy As String
     <XafDisplayName("ส่งรายงานโดย")> _
+     <Appearance("SubmitBy", Enabled:=False)> _
     Public Property SubmitBy() As String
         Get
             Return fSubmitBy
@@ -86,6 +89,7 @@ Public Class SubmitQualityBetweenStorage
 
     Dim fStatus As PublicEnum.SubmitReportStatus
     <XafDisplayName("สถานะ")> _
+     <Appearance("Status", Enabled:=False)> _
     Public Property Status() As PublicEnum.SubmitReportStatus
         Get
             Return fStatus

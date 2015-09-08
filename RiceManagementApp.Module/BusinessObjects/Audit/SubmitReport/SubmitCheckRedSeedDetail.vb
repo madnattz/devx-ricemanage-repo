@@ -13,6 +13,7 @@ Imports DevExpress.ExpressApp.Model
 Imports DevExpress.Persistent.BaseImpl
 Imports DevExpress.Persistent.Validation
 Imports DevExpress.Xpo.DB
+Imports DevExpress.ExpressApp.ConditionalAppearance
 
 <ImageName("BO_List")> _
 <XafDisplayName("ข้อมูล ปริมาณการตรวจสอบข้าวแดง")> _
@@ -37,9 +38,10 @@ Public Class SubmitCheckRedSeedDetail
     End Property
 
     Dim fItemNo As Integer
-    <VisibleInDetailView(False), VisibleInListView(False), VisibleInLookupListView(False)> _
+    <VisibleInDetailView(True), VisibleInListView(False), VisibleInLookupListView(False)> _
     <Index(1)>
     <XafDisplayName("รายการที่")> _
+    <Appearance("ItemNo", Enabled:=False)> _
     Public Property ItemNo() As Integer
         Get
             Return fItemNo
@@ -50,9 +52,10 @@ Public Class SubmitCheckRedSeedDetail
     End Property
 
     Dim fItemCaption As String
-    <VisibleInDetailView(False), VisibleInListView(True), VisibleInLookupListView(False)> _
+    <VisibleInDetailView(True), VisibleInListView(True), VisibleInLookupListView(False)> _
     <Index(2)>
     <XafDisplayName("การตรวจสอบข้าวแดง")> _
+    <Appearance("ItemCaption", Enabled:=False)> _
     Public Property ItemCaption() As String
         Get
             Return fItemCaption
@@ -63,9 +66,10 @@ Public Class SubmitCheckRedSeedDetail
     End Property
 
     Dim fMainValue As String
-    <VisibleInDetailView(False), VisibleInListView(True), VisibleInLookupListView(False)> _
+    <VisibleInDetailView(True), VisibleInListView(True), VisibleInLookupListView(False)> _
     <Index(3)>
     <XafDisplayName("เมล็ดพันธุ์หลัก")> _
+    <Appearance("MainValue", Enabled:=False)> _
     Public Property MainValue() As String
         Get
             Return fMainValue
@@ -76,9 +80,10 @@ Public Class SubmitCheckRedSeedDetail
     End Property
 
     Dim fBuyValue As String
-    <VisibleInDetailView(False), VisibleInListView(True), VisibleInLookupListView(False)> _
+    <VisibleInDetailView(True), VisibleInListView(True), VisibleInLookupListView(False)> _
     <Index(4)>
     <XafDisplayName("ตรวจเพื่อการจัดซื้อคืน")> _
+    <Appearance("BuyValue", Enabled:=False)> _
     Public Property BuyValue() As String
         Get
             Return fBuyValue

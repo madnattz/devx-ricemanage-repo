@@ -104,6 +104,7 @@ Public Class SubmitQualityForBuy
 
     Dim fStatus As PublicEnum.SubmitReportStatus
     <XafDisplayName("สถานะ")> _
+    <Appearance("Status", Enabled:=False)> _
     Public Property Status() As PublicEnum.SubmitReportStatus
         Get
             Return fStatus

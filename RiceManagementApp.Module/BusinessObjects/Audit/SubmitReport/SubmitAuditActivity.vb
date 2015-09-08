@@ -12,9 +12,10 @@ Imports System.Collections.Generic
 Imports DevExpress.ExpressApp.Model
 Imports DevExpress.Persistent.BaseImpl
 Imports DevExpress.Persistent.Validation
+Imports DevExpress.ExpressApp.ConditionalAppearance
 
 <ImageName("sent3")> _
-<XafDisplayName("ส่งรายงาน สรุปแผนและผลการดำเนินงาน 2")> _
+<XafDisplayName("ส่งรายงาน สรุปแผนและผลการดำเนินงาน")> _
 <DefaultClassOptions()> _
 <ConditionalAppearance.Appearance("SubmitAuditActivityDisableAllItems", criteria:="Status!='Draft'", Enabled:=False, TargetItems:="*", Context:="DetailView")> _
 Public Class SubmitAuditActivity
@@ -36,7 +37,7 @@ Public Class SubmitAuditActivity
     <Association("SubmitAuditActivity-SubmitAuditActivityDetails", GetType(SubmitAuditActivityDetail))> _
     <DevExpress.Xpo.Aggregated> _
     <XafDisplayName("ข้อมูล แผนและผลการดำเนินงานตามกิจกรรมในกระบวนการผลิตเมล็ดพันธุ์")> _
-        Public ReadOnly Property SubmitAuditActivityDetails() As XPCollection(Of SubmitAuditActivityDetail)
+    Public ReadOnly Property SubmitAuditActivityDetails() As XPCollection(Of SubmitAuditActivityDetail)
         Get
             Return GetCollection(Of SubmitAuditActivityDetail)("SubmitAuditActivityDetails")
         End Get
@@ -57,6 +58,7 @@ Public Class SubmitAuditActivity
 
     Dim fSubmitDate As Date
     <XafDisplayName("วันที่ส่งรายงาน")> _
+    <Appearance("SubmitDate", Enabled:=False)> _
     Public Property SubmitDate() As Date
         Get
             Return fSubmitDate
@@ -68,6 +70,7 @@ Public Class SubmitAuditActivity
 
     Dim fSubmitBy As String
     <XafDisplayName("ส่งรายงานโดย")> _
+    <Appearance("SubmitBy", Enabled:=False)> _
     Public Property SubmitBy() As String
         Get
             Return fSubmitBy
@@ -79,6 +82,7 @@ Public Class SubmitAuditActivity
 
     Dim fStatus As PublicEnum.SubmitReportStatus
     <XafDisplayName("สถานะ")> _
+    <Appearance("Status", Enabled:=False)> _
     Public Property Status() As PublicEnum.SubmitReportStatus
         Get
             Return fStatus

@@ -12,6 +12,7 @@ Imports System.Collections.Generic
 Imports DevExpress.ExpressApp.Model
 Imports DevExpress.Persistent.BaseImpl
 Imports DevExpress.Persistent.Validation
+Imports DevExpress.ExpressApp.ConditionalAppearance
 
 <ImageName("BO_List")> _
 <XafDisplayName("ข้อมูล แผนและผลการดำเนินงาน")> _
@@ -37,7 +38,8 @@ Public Class SubmitAuditActivityDetail
 
     Dim fActivityNo As Integer
     <Index(1)>
-    <VisibleInDetailView(False), VisibleInListView(True), VisibleInLookupListView(False)>
+    <VisibleInDetailView(True), VisibleInListView(True), VisibleInLookupListView(False)>
+<Appearance("ActivityNo", Enabled:=False)> _
     <XafDisplayName("ลำดับ")> _
     Public Property ActivityNo() As Integer
         Get
@@ -50,7 +52,8 @@ Public Class SubmitAuditActivityDetail
 
     Dim fActivityName As String
     <Index(2)>
-    <VisibleInDetailView(False), VisibleInListView(True), VisibleInLookupListView(False)>
+    <VisibleInDetailView(True), VisibleInListView(True), VisibleInLookupListView(False)>
+    <Appearance("ActivityName", Enabled:=False)> _
     <XafDisplayName("กิจกรรม")> _
     Public Property ActivityName() As String
         Get
@@ -63,8 +66,9 @@ Public Class SubmitAuditActivityDetail
 
     Dim fActivityUnit As String
     <Index(3)>
-    <VisibleInDetailView(False), VisibleInListView(True), VisibleInLookupListView(False)>
+    <VisibleInDetailView(True), VisibleInListView(True), VisibleInLookupListView(False)>
     <XafDisplayName("หน่วย")> _
+    <Appearance("ActivityUnit", Enabled:=False)> _
     Public Property ActivityUnit() As String
         Get
             Return fActivityUnit
@@ -76,8 +80,9 @@ Public Class SubmitAuditActivityDetail
 
     Dim fOctValue As Integer
     <Index(4)>
-    <VisibleInDetailView(False), VisibleInListView(True), VisibleInLookupListView(False)>
+    <VisibleInDetailView(True), VisibleInListView(True), VisibleInLookupListView(False)>
     <XafDisplayName("ต.ค.")> _
+    <Appearance("OctValue", Enabled:=False)> _
     Public Property OctValue() As Integer
         Get
             Return fOctValue
@@ -89,8 +94,9 @@ Public Class SubmitAuditActivityDetail
 
     Dim fNovValue As Integer
     <Index(5)>
-    <VisibleInDetailView(False), VisibleInListView(True), VisibleInLookupListView(False)>
+    <VisibleInDetailView(True), VisibleInListView(True), VisibleInLookupListView(False)>
     <XafDisplayName("พ.ย.")> _
+    <Appearance("NovValue", Enabled:=False)> _
     Public Property NovValue() As Integer
         Get
             Return fNovValue
@@ -102,8 +108,9 @@ Public Class SubmitAuditActivityDetail
 
     Dim fDecValue As Integer
     <Index(6)>
-    <VisibleInDetailView(False), VisibleInListView(True), VisibleInLookupListView(False)>
+    <VisibleInDetailView(True), VisibleInListView(True), VisibleInLookupListView(False)>
     <XafDisplayName("ธ.ค.")> _
+    <Appearance("DecValue", Enabled:=False)> _
     Public Property DecValue() As Integer
         Get
             Return fDecValue
@@ -115,8 +122,9 @@ Public Class SubmitAuditActivityDetail
 
     Dim fJanValue As Integer
     <Index(7)>
-    <VisibleInDetailView(False), VisibleInListView(True), VisibleInLookupListView(False)>
+    <VisibleInDetailView(True), VisibleInListView(True), VisibleInLookupListView(False)>
     <XafDisplayName("ม.ค.")> _
+    <Appearance("JanValue", Enabled:=False)> _
     Public Property JanValue() As Integer
         Get
             Return fJanValue
@@ -128,8 +136,9 @@ Public Class SubmitAuditActivityDetail
 
     Dim fFebValue As Integer
     <Index(8)>
-    <VisibleInDetailView(False), VisibleInListView(True), VisibleInLookupListView(False)>
+    <VisibleInDetailView(True), VisibleInListView(True), VisibleInLookupListView(False)>
     <XafDisplayName("ก.พ.")> _
+    <Appearance("FebValue", Enabled:=False)> _
     Public Property FebValue() As Integer
         Get
             Return fFebValue
@@ -141,8 +150,9 @@ Public Class SubmitAuditActivityDetail
 
     Dim fMarValue As Integer
     <Index(9)>
-    <VisibleInDetailView(False), VisibleInListView(True), VisibleInLookupListView(False)>
+    <VisibleInDetailView(True), VisibleInListView(True), VisibleInLookupListView(False)>
     <XafDisplayName("มี.ค.")> _
+    <Appearance("MarValue", Enabled:=False)> _
     Public Property MarValue() As Integer
         Get
             Return fMarValue
@@ -154,8 +164,9 @@ Public Class SubmitAuditActivityDetail
 
     Dim fAprValue As Integer
     <Index(10)>
-    <VisibleInDetailView(False), VisibleInListView(True), VisibleInLookupListView(False)>
+    <VisibleInDetailView(True), VisibleInListView(True), VisibleInLookupListView(False)>
     <XafDisplayName("เม.ย.")> _
+    <Appearance("AprValue", Enabled:=False)> _
     Public Property AprValue() As Integer
         Get
             Return fAprValue
@@ -167,8 +178,9 @@ Public Class SubmitAuditActivityDetail
 
     Dim fMayValue As Integer
     <Index(11)>
-    <VisibleInDetailView(False), VisibleInListView(True), VisibleInLookupListView(False)>
+    <VisibleInDetailView(True), VisibleInListView(True), VisibleInLookupListView(False)>
     <XafDisplayName("พ.ค.")> _
+    <Appearance("MayValue", Enabled:=False)> _
     Public Property MayValue() As Integer
         Get
             Return fMayValue
@@ -180,8 +192,9 @@ Public Class SubmitAuditActivityDetail
 
     Dim fJunValue As Integer
     <Index(12)>
-    <VisibleInDetailView(False), VisibleInListView(True), VisibleInLookupListView(False)>
+    <VisibleInDetailView(True), VisibleInListView(True), VisibleInLookupListView(False)>
     <XafDisplayName("มิ.ย.")> _
+    <Appearance("JunValue", Enabled:=False)> _
     Public Property JunValue() As Integer
         Get
             Return fJunValue
@@ -193,8 +206,9 @@ Public Class SubmitAuditActivityDetail
 
     Dim fJulValue As Integer
     <Index(13)>
-    <VisibleInDetailView(False), VisibleInListView(True), VisibleInLookupListView(False)>
+    <VisibleInDetailView(True), VisibleInListView(True), VisibleInLookupListView(False)>
     <XafDisplayName("ก.ค.")> _
+    <Appearance("JulValue", Enabled:=False)> _
     Public Property JulValue() As Integer
         Get
             Return fJulValue
@@ -206,8 +220,9 @@ Public Class SubmitAuditActivityDetail
 
     Dim fAugValue As Integer
     <Index(14)>
-    <VisibleInDetailView(False), VisibleInListView(True), VisibleInLookupListView(False)>
+    <VisibleInDetailView(True), VisibleInListView(True), VisibleInLookupListView(False)>
     <XafDisplayName("ส.ค.")> _
+    <Appearance("AugValue", Enabled:=False)> _
     Public Property AugValue() As Integer
         Get
             Return fAugValue
@@ -219,8 +234,9 @@ Public Class SubmitAuditActivityDetail
 
     Dim fSepValue As Integer
     <Index(15)>
-    <VisibleInDetailView(False), VisibleInListView(True), VisibleInLookupListView(False)>
+    <VisibleInDetailView(True), VisibleInListView(True), VisibleInLookupListView(False)>
     <XafDisplayName("ก.ย.")> _
+    <Appearance("SepValue", Enabled:=False)> _
     Public Property SepValue() As Integer
         Get
             Return fSepValue
@@ -232,8 +248,9 @@ Public Class SubmitAuditActivityDetail
 
     Dim fTotal As Integer
     <Index(16)>
-    <VisibleInDetailView(False), VisibleInListView(True), VisibleInLookupListView(False)>
+    <VisibleInDetailView(True), VisibleInListView(True), VisibleInLookupListView(False)>
     <XafDisplayName("รวม")> _
+    <Appearance("Total", Enabled:=False)> _
     Public Property Total() As Integer
         Get
             Return fTotal
@@ -245,8 +262,9 @@ Public Class SubmitAuditActivityDetail
 
     Dim fDifferrence As Integer
     <Index(17)>
-    <VisibleInDetailView(False), VisibleInListView(True), VisibleInLookupListView(False)>
+    <VisibleInDetailView(True), VisibleInListView(True), VisibleInLookupListView(False)>
     <XafDisplayName("ผลต่าง")> _
+    <Appearance("Differrence", Enabled:=False)> _
     Public Property Differrence() As Integer
         Get
             Return fDifferrence

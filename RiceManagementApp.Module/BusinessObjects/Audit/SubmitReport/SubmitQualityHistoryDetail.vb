@@ -12,6 +12,7 @@ Imports System.Collections.Generic
 Imports DevExpress.ExpressApp.Model
 Imports DevExpress.Persistent.BaseImpl
 Imports DevExpress.Persistent.Validation
+Imports DevExpress.ExpressApp.ConditionalAppearance
 
 <ImageName("BO_Department")> _
 Public Class SubmitQualityHistoryDetail
@@ -37,6 +38,7 @@ Public Class SubmitQualityHistoryDetail
     Dim fProductName As String
     <Index(1)> _
     <XafDisplayName("เมล็ดพันธุ์")> _
+    <Appearance("ProductName", Enabled:=False)> _
     <VisibleInListView(True), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     Public Property ProductName() As String
         Get
@@ -50,6 +52,7 @@ Public Class SubmitQualityHistoryDetail
     Dim fSeedClass As String
     <Index(2)> _
     <XafDisplayName("ชั้นพันธุ์")> _
+    <Appearance("SeedClass", Enabled:=False)> _
     <VisibleInListView(False), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     Public Property SeedClass() As String
         Get
@@ -63,6 +66,7 @@ Public Class SubmitQualityHistoryDetail
     Dim fLotNo As String
     <Index(3)> _
     <XafDisplayName("ล็อตที่")> _
+    <Appearance("LotNo", Enabled:=False)> _
     <VisibleInListView(False), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     Public Property LotNo() As String
         Get
@@ -76,6 +80,7 @@ Public Class SubmitQualityHistoryDetail
     Dim fForBuyWetSeed As Double
     <Index(4)> _
     <XafDisplayName("จัดซื้อ-ความชื้น(%)")> _
+    <Appearance("ForBuyWetSeed", Enabled:=False)> _
     <VisibleInListView(True), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     Public Property ForBuyWetSeed() As Double
         Get
@@ -89,6 +94,7 @@ Public Class SubmitQualityHistoryDetail
     Dim fForBuyGrowSeed As Double
     <Index(5)> _
     <XafDisplayName("จัดซื้อ-ความงอก(%)")> _
+    <Appearance("ForBuyGrowSeed", Enabled:=False)> _
     <VisibleInListView(True), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     Public Property ForBuyGrowSeed() As Double
         Get
@@ -102,6 +108,7 @@ Public Class SubmitQualityHistoryDetail
     Dim fForBuyRedSeed As Double
     <Index(6)> _
     <XafDisplayName("จัดซื้อ-ข้าวแดง(%)")> _
+    <Appearance("ForBuyRedSeed", Enabled:=False)> _
     <VisibleInListView(True), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     Public Property ForBuyRedSeed() As Double
         Get
@@ -115,6 +122,7 @@ Public Class SubmitQualityHistoryDetail
     Dim fForBuyOtherSeed As Double
     <Index(7)> _
     <XafDisplayName("เมล็ดอื่นๆ")> _
+    <Appearance("ForBuyOtherSeed", Enabled:=False)> _
     <VisibleInListView(False), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     Public Property ForBuyOtherSeed() As Double
         Get
@@ -128,6 +136,7 @@ Public Class SubmitQualityHistoryDetail
     Dim fForBuyCheckDate As String
     <Index(8)> _
     <XafDisplayName("วันที่")> _
+    <Appearance("ForBuyCheckDate", Enabled:=False)> _
     <VisibleInListView(False), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     Public Property ForBuyCheckDate() As String
         Get
@@ -141,6 +150,7 @@ Public Class SubmitQualityHistoryDetail
     Dim fBeforeWetSeed As Double
     <Index(9)> _
     <XafDisplayName("ก่อนปรับปรุง-ความชื้น(%)")> _
+    <Appearance("BeforeWetSeed", Enabled:=False)> _
     <VisibleInListView(True), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     Public Property BeforeWetSeed() As Double
         Get
@@ -154,6 +164,7 @@ Public Class SubmitQualityHistoryDetail
     Dim fBeforeGrowSeed As Double
     <Index(10)> _
     <XafDisplayName("ก่อนปรับปรุง-ความงอก(%)")> _
+    <Appearance("BeforeGrowSeed", Enabled:=False)> _
     <VisibleInListView(True), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     Public Property BeforeGrowSeed() As Double
         Get
@@ -167,6 +178,7 @@ Public Class SubmitQualityHistoryDetail
     Dim fBeforeCompound As Double
     <Index(11)> _
     <XafDisplayName("ก่อนปรับปรุง-สิ่งเจือปน(%)")> _
+    <Appearance("BeforeCompound", Enabled:=False)> _
     <VisibleInListView(True), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     Public Property BeforeCompound() As Double
         Get
@@ -180,6 +192,7 @@ Public Class SubmitQualityHistoryDetail
     Dim fBeforeDate As String
     <Index(12)> _
     <XafDisplayName("ก่อนปรับปรุง-วันที่")> _
+    <Appearance("BeforeDate", Enabled:=False)> _
     <VisibleInListView(False), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     Public Property BeforeDate() As String
         Get
@@ -193,6 +206,7 @@ Public Class SubmitQualityHistoryDetail
     Dim fAfterWetSeed As Double
     <Index(13)> _
     <XafDisplayName("หลังปรับปรุง-ความชื้น(%)")> _
+    <Appearance("AfterWetSeed", Enabled:=False)> _
     <VisibleInListView(True), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     Public Property AfterWetSeed() As Double
         Get
@@ -206,6 +220,7 @@ Public Class SubmitQualityHistoryDetail
     Dim fAfterGrowSeed As Double
     <Index(14)> _
     <XafDisplayName("หลังปรับปรุง-ความงอก(%)")> _
+    <Appearance("AfterGrowSeed", Enabled:=False)> _
     <VisibleInListView(True), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     Public Property AfterGrowSeed() As Double
         Get
@@ -219,6 +234,7 @@ Public Class SubmitQualityHistoryDetail
     Dim fAfterStrongSeed As Double
     <Index(15)> _
     <XafDisplayName("ความแข็งแรง")> _
+    <Appearance("AfterStrongSeed", Enabled:=False)> _
     <VisibleInListView(False), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     Public Property AfterStrongSeed() As Double
         Get
@@ -232,6 +248,7 @@ Public Class SubmitQualityHistoryDetail
     Dim fAfterPureSeed As Double
     <Index(16)> _
     <XafDisplayName("เมล็ดพันธุ์สุทธิ์")> _
+    <Appearance("AfterPureSeed", Enabled:=False)> _
     <VisibleInListView(False), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     Public Property AfterPureSeed() As Double
         Get
@@ -245,6 +262,7 @@ Public Class SubmitQualityHistoryDetail
     Dim fAfterCompound As Double
     <Index(17)> _
     <XafDisplayName("หลังปรับปรุง-สิ่งเจือปน(%)")> _
+    <Appearance("AfterCompound", Enabled:=False)> _
     <VisibleInListView(True), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     Public Property AfterCompound() As Double
         Get
@@ -258,6 +276,7 @@ Public Class SubmitQualityHistoryDetail
     Dim fAfterRedSeed As Double
     <Index(18)> _
     <XafDisplayName("ข้าวแดง")> _
+    <Appearance("AfterRedSeed", Enabled:=False)> _
     <VisibleInListView(False), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     Public Property AfterRedSeed() As Double
         Get
@@ -271,6 +290,7 @@ Public Class SubmitQualityHistoryDetail
     Dim fAfterOtherSeed As Double
     <Index(19)> _
     <XafDisplayName("เมล็ดอื่นๆ")> _
+    <Appearance("AfterOtherSeed", Enabled:=False)> _
     <VisibleInListView(False), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     Public Property AfterOtherSeed() As Double
         Get
@@ -284,6 +304,7 @@ Public Class SubmitQualityHistoryDetail
     Dim fAfterWeight As Double
     <Index(20)> _
     <XafDisplayName("หลังปรับปรุง-น้ำหนัก(กก.)")> _
+    <Appearance("AfterWeight", Enabled:=False)> _
     <VisibleInListView(True), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     Public Property AfterWeight() As Double
         Get
@@ -297,6 +318,7 @@ Public Class SubmitQualityHistoryDetail
     Dim fAfterDate As String
     <Index(21)> _
     <XafDisplayName("วันที่ตรวจสอบ")> _
+    <Appearance("AfterDate", Enabled:=False)> _
     <VisibleInListView(False), VisibleInDetailView(True), VisibleInLookupListView(False)> _
     Public Property AfterDate() As String
         Get

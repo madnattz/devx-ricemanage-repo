@@ -10068,14 +10068,14 @@
       </Items>
       <Layout>
         <LayoutGroup Id="Main" RelativeSize="100">
-          <LayoutGroup Id="SimpleEditors" RelativeSize="22.587719298245613">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="13.733333333333333">
             <LayoutGroup Id="SubmitAuditActivity" RelativeSize="100">
-              <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" Index="0" RelativeSize="100" Caption="สรุปแผนและผลการดำเนินงาน" Direction="Horizontal" IsNewNode="True">
-                <LayoutGroup Id="Auto130ad848-84bf-481d-8ca0-877ee79826e1" ShowCaption="False" Caption="" Index="0" RelativeSize="50" IsNewNode="True">
+              <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" Index="0" RelativeSize="100" Caption="ส่งรายงาน สรุปแผนและผลการดำเนินงาน" Direction="Horizontal" IsNewNode="True">
+                <LayoutGroup Id="Auto130ad848-84bf-481d-8ca0-877ee79826e1" ShowCaption="False" Caption="Auto130ad848-84bf-481d-8ca0-877ee79826e1(5)" Index="0" RelativeSize="50" IsNewNode="True">
                   <LayoutItem Id="MainPlan" ViewItem="MainPlan" SizeConstraintsType="Default" Index="0" RelativeSize="50" IsNewNode="True" />
                   <LayoutItem Id="Status" ViewItem="Status" SizeConstraintsType="Default" Index="1" RelativeSize="50" IsNewNode="True" />
                 </LayoutGroup>
-                <LayoutGroup Id="Autoce30abef-1c1f-4e90-9f86-669ed146b4c2" ShowCaption="False" Caption="" Index="1" RelativeSize="50" IsNewNode="True">
+                <LayoutGroup Id="Autoce30abef-1c1f-4e90-9f86-669ed146b4c2" ShowCaption="False" Caption="Autoce30abef-1c1f-4e90-9f86-669ed146b4c2(8)" Index="1" RelativeSize="50" IsNewNode="True">
                   <LayoutItem Id="SubmitDate" ViewItem="SubmitDate" SizeConstraintsType="Default" Index="0" RelativeSize="50" IsNewNode="True" />
                   <LayoutItem Id="SubmitBy" ViewItem="SubmitBy" SizeConstraintsType="Default" Index="1" RelativeSize="50" IsNewNode="True" />
                 </LayoutGroup>
@@ -10086,13 +10086,44 @@
               <LayoutItem Id="SubmitDate" Removed="True" />
             </LayoutGroup>
           </LayoutGroup>
-          <LayoutGroup Id="SubmitAuditActivityDetails_Group" Direction="Vertical" RelativeSize="77.412280701754383">
+          <LayoutGroup Id="SubmitAuditActivityDetails_Group" Direction="Vertical" RelativeSize="86.266666666666666">
             <LayoutItem Id="SubmitAuditActivityDetails" SizeConstraintsType="Default" RelativeSize="100" />
           </LayoutGroup>
         </LayoutGroup>
       </Layout>
     </DetailView>
     <ListView Id="SubmitAuditActivity_SubmitAuditActivityDetails_ListView" AllowDelete="False" AllowEdit="False" AllowNew="False" />
+    <DetailView Id="SubmitAuditActivityDetail_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="SubmitAuditActivityDetail" Caption="ข้อมูล แผนและผลการดำเนินงานตามกิจกรรมในกระบวนการผลิตเมล็ดพันธุ์" RelativeSize="100">
+              <LayoutGroup Id="SubmitAuditActivityDetail_col1" RelativeSize="50">
+                <LayoutItem Id="ActivityNo" SizeConstraintsType="Default" RelativeSize="4.5133991537376588" />
+                <LayoutItem Id="ActivityName" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="ActivityUnit" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="OctValue" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="NovValue" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="DecValue" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="JanValue" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="FebValue" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="MarValue" SizeConstraintsType="Default" RelativeSize="71.791255289139627" />
+              </LayoutGroup>
+              <LayoutGroup Id="SubmitAuditActivityDetail_col2" RelativeSize="50">
+                <LayoutItem Id="AprValue" SizeConstraintsType="Default" RelativeSize="4.5133991537376588" />
+                <LayoutItem Id="MayValue" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="JunValue" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="JulValue" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="AugValue" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="SepValue" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="Total" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="Differrence" SizeConstraintsType="Default" RelativeSize="75.176304654442873" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
     <DetailView Id="SubmitCheckFarm_DetailView" Caption="ส่งรายงาน การตรวจตัดสินคุณภาพแปลงขยายพันธุ์ข้าวอย่างเป็นทางการ">
       <Items>
         <PropertyEditor Id="Status" AllowEdit="False" />
@@ -10101,14 +10132,14 @@
       </Items>
       <Layout>
         <LayoutGroup Id="Main" RelativeSize="100">
-          <LayoutGroup Id="SimpleEditors" RelativeSize="21.775898520084567">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="13.733333333333333">
             <LayoutGroup Id="SubmitCheckFarm" RelativeSize="100">
-              <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" Index="0" RelativeSize="100" Caption="การตรวจตัดสินคุณภาพแปลงขยายพันธุ์ข้าวอย่างเป็นทางการ" Direction="Horizontal" IsNewNode="True">
-                <LayoutGroup Id="Auto7e1bde20-3fee-4eac-9b92-bff99cdc2220" ShowCaption="False" Caption="" Index="0" RelativeSize="50" IsNewNode="True">
+              <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" Index="0" RelativeSize="100" Caption="ส่งรายงาน การตรวจตัดสินคุณภาพแปลงขยายพันธุ์ข้าวอย่างเป็นทางการ" Direction="Horizontal" IsNewNode="True">
+                <LayoutGroup Id="Auto7e1bde20-3fee-4eac-9b92-bff99cdc2220" ShowCaption="False" Caption="Auto7e1bde20-3fee-4eac-9b92-bff99cdc2220(5)" Index="0" RelativeSize="50" IsNewNode="True">
                   <LayoutItem Id="MainPlan" ViewItem="MainPlan" SizeConstraintsType="Default" Index="0" RelativeSize="50" IsNewNode="True" />
                   <LayoutItem Id="Status" ViewItem="Status" SizeConstraintsType="Default" Index="1" RelativeSize="50" IsNewNode="True" />
                 </LayoutGroup>
-                <LayoutGroup Id="Autodff88149-87f6-472a-af95-0723896fa73e" ShowCaption="False" Caption="" Index="1" RelativeSize="50" IsNewNode="True">
+                <LayoutGroup Id="Autodff88149-87f6-472a-af95-0723896fa73e" ShowCaption="False" Caption="Autodff88149-87f6-472a-af95-0723896fa73e(8)" Index="1" RelativeSize="50" IsNewNode="True">
                   <LayoutItem Id="SubmitDate" ViewItem="SubmitDate" SizeConstraintsType="Default" Index="0" RelativeSize="50" IsNewNode="True" />
                   <LayoutItem Id="SubmitBy" ViewItem="SubmitBy" SizeConstraintsType="Default" Index="1" RelativeSize="50" IsNewNode="True" />
                 </LayoutGroup>
@@ -10119,7 +10150,7 @@
               <LayoutItem Id="SubmitDate" Removed="True" />
             </LayoutGroup>
           </LayoutGroup>
-          <LayoutGroup Id="SubmitCheckFarmDetails_Group" Direction="Vertical" RelativeSize="78.224101479915433">
+          <LayoutGroup Id="SubmitCheckFarmDetails_Group" Direction="Vertical" RelativeSize="86.266666666666666">
             <LayoutItem Id="SubmitCheckFarmDetails" SizeConstraintsType="Default" RelativeSize="100" />
           </LayoutGroup>
         </LayoutGroup>
@@ -10127,6 +10158,37 @@
     </DetailView>
     <ListView Id="SubmitCheckFarm_ListView" Caption="ส่งรายงาน การตรวจตัดสินคุณภาพแปลงขยายพันธุ์ข้าวอย่างเป็นทางการ" />
     <ListView Id="SubmitCheckFarm_SubmitCheckFarmDetails_ListView" AllowDelete="False" AllowNew="False" />
+    <DetailView Id="SubmitCheckFarmDetail_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="SubmitCheckFarmDetail" Caption="เกษตรกรผู้จัดทำแปลง" RelativeSize="100">
+              <LayoutGroup Id="SubmitCheckFarmDetail_col1" RelativeSize="50">
+                <LayoutItem Id="FarmerNo" SizeConstraintsType="Default" RelativeSize="4.5133991537376588" />
+                <LayoutItem Id="FarmerName" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="GrowAreaSize" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="EstimateResultPerArea" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="CheckPeriod" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="GrowTypeString" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="OtherSeedValue" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="RedSeedValue" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="Disease" SizeConstraintsType="Default" RelativeSize="71.791255289139627" />
+              </LayoutGroup>
+              <LayoutGroup Id="SubmitCheckFarmDetail_col2" RelativeSize="50">
+                <LayoutItem Id="Bug" SizeConstraintsType="Default" RelativeSize="4.5133991537376588" />
+                <LayoutItem Id="Weed" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="Broken" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="Distance" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="DamageArea" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="CheckDate" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="CheckResults" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="Remark" SizeConstraintsType="Default" RelativeSize="75.176304654442873" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
     <DetailView Id="SubmitCheckFarmSummary_DetailView">
       <Items>
         <PropertyEditor Id="Status" AllowEdit="False" />
@@ -10135,14 +10197,14 @@
       </Items>
       <Layout>
         <LayoutGroup Id="Main" RelativeSize="100">
-          <LayoutGroup Id="SimpleEditors" RelativeSize="22.391304347826086">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="13.733333333333333">
             <LayoutGroup Id="SubmitCheckFarmSummary" RelativeSize="100">
-              <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" Index="0" RelativeSize="100" Caption="ผลการตรวจตัดสินคุณภาพแปลงขยายพันธุ์" Direction="Horizontal" IsNewNode="True">
-                <LayoutGroup Id="Auto858eff96-ea49-4f36-a37c-599cc87ceed1" ShowCaption="False" Caption="" Index="0" RelativeSize="49.913644214162346" IsNewNode="True">
+              <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" Index="0" RelativeSize="100" Caption="ส่งรายงาน ผลการตรวจตัดสินคุณภาพแปลงขยายพันธุ์" Direction="Horizontal" IsNewNode="True">
+                <LayoutGroup Id="Auto858eff96-ea49-4f36-a37c-599cc87ceed1" ShowCaption="False" Caption="Auto858eff96-ea49-4f36-a37c-599cc87ceed1(5)" Index="0" RelativeSize="49.862637362637365" IsNewNode="True">
                   <LayoutItem Id="SeedYear" ViewItem="SeedYear" SizeConstraintsType="Default" Index="0" RelativeSize="50" IsNewNode="True" />
                   <LayoutItem Id="Status" ViewItem="Status" SizeConstraintsType="Default" Index="1" RelativeSize="50" IsNewNode="True" />
                 </LayoutGroup>
-                <LayoutGroup Id="Auto174734f5-b4cc-4ef8-b3f6-57f9324c5af1" ShowCaption="False" Caption="" Index="1" RelativeSize="50.086355785837654" IsNewNode="True">
+                <LayoutGroup Id="Auto174734f5-b4cc-4ef8-b3f6-57f9324c5af1" ShowCaption="False" Caption="Auto174734f5-b4cc-4ef8-b3f6-57f9324c5af1(8)" Index="1" RelativeSize="50.137362637362635" IsNewNode="True">
                   <LayoutItem Id="SubmitDate" ViewItem="SubmitDate" SizeConstraintsType="Default" Index="0" RelativeSize="50" IsNewNode="True" />
                   <LayoutItem Id="SubmitBy" ViewItem="SubmitBy" SizeConstraintsType="Default" Index="1" RelativeSize="50" IsNewNode="True" />
                 </LayoutGroup>
@@ -10153,7 +10215,7 @@
               <LayoutItem Id="SubmitDate" Removed="True" />
             </LayoutGroup>
           </LayoutGroup>
-          <LayoutGroup Id="SubmitCheckFarmSummaryDetails_Group" Direction="Vertical" RelativeSize="77.6086956521739" Caption="รายการผลการตรวจสอบคุณภาพแปลงขยายพันธุ์">
+          <LayoutGroup Id="SubmitCheckFarmSummaryDetails_Group" Direction="Vertical" RelativeSize="86.266666666666666" Caption="รายการผลการตรวจสอบคุณภาพแปลงขยายพันธุ์">
             <LayoutItem Id="SubmitCheckFarmSummaryDetails" SizeConstraintsType="Default" RelativeSize="100" />
           </LayoutGroup>
         </LayoutGroup>
@@ -10168,6 +10230,28 @@
         <SortProperty Id="MonthNo" PropertyName="MonthNo" Index="1" IsNewNode="True" />
       </Sorting>
     </ListView>
+    <DetailView Id="SubmitCheckFarmSummaryDetail_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="SubmitCheckFarmSummaryDetail" Caption="รายการผลการตรวจสอบคุณภาพแปลงขยายพันธุ์" RelativeSize="100">
+              <LayoutGroup Id="SubmitCheckFarmSummaryDetail_col1" RelativeSize="50">
+                <LayoutItem Id="MainPlan" SizeConstraintsType="Default" RelativeSize="4.5133991537376588" />
+                <LayoutItem Id="MonthNo" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="PlanYear" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="AreaSize" SizeConstraintsType="Default" RelativeSize="88.716502115655857" />
+              </LayoutGroup>
+              <LayoutGroup Id="SubmitCheckFarmSummaryDetail_col2" RelativeSize="50">
+                <LayoutItem Id="ActualAreaSize" SizeConstraintsType="Default" RelativeSize="4.5133991537376588" />
+                <LayoutItem Id="ActualPassArea" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="FullDamageArea" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="FailReason" SizeConstraintsType="Default" RelativeSize="88.716502115655857" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
     <DetailView Id="SubmitCheckQuality_DetailView">
       <Layout>
         <LayoutGroup Id="Main" RelativeSize="100">
@@ -10234,8 +10318,8 @@
       </Items>
       <Layout>
         <LayoutGroup Id="Main" RelativeSize="100">
-          <LayoutGroup Id="SimpleEditors" RelativeSize="27.850877192982455">
-            <LayoutGroup Id="SubmitCheckQualityForMonth" Caption="ปริมาณการตรวจสอบคุณภาพเมล็ดพันธุ์ข้าวประจำเดือน" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="16.933333333333334">
+            <LayoutGroup Id="SubmitCheckQualityForMonth" Caption="ส่งรายงาน ปริมาณการตรวจสอบคุณภาพเมล็ดพันธุ์ข้าวประจำเดือน" RelativeSize="100">
               <LayoutGroup Id="SubmitCheckQualityForMonth_col1" RelativeSize="50">
                 <LayoutItem Id="Month" SizeConstraintsType="Default" RelativeSize="36.363636363636367" />
                 <LayoutItem Id="SeedYear" SizeConstraintsType="Default" RelativeSize="27.272727272727273" />
@@ -10245,18 +10329,60 @@
               <LayoutGroup Id="SubmitCheckQualityForMonth_col2" RelativeSize="50">
                 <LayoutItem Id="SubmitDate" ViewItem="SubmitDate" SizeConstraintsType="Default" Index="0" RelativeSize="36.363636363636367" IsNewNode="True" />
                 <LayoutItem Id="SubmitBy" SizeConstraintsType="Default" RelativeSize="27.272727272727273" Index="1" />
-                <LayoutItem Id="Item1" ShowCaption="False" ViewItem="" SizeConstraintsType="Default" Index="2" RelativeSize="36.363636363636367" IsNewNode="True" />
+                <LayoutItem Id="Item1" ShowCaption="False" SizeConstraintsType="Default" Index="2" RelativeSize="36.363636363636367" ViewItem="" IsNewNode="True" />
                 <LayoutItem Id="Status" SizeConstraintsType="Default" RelativeSize="36.363636363636367" Index="2" Removed="True" />
               </LayoutGroup>
             </LayoutGroup>
           </LayoutGroup>
-          <LayoutGroup Id="SubmitCheckQualityForMonthDetails_Group" Direction="Vertical" RelativeSize="72.149122807017548">
+          <LayoutGroup Id="SubmitCheckQualityForMonthDetails_Group" Direction="Vertical" RelativeSize="83.066666666666663">
             <LayoutItem Id="SubmitCheckQualityForMonthDetails" SizeConstraintsType="Default" RelativeSize="100" />
           </LayoutGroup>
         </LayoutGroup>
       </Layout>
     </DetailView>
     <ListView Id="SubmitCheckQualityForMonth_SubmitCheckQualityForMonthDetails_ListView" AllowDelete="False" AllowNew="False" AllowEdit="True" />
+    <DetailView Id="SubmitCheckQualityForMonthDetail_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="SubmitCheckQualityForMonthDetail" Caption="ปริมาณการตรวจสอบคุณภาพเมล็ดพันธุ์ข้าวประจำเดือน" RelativeSize="100">
+              <LayoutGroup Id="SubmitCheckQualityForMonthDetail_col1" RelativeSize="50">
+                <LayoutItem Id="SeedTypeName" SizeConstraintsType="Default" RelativeSize="4.5133991537376588" />
+                <LayoutItem Id="SeedClassName" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="SeasonName" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="SeedYear" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="StepName" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="ItemCount" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="CheckMonthNo" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="CheckMonthName" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="CheckYear" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="PassQuantity" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="Wet" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="Compound" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="Grow" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="Strong" SizeConstraintsType="Default" RelativeSize="54.866008462623412" />
+              </LayoutGroup>
+              <LayoutGroup Id="SubmitCheckQualityForMonthDetail_col2" RelativeSize="50">
+                <LayoutItem Id="PureSeed" SizeConstraintsType="Default" RelativeSize="4.5133991537376588" />
+                <LayoutItem Id="OtherSeed" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="OtherRice" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="RedSeed" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="GreenSeed" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="FloatSeed" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="Insect" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="DiseaseSeed" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="KOH" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="Iodine" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="StickySeed" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="AATest" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="AllTestCount" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="Remark" SizeConstraintsType="Default" RelativeSize="54.866008462623412" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
     <DetailView Id="SubmitCheckRedSeed_DetailView" Caption="ส่งรายงาน ปริมาณข้าวแดง">
       <Items>
         <PropertyEditor Id="Status" AllowEdit="False" />
@@ -10266,7 +10392,7 @@
       <Layout>
         <LayoutGroup Id="Main" RelativeSize="100">
           <LayoutGroup Id="SimpleEditors" RelativeSize="16.933333333333334">
-            <LayoutGroup Id="SubmitCheckRedSeed" Caption="รายงานปริมาณการตรวจสอบข้าวแดง" RelativeSize="100">
+            <LayoutGroup Id="SubmitCheckRedSeed" Caption="ส่งรายงาน ปริมาณการตรวจสอบข้าวแดง" RelativeSize="100">
               <LayoutGroup Id="SubmitCheckRedSeed_col1" RelativeSize="50">
                 <LayoutItem Id="Season" SizeConstraintsType="Default" RelativeSize="36.363636363636367" />
                 <LayoutItem Id="SeedYear" SizeConstraintsType="Default" RelativeSize="27.272727272727273" />
@@ -10285,6 +10411,29 @@
       </Layout>
     </DetailView>
     <ListView Id="SubmitCheckRedSeed_SubmitCheckRedSeedDetails_ListView" AllowDelete="False" AllowNew="False" />
+    <DetailView Id="SubmitCheckRedSeedDetail_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="SubmitCheckRedSeedDetail" RelativeSize="100">
+              <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" Direction="Vertical" Index="0" RelativeSize="100" Caption="ข้อมูลปริมาณการตรวจสอบข้าวแดง" IsNewNode="True">
+                <LayoutGroup Id="Auto84c2a16f-1b8f-4a6c-8cef-59bd63ffffbb" ShowCaption="False" Caption="" Direction="Horizontal" Index="0" RelativeSize="7.0329670329670328" IsNewNode="True">
+                  <LayoutItem Id="ItemNo" ViewItem="ItemNo" SizeConstraintsType="Default" Index="0" RelativeSize="50" IsNewNode="True" />
+                  <LayoutItem Id="ItemCaption" ViewItem="ItemCaption" SizeConstraintsType="Default" Index="1" RelativeSize="50" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutItem Id="MainValue" ViewItem="MainValue" SizeConstraintsType="Default" Index="1" RelativeSize="5.2747252747252746" IsNewNode="True" />
+                <LayoutItem Id="BuyValue" ViewItem="BuyValue" SizeConstraintsType="Default" Index="2" RelativeSize="5.2747252747252746" IsNewNode="True" />
+                <LayoutItem Id="Item2" ShowCaption="False" ViewItem="" SizeConstraintsType="Default" Index="3" RelativeSize="82.417582417582423" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutItem Id="BuyValue" SizeConstraintsType="Default" Index="1" RelativeSize="80.443548387096769" Removed="True" />
+              <LayoutItem Id="MainValue" SizeConstraintsType="Default" Index="1" RelativeSize="4.838709677419355" Removed="True" />
+              <LayoutItem Id="ItemCaption" Removed="True" />
+              <LayoutItem Id="ItemNo" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
     <DetailView Id="SubmitIncomeAndExpensesMonthReport_DetailView">
       <Layout>
         <LayoutGroup Id="Main" RelativeSize="100">
@@ -10741,8 +10890,8 @@
       </Items>
       <Layout>
         <LayoutGroup Id="Main" RelativeSize="100">
-          <LayoutGroup Id="SimpleEditors" RelativeSize="27.850877192982455">
-            <LayoutGroup Id="SubmitQualityBetweenStorage" Caption="ส่งรายงานผลการตรวจสอบคุณภาพเมล็ดพันธุ์ระหว่างการเก็บรักษา" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="16.933333333333334">
+            <LayoutGroup Id="SubmitQualityBetweenStorage" Caption="ส่งรายงาน ผลการตรวจสอบคุณภาพเมล็ดพันธุ์ระหว่างการเก็บรักษา" RelativeSize="100">
               <LayoutGroup Id="SubmitQualityBetweenStorage_col1" RelativeSize="50">
                 <LayoutItem Id="Month" SizeConstraintsType="Default" RelativeSize="36.363636363636367" />
                 <LayoutItem Id="SeedYear" SizeConstraintsType="Default" RelativeSize="63.636363636363633" />
@@ -10755,6 +10904,9 @@
               </LayoutGroup>
             </LayoutGroup>
           </LayoutGroup>
+          <LayoutGroup Id="SubmitQualityBetweenStorageDetails_Group" Direction="Vertical" RelativeSize="83.066666666666663">
+            <LayoutItem Id="SubmitQualityBetweenStorageDetails" SizeConstraintsType="Default" RelativeSize="100" />
+          </LayoutGroup>
         </LayoutGroup>
       </Layout>
     </DetailView>
@@ -10765,46 +10917,24 @@
           <LayoutGroup Id="SimpleEditors" RelativeSize="100">
             <LayoutGroup Id="SubmitQualityBetweenStorageDetail" Caption="ข้อมูลผลการตรวจสอบคุณภาพเมล็ดพันธุ์ระหว่างการเก็บรักษา" RelativeSize="100">
               <LayoutGroup Id="SubmitQualityBetweenStorageDetail_col1" RelativeSize="50">
-                <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" Index="0" RelativeSize="100" Caption="เมล็ดพันธุ์" IsNewNode="True">
-                  <LayoutItem Id="PlantName" ViewItem="PlantName" SizeConstraintsType="Default" Index="0" RelativeSize="8.0604534005037785" IsNewNode="True" />
-                  <LayoutItem Id="SeedTypeName" ViewItem="SeedTypeName" SizeConstraintsType="Default" Index="1" RelativeSize="6.0453400503778338" IsNewNode="True" />
-                  <LayoutItem Id="SeedClassName" ViewItem="SeedClassName" SizeConstraintsType="Default" Index="2" RelativeSize="6.0453400503778338" IsNewNode="True" />
-                  <LayoutItem Id="SeasonName" ViewItem="SeasonName" SizeConstraintsType="Default" Index="3" RelativeSize="6.0453400503778338" IsNewNode="True" />
-                  <LayoutItem Id="SeedYear" ViewItem="SeedYear" SizeConstraintsType="Default" Index="4" RelativeSize="6.0453400503778338" IsNewNode="True" />
-                  <LayoutItem Id="SeedLot" ViewItem="SeedLot" SizeConstraintsType="Default" Index="5" RelativeSize="6.0453400503778338" IsNewNode="True" />
-                  <LayoutItem Id="Item3" ShowCaption="False" ViewItem="" SizeConstraintsType="Default" Index="6" RelativeSize="61.712846347607055" IsNewNode="True" />
-                </LayoutGroup>
-                <LayoutItem Id="BuyDate" SizeConstraintsType="Default" RelativeSize="55.93607305936073" Index="1" Removed="True" />
-                <LayoutItem Id="DiffMonthBuy" SizeConstraintsType="Default" RelativeSize="50.456621004566209" Index="2" Removed="True" />
-                <LayoutItem Id="PlantName" SizeConstraintsType="Default" RelativeSize="4.5133991537376588" Removed="True" />
-                <LayoutItem Id="SeasonName" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" Removed="True" />
-                <LayoutItem Id="SeedClassName" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" Removed="True" />
-                <LayoutItem Id="SeedLot" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" Removed="True" />
-                <LayoutItem Id="SeedTypeName" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" Removed="True" />
-                <LayoutItem Id="SeedYear" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" Removed="True" />
+                <LayoutItem Id="PlantName" SizeConstraintsType="Default" RelativeSize="4.5133991537376588" />
+                <LayoutItem Id="SeedTypeName" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="SeedClassName" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="SeasonName" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="SeedYear" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="SeedLot" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="BuyDate" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="DiffMonthBuy" SizeConstraintsType="Default" RelativeSize="75.176304654442873" />
               </LayoutGroup>
               <LayoutGroup Id="SubmitQualityBetweenStorageDetail_col2" RelativeSize="50">
-                <LayoutItem Id="DiffProcess" SizeConstraintsType="Default" RelativeSize="7.30593607305936" Index="0" Removed="True" />
-                <LayoutItem Id="Grow" SizeConstraintsType="Default" RelativeSize="7.30593607305936" Index="0" Removed="True" />
-                <LayoutGroup Id="Item2" ShowCaption="True" CaptionLocation="Top" Index="0" RelativeSize="100" Caption="ผลการตรวจสอบ" IsNewNode="True">
-                  <LayoutItem Id="LabDate" ViewItem="LabDate" SizeConstraintsType="Default" Index="0" RelativeSize="8.0604534005037785" IsNewNode="True" />
-                  <LayoutItem Id="Strong" ViewItem="Strong" SizeConstraintsType="Default" Index="1" RelativeSize="6.0453400503778338" IsNewNode="True" />
-                  <LayoutItem Id="Grow" ViewItem="Grow" SizeConstraintsType="Default" Index="2" RelativeSize="6.0453400503778338" IsNewNode="True" />
-                  <LayoutItem Id="Wet" ViewItem="Wet" SizeConstraintsType="Default" Index="3" RelativeSize="6.0453400503778338" IsNewNode="True" />
-                  <LayoutItem Id="DiffProcess" ViewItem="DiffProcess" SizeConstraintsType="Default" Index="4" RelativeSize="6.0453400503778338" IsNewNode="True" />
-                  <LayoutItem Id="SeedWeight" ViewItem="SeedWeight" SizeConstraintsType="Default" Index="5" RelativeSize="6.0453400503778338" IsNewNode="True" />
-                  <LayoutItem Id="BuyDate" ViewItem="BuyDate" SizeConstraintsType="Default" Index="6" RelativeSize="6.0453400503778338" IsNewNode="True" />
-                  <LayoutItem Id="DiffMonthBuy" ViewItem="DiffMonthBuy" SizeConstraintsType="Default" Index="7" RelativeSize="6.0453400503778338" IsNewNode="True" />
-                  <LayoutItem Id="ProcessDate" ViewItem="ProcessDate" SizeConstraintsType="Default" Index="8" RelativeSize="6.0453400503778338" IsNewNode="True" />
-                  <LayoutItem Id="Remark" ViewItem="Remark" SizeConstraintsType="Default" Index="9" RelativeSize="6.0453400503778338" IsNewNode="True" />
-                  <LayoutItem Id="Item4" ShowCaption="False" ViewItem="" SizeConstraintsType="Default" Index="10" RelativeSize="37.531486146095716" IsNewNode="True" />
-                </LayoutGroup>
-                <LayoutItem Id="LabDate" SizeConstraintsType="Default" RelativeSize="7.30593607305936" Index="0" Removed="True" />
-                <LayoutItem Id="SeedWeight" SizeConstraintsType="Default" RelativeSize="7.30593607305936" Index="0" Removed="True" />
-                <LayoutItem Id="Strong" SizeConstraintsType="Default" RelativeSize="7.30593607305936" Index="0" Removed="True" />
-                <LayoutItem Id="Wet" SizeConstraintsType="Default" RelativeSize="7.30593607305936" Index="0" Removed="True" />
-                <LayoutItem Id="ProcessDate" SizeConstraintsType="Default" RelativeSize="4.5133991537376588" Removed="True" />
-                <LayoutItem Id="Remark" SizeConstraintsType="Default" RelativeSize="75.176304654442873" Removed="True" />
+                <LayoutItem Id="ProcessDate" SizeConstraintsType="Default" RelativeSize="4.5133991537376588" />
+                <LayoutItem Id="DiffProcess" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="Wet" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="Grow" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="Strong" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="SeedWeight" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="LabDate" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="Remark" SizeConstraintsType="Default" RelativeSize="75.176304654442873" />
               </LayoutGroup>
             </LayoutGroup>
           </LayoutGroup>
@@ -10820,7 +10950,7 @@
       <Layout>
         <LayoutGroup Id="Main" RelativeSize="100">
           <LayoutGroup Id="SimpleEditors" RelativeSize="16.933333333333334">
-            <LayoutGroup Id="SubmitQualityForBuy" Caption="ผลการทดสอบคุณภาพเมล็ดพันธุ์เพื่อจัดซื้อ" RelativeSize="100">
+            <LayoutGroup Id="SubmitQualityForBuy" Caption="ส่งรายงาน ผลการทดสอบคุณภาพเมล็ดพันธุ์เพื่อจัดซื้อ" RelativeSize="100">
               <LayoutGroup Id="SubmitQualityForBuy_col1" RelativeSize="50">
                 <LayoutItem Id="MainPlan" SizeConstraintsType="Default" RelativeSize="36.363636363636367" />
                 <LayoutItem Id="StartDay" SizeConstraintsType="Default" RelativeSize="27.272727272727273" />
@@ -10840,6 +10970,39 @@
       </Layout>
     </DetailView>
     <ListView Id="SubmitQualityForBuy_SubmitQualityForBuyReportDetails_ListView" AllowDelete="False" AllowNew="False" />
+    <DetailView Id="SubmitQualityForBuyDetail_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="SubmitQualityForBuyDetail" Caption="ข้อมูลการตรวจสอบคุณภาพ" RelativeSize="100">
+              <LayoutGroup Id="SubmitQualityForBuyDetail_col1" RelativeSize="50">
+                <LayoutItem Id="SampleNo" SizeConstraintsType="Default" RelativeSize="4.5133991537376588" />
+                <LayoutItem Id="PlanFarmerNo" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="ItemNo" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="FullName" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="Plant" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="SeedType" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="SeedClass" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="SeedSeason" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="SeedYear" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="SeedWeight" SizeConstraintsType="Default" RelativeSize="68.4062059238364" />
+              </LayoutGroup>
+              <LayoutGroup Id="SubmitQualityForBuyDetail_col2" RelativeSize="50">
+                <LayoutItem Id="Wet" SizeConstraintsType="Default" RelativeSize="4.5133991537376588" />
+                <LayoutItem Id="PureSeed" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="Compound" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="OtherRiceSeed" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="RedSeed" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="Grow" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="OtherSeed" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="LabDate" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="CheckResults" SizeConstraintsType="Default" RelativeSize="71.791255289139627" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
     <DetailView Id="SubmitQualityHistory_DetailView" Caption="ส่งรายงาน ประวัติคุณภาพเมล็ดพันธุ์">
       <Items>
         <PropertyEditor Id="Status" AllowEdit="False" />
@@ -10848,28 +11011,63 @@
       </Items>
       <Layout>
         <LayoutGroup Id="Main" RelativeSize="100">
-          <LayoutGroup Id="SimpleEditors" RelativeSize="26.849894291754758">
-            <LayoutGroup Id="SubmitQualityHistory" RelativeSize="100" Caption="ประวัติคุณภาพเมล็ดพันธุ์">
-              <LayoutGroup Id="SubmitQualityHistory_col1" RelativeSize="50.11600928074246">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="16.933333333333334">
+            <LayoutGroup Id="SubmitQualityHistory" RelativeSize="100" Caption="ส่งรายงาน ประวัติคุณภาพเมล็ดพันธุ์">
+              <LayoutGroup Id="SubmitQualityHistory_col1" RelativeSize="50">
                 <LayoutItem Id="Season" SizeConstraintsType="Default" RelativeSize="36.363636363636367" />
                 <LayoutItem Id="SeedYear" SizeConstraintsType="Default" RelativeSize="27.272727272727273" />
-                <LayoutItem Id="Item1" ShowCaption="False" ViewItem="" SizeConstraintsType="Default" Index="2" RelativeSize="36.363636363636367" IsNewNode="True" />
+                <LayoutItem Id="Item1" ShowCaption="False" SizeConstraintsType="Default" Index="2" RelativeSize="36.363636363636367" ViewItem="" IsNewNode="True" />
                 <LayoutItem Id="SubmitDate" Removed="True" />
               </LayoutGroup>
-              <LayoutGroup Id="SubmitQualityHistory_col2" RelativeSize="49.88399071925754">
+              <LayoutGroup Id="SubmitQualityHistory_col2" RelativeSize="50">
                 <LayoutItem Id="SubmitDate" ViewItem="SubmitDate" SizeConstraintsType="Default" Index="0" RelativeSize="36.363636363636367" IsNewNode="True" />
                 <LayoutItem Id="SubmitBy" SizeConstraintsType="Default" Index="1" RelativeSize="27.272727272727273" />
                 <LayoutItem Id="Status" SizeConstraintsType="Default" Index="2" RelativeSize="36.363636363636367" />
               </LayoutGroup>
             </LayoutGroup>
           </LayoutGroup>
-          <LayoutGroup Id="SubmitQualityHistoryReportDetails_Group" Direction="Vertical" RelativeSize="73.150105708245249" Caption="รายการประวัติคุณภาพเมล็ดพันธุ์">
+          <LayoutGroup Id="SubmitQualityHistoryReportDetails_Group" Direction="Vertical" RelativeSize="83.066666666666663" Caption="รายการประวัติคุณภาพเมล็ดพันธุ์">
             <LayoutItem Id="SubmitQualityHistoryReportDetails" SizeConstraintsType="Default" RelativeSize="100" />
           </LayoutGroup>
         </LayoutGroup>
       </Layout>
     </DetailView>
     <ListView Id="SubmitQualityHistory_SubmitQualityHistoryReportDetails_ListView" AllowDelete="False" AllowNew="False" />
+    <DetailView Id="SubmitQualityHistoryDetail_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="SubmitQualityHistoryDetail" Caption="รายการประวัติคุณภาพเมล็ดพันธุ์" RelativeSize="100">
+              <LayoutGroup Id="SubmitQualityHistoryDetail_col1" RelativeSize="50">
+                <LayoutItem Id="ProductName" SizeConstraintsType="Default" RelativeSize="4.5133991537376588" />
+                <LayoutItem Id="SeedClass" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="LotNo" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="ForBuyWetSeed" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="ForBuyGrowSeed" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="ForBuyRedSeed" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="ForBuyOtherSeed" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="ForBuyCheckDate" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="BeforeWetSeed" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="BeforeGrowSeed" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="BeforeCompound" SizeConstraintsType="Default" RelativeSize="65.02115655853315" />
+              </LayoutGroup>
+              <LayoutGroup Id="SubmitQualityHistoryDetail_col2" RelativeSize="50">
+                <LayoutItem Id="BeforeDate" SizeConstraintsType="Default" RelativeSize="4.5133991537376588" />
+                <LayoutItem Id="AfterWetSeed" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="AfterGrowSeed" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="AfterStrongSeed" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="AfterPureSeed" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="AfterCompound" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="AfterRedSeed" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="AfterOtherSeed" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="AfterWeight" SizeConstraintsType="Default" RelativeSize="3.3850493653032441" />
+                <LayoutItem Id="AfterDate" SizeConstraintsType="Default" RelativeSize="68.4062059238364" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
     <DetailView Id="SubmitTrialBalacneMonthReport_DetailView">
       <Layout>
         <LayoutGroup Id="Main" RelativeSize="100">

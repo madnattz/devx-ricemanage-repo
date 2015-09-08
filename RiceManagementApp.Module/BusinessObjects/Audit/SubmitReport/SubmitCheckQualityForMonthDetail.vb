@@ -40,6 +40,7 @@ Public Class SubmitCheckQualityForMonthDetail
     Dim fSeedTypeName As String
     <Index(1)>
     <XafDisplayName("พันธุ์")> _
+    <Appearance("SeedTypeName", Enabled:=False)> _
     Public Property SeedTypeName() As String
         Get
             Return fSeedTypeName
@@ -52,6 +53,7 @@ Public Class SubmitCheckQualityForMonthDetail
     Dim fSeedClassName As String
     <Index(2)>
     <XafDisplayName("ชั้นพันธุ์")> _
+    <Appearance("SeedClassName", Enabled:=False)> _
     Public Property SeedClassName() As String
         Get
             Return fSeedClassName
@@ -64,6 +66,7 @@ Public Class SubmitCheckQualityForMonthDetail
     Dim fSeasonName As String
     <Index(3)>
     <XafDisplayName("ฤดู")> _
+    <Appearance("SeasonName", Enabled:=False)> _
     Public Property SeasonName() As String
         Get
             Return fSeasonName
@@ -76,6 +79,7 @@ Public Class SubmitCheckQualityForMonthDetail
     Dim fSeedYear As String
     <Index(4)>
     <XafDisplayName("ปี")> _
+    <Appearance("SeedYear", Enabled:=False)> _
     Public Property SeedYear() As String
         Get
             Return fSeedYear
@@ -88,6 +92,7 @@ Public Class SubmitCheckQualityForMonthDetail
     Dim fStepName As String
     <Index(5)>
     <XafDisplayName("ระยะที่ตรวจสอบ")> _
+    <Appearance("StepName", Enabled:=False)> _
     Public Property StepName() As String
         Get
             Return fStepName
@@ -100,6 +105,7 @@ Public Class SubmitCheckQualityForMonthDetail
     Dim fItemCount As Integer
     <Index(6)>
     <XafDisplayName("จำนวนตัวอย่าง")> _
+    <Appearance("ItemCount", Enabled:=False)> _
     Public Property ItemCount() As Integer
         Get
             Return fItemCount
@@ -112,7 +118,8 @@ Public Class SubmitCheckQualityForMonthDetail
     Dim fCheckMonthNo As Integer
     <Index(7)>
     <XafDisplayName("เดือนที่")> _
-    <VisibleInDetailView(False), VisibleInListView(False), VisibleInLookupListView(False)> _
+    <Appearance("CheckMonthNo", Enabled:=False)> _
+    <VisibleInDetailView(True), VisibleInListView(False), VisibleInLookupListView(False)> _
     Public Property CheckMonthNo() As Integer
         Get
             Return fCheckMonthNo
@@ -125,7 +132,8 @@ Public Class SubmitCheckQualityForMonthDetail
     Dim fCheckMonthName As String
     <Index(8)>
     <XafDisplayName("ชื่อเดือน")> _
-    <VisibleInDetailView(False), VisibleInListView(False), VisibleInLookupListView(False)> _
+    <Appearance("CheckMonthName", Enabled:=False)> _
+    <VisibleInDetailView(True), VisibleInListView(False), VisibleInLookupListView(False)> _
     Public Property CheckMonthName() As String
         Get
             Return fCheckMonthName
@@ -138,7 +146,8 @@ Public Class SubmitCheckQualityForMonthDetail
     Dim fCheckYear As String
     <Index(9)>
     <XafDisplayName("ปี")> _
-    <VisibleInDetailView(False), VisibleInListView(False), VisibleInLookupListView(False)> _
+    <Appearance("CheckYear", Enabled:=False)> _
+    <VisibleInDetailView(True), VisibleInListView(False), VisibleInLookupListView(False)> _
     Public Property CheckYear() As String
         Get
             Return fCheckYear
@@ -151,6 +160,7 @@ Public Class SubmitCheckQualityForMonthDetail
     Dim fPassQuantity As Integer
     <Index(10)>
     <XafDisplayName("น้ำหนักที่ผ่านการตรวจสอบ")> _
+    <Appearance("PassQuantity", Enabled:=False)> _
     Public Property PassQuantity() As Integer
         Get
             Return fPassQuantity
@@ -162,8 +172,9 @@ Public Class SubmitCheckQualityForMonthDetail
 
     Dim fWet As Double
     <Index(11)>
-    <VisibleInDetailView(False), VisibleInListView(False), VisibleInLookupListView(False)> _
+    <VisibleInDetailView(True), VisibleInListView(False), VisibleInLookupListView(False)> _
     <XafDisplayName("ความชื้น")> _
+    <Appearance("Wet", Enabled:=False)> _
     Public Property Wet() As Double
         Get
             Return fWet
@@ -175,8 +186,9 @@ Public Class SubmitCheckQualityForMonthDetail
 
     Dim fCompound As Double
     <Index(12)>
-    <VisibleInDetailView(False), VisibleInListView(False), VisibleInLookupListView(False)> _
+    <VisibleInDetailView(True), VisibleInListView(False), VisibleInLookupListView(False)> _
     <XafDisplayName("สิ่่งเจือปน")> _
+    <Appearance("Compound", Enabled:=False)> _
     Public Property Compound() As Double
         Get
             Return fCompound
@@ -188,8 +200,9 @@ Public Class SubmitCheckQualityForMonthDetail
 
     Dim fGrow As Double
     <Index(13)>
-    <VisibleInDetailView(False), VisibleInListView(False), VisibleInLookupListView(False)> _
+    <VisibleInDetailView(True), VisibleInListView(False), VisibleInLookupListView(False)> _
     <XafDisplayName("ความงอก")> _
+    <Appearance("Grow", Enabled:=False)> _
     Public Property Grow() As Double
         Get
             Return fGrow
@@ -201,8 +214,9 @@ Public Class SubmitCheckQualityForMonthDetail
 
     Dim fStrong As Double
     <Index(14)>
-    <VisibleInDetailView(False), VisibleInListView(False), VisibleInLookupListView(False)> _
+    <VisibleInDetailView(True), VisibleInListView(False), VisibleInLookupListView(False)> _
     <XafDisplayName("ความแข็งแรง")> _
+    <Appearance("Strong", Enabled:=False)> _
     Public Property Strong() As Double
         Get
             Return fStrong
@@ -214,8 +228,9 @@ Public Class SubmitCheckQualityForMonthDetail
 
     Dim fPureSeed As Double
     <Index(15)>
-    <VisibleInDetailView(False), VisibleInListView(False), VisibleInLookupListView(False)> _
+    <VisibleInDetailView(True), VisibleInListView(False), VisibleInLookupListView(False)> _
     <XafDisplayName("ความบริสุทธิ์")> _
+    <Appearance("PureSeed", Enabled:=False)> _
     Public Property PureSeed() As Double
         Get
             Return fPureSeed
@@ -227,8 +242,9 @@ Public Class SubmitCheckQualityForMonthDetail
 
     Dim fOtherSeed As Double
     <Index(16)>
-    <VisibleInDetailView(False), VisibleInListView(False), VisibleInLookupListView(False)> _
+    <VisibleInDetailView(True), VisibleInListView(False), VisibleInLookupListView(False)> _
     <XafDisplayName("เมล็ดพันธุ์อื่น")> _
+    <Appearance("OtherSeed", Enabled:=False)> _
     Public Property OtherSeed() As Double
         Get
             Return fOtherSeed
@@ -240,8 +256,9 @@ Public Class SubmitCheckQualityForMonthDetail
 
     Dim fOtherRice As Double
     <Index(17)>
-    <VisibleInDetailView(False), VisibleInListView(False), VisibleInLookupListView(False)> _
+    <VisibleInDetailView(True), VisibleInListView(False), VisibleInLookupListView(False)> _
     <XafDisplayName("เมล็ดข้าวอื่นๆ")> _
+    <Appearance("OtherRice", Enabled:=False)> _
     Public Property OtherRice() As Double
         Get
             Return fOtherRice
@@ -253,8 +270,9 @@ Public Class SubmitCheckQualityForMonthDetail
 
     Dim fRedSeed As Double
     <Index(18)>
-    <VisibleInDetailView(False), VisibleInListView(False), VisibleInLookupListView(False)> _
+    <VisibleInDetailView(True), VisibleInListView(False), VisibleInLookupListView(False)> _
     <XafDisplayName("เมล็ดข้าวแดง")> _
+    <Appearance("RedSeed", Enabled:=False)> _
     Public Property RedSeed() As Double
         Get
             Return fRedSeed
@@ -266,8 +284,9 @@ Public Class SubmitCheckQualityForMonthDetail
 
     Dim fGreenSeed As Double
     <Index(19)>
-    <VisibleInDetailView(False), VisibleInListView(False), VisibleInLookupListView(False)> _
+    <VisibleInDetailView(True), VisibleInListView(False), VisibleInLookupListView(False)> _
     <XafDisplayName("เมล็ดข้าวเขียว")> _
+    <Appearance("GreenSeed", Enabled:=False)> _
     Public Property GreenSeed() As Double
         Get
             Return fGreenSeed
@@ -279,8 +298,9 @@ Public Class SubmitCheckQualityForMonthDetail
 
     Dim fFloatSeed As Double
     <Index(20)>
-    <VisibleInDetailView(False), VisibleInListView(False), VisibleInLookupListView(False)> _
+    <VisibleInDetailView(True), VisibleInListView(False), VisibleInLookupListView(False)> _
     <XafDisplayName("เมล็ดข้าวลอยน้ำ")> _
+    <Appearance("FloatSeed", Enabled:=False)> _
     Public Property FloatSeed() As Double
         Get
             Return fFloatSeed
@@ -292,8 +312,9 @@ Public Class SubmitCheckQualityForMonthDetail
 
     Dim fInsect As Double
     <Index(21)>
-    <VisibleInDetailView(False), VisibleInListView(False), VisibleInLookupListView(False)> _
+    <VisibleInDetailView(True), VisibleInListView(False), VisibleInLookupListView(False)> _
     <XafDisplayName("แมลง")> _
+    <Appearance("Insect", Enabled:=False)> _
     Public Property Insect() As Double
         Get
             Return fInsect
@@ -305,8 +326,9 @@ Public Class SubmitCheckQualityForMonthDetail
 
     Dim fDiseaseSeed As Double
     <Index(22)>
-    <VisibleInDetailView(False), VisibleInListView(False), VisibleInLookupListView(False)> _
+    <VisibleInDetailView(True), VisibleInListView(False), VisibleInLookupListView(False)> _
     <XafDisplayName("เมล็ดเป็นโรค")> _
+    <Appearance("DiseaseSeed", Enabled:=False)> _
     Public Property DiseaseSeed() As Double
         Get
             Return fDiseaseSeed
@@ -318,8 +340,9 @@ Public Class SubmitCheckQualityForMonthDetail
 
     Dim fKOH As Double
     <Index(23)>
-    <VisibleInDetailView(False), VisibleInListView(False), VisibleInLookupListView(False)> _
+    <VisibleInDetailView(True), VisibleInListView(False), VisibleInLookupListView(False)> _
     <XafDisplayName("KOH")> _
+    <Appearance("KOH", Enabled:=False)> _
     Public Property KOH() As Double
         Get
             Return fKOH
@@ -331,8 +354,9 @@ Public Class SubmitCheckQualityForMonthDetail
 
     Dim fIodine As Double
     <Index(24)>
-    <VisibleInDetailView(False), VisibleInListView(False), VisibleInLookupListView(False)> _
+    <VisibleInDetailView(True), VisibleInListView(False), VisibleInLookupListView(False)> _
     <XafDisplayName("ไอโอดีน")> _
+    <Appearance("Iodine", Enabled:=False)> _
     Public Property Iodine() As Double
         Get
             Return fIodine
@@ -344,8 +368,9 @@ Public Class SubmitCheckQualityForMonthDetail
 
     Dim fStickySeed As Double
     <Index(25)>
-    <VisibleInDetailView(False), VisibleInListView(False), VisibleInLookupListView(False)> _
+    <VisibleInDetailView(True), VisibleInListView(False), VisibleInLookupListView(False)> _
     <XafDisplayName("เมล็ดข้าวเหนียว")> _
+    <Appearance("StickySeed", Enabled:=False)> _
     Public Property StickySeed() As Double
         Get
             Return fStickySeed
@@ -357,8 +382,9 @@ Public Class SubmitCheckQualityForMonthDetail
 
     Dim fAATest As Double
     <Index(26)>
-    <VisibleInDetailView(False), VisibleInListView(False), VisibleInLookupListView(False)> _
+    <VisibleInDetailView(True), VisibleInListView(False), VisibleInLookupListView(False)> _
     <XafDisplayName("AATest")> _
+    <Appearance("AATest", Enabled:=False)> _
     Public Property AATest() As Double
         Get
             Return fAATest
@@ -370,8 +396,9 @@ Public Class SubmitCheckQualityForMonthDetail
 
     Dim fAllTestCount As Double
     <Index(27)>
-    <VisibleInDetailView(False), VisibleInListView(False), VisibleInLookupListView(False)> _
+    <VisibleInDetailView(True), VisibleInListView(False), VisibleInLookupListView(False)> _
     <XafDisplayName("รวม")> _
+    <Appearance("AllTestCount", Enabled:=False)> _
     Public Property AllTestCount() As Double
         Get
             Return fAllTestCount
@@ -383,8 +410,9 @@ Public Class SubmitCheckQualityForMonthDetail
 
     Dim fRemark As String
     <Index(28)>
-    <VisibleInDetailView(False), VisibleInListView(False), VisibleInLookupListView(False)> _
+    <VisibleInDetailView(True), VisibleInListView(False), VisibleInLookupListView(False)> _
     <XafDisplayName("หมายเหตุ")> _
+    <Appearance("Remark", Enabled:=False)> _
     Public Property Remark() As String
         Get
             Return fRemark
